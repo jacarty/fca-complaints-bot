@@ -1,0 +1,24 @@
+{
+  "fixed-titan": {
+    "kb_id": "WNJATLY3JJ",
+    "kb_name": "fca-complaints-fixed-titan",
+    "chunking_strategy": "FIXED_SIZE",
+    "embedding_model": "amazon.titan-embed-text-v2:0",
+    "index_arn": "arn:aws:s3vectors:eu-west-1:982099554067:bucket/fca-complaints-vectors/index/fca-complaints-fixed-titan",
+    "data_sources": {
+      "fca": "DXL6HYZLA0",
+      "synthetic": "MCZNYM29VT"
+    }
+  },
+  "structure-titan": {
+    "kb_id": "XKFNEPIT5D",
+    "kb_name": "fca-complaints-structure-titan",
+    "chunking_strategy": "NONE",
+    "embedding_model": "amazon.titan-embed-text-v2:0",
+    "index_arn": "arn:aws:s3vectors:eu-west-1:982099554067:bucket/fca-complaints-vectors/index/fca-complaints-structure-titan",
+    "data_sources": {
+      "fca": "T3KASZFP0U",
+      "synthetic": "ZHHZKY06QU"
+    }
+  }
+}

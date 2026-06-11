@@ -7,7 +7,7 @@ data/fca/sections/
 data/fca/sections-structure/
 data/synthetic/policies-structure/
 data/synthetic/policies/
-data/fca_handbook.jsonl
+data/fca/fca_handbook.jsonl
 
 # OS generated files
 .DS_Store
