@@ -8,9 +8,9 @@ Work in progress. This repository clones the evaluation framework from `rag-eval
 
 | Stage | State |
 |-------|-------|
-| Repo scaffold & tidy | In progress |
-| Corpus rebuild (add DISP + CONC) | Pending |
-| Bot build (retrieval + drafting + UI) | Pending |
+| Repo scaffold & tidy | Complete |
+| Corpus rebuild (add DISP + CONC) | Complete |
+| Bot build (retrieval + drafting + UI) | In progress |
 | Complaint ground-truth set | Pending |
 | Eval adaptation & run | Pending |
 | Write-up | Pending |
