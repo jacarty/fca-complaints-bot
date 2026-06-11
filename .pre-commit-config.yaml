@@ -1,0 +1,45 @@
+# Pre-commit hooks for the rag-eval-framework.
+#
+# Setup (one-time, per developer):
+#   uv sync
+#   uv run pre-commit install
+#
+# After install, hooks run automatically on `git commit`.
+# To run manually against all files: uv run pre-commit run --all-files
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: ['--maxkb=500']
+      - id: no-commit-to-branch
+        args: ['--branch', 'main']
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.12
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: local
+    hooks:
+      - id: uv-audit
+        name: uv dependency audit (OSV)
+        entry: uv audit
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: pip-audit
+        name: pip-audit (PyPI advisory database)
+        entry: uvx pip-audit
+        language: system
+        pass_filenames: false
+        always_run: true

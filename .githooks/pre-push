@@ -1,0 +1,62 @@
+#!/bin/sh
+#
+# Pre-push hook: branch naming validation
+# Validates that the branch being pushed follows the naming convention.
+#
+# Install: cp .githooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
+# Or set hooks path: git config core.hooksPath .githooks
+
+# Colours for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+NC='\033[0m'
+
+# Get current branch name
+BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null)
+
+# Skip if we can't determine the branch (detached HEAD)
+if [ -z "$BRANCH" ]; then
+    exit 0
+fi
+
+# Allow these branches without validation
+EXEMPT_BRANCHES="main|master|dev|develop|staging|production|release"
+
+if echo "$BRANCH" | grep -qE "^($EXEMPT_BRANCHES)$"; then
+    exit 0
+fi
+
+# Valid branch pattern: type/short-description
+# - type must match conventional commit types
+# - description uses lowercase, numbers, and hyphens
+# - no uppercase, no spaces, no special characters
+VALID_TYPES="feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert|hotfix|release"
+BRANCH_PATTERN="^($VALID_TYPES)/[a-z0-9][a-z0-9-]{1,48}[a-z0-9]$"
+
+if ! echo "$BRANCH" | grep -qE "$BRANCH_PATTERN"; then
+    echo "" >&2
+    echo "${RED}✗ Invalid branch name: ${YELLOW}${BRANCH}${NC}" >&2
+    echo "" >&2
+    echo "  Expected format: ${GREEN}<type>/<short-description>${NC}" >&2
+    echo "" >&2
+    echo "  Valid types: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert, hotfix, release" >&2
+    echo "" >&2
+    echo "  Rules:" >&2
+    echo "    - Lowercase only, no spaces" >&2
+    echo "    - Use hyphens to separate words" >&2
+    echo "    - Keep under 50 characters" >&2
+    echo "    - Must start and end with a letter or number" >&2
+    echo "" >&2
+    echo "  Examples:" >&2
+    echo "    ${GREEN}feat/oauth-google-login${NC}" >&2
+    echo "    ${GREEN}fix/null-payment-response${NC}" >&2
+    echo "    ${GREEN}docs/aws-deployment${NC}" >&2
+    echo "    ${GREEN}refactor/extract-query-builder${NC}" >&2
+    echo "" >&2
+    echo "  Exempt branches: main, master, dev, develop, staging, production, release" >&2
+    echo "  Skip this check with: git push --no-verify" >&2
+    exit 1
+fi
+
+exit 0

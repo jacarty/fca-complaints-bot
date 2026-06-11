@@ -1,0 +1,8 @@
+# CODEOWNERS
+# Define users or teams responsible for reviewing changes in this repository.
+# Replace YOUR-GITHUB-USERNAME with your GitHub handle, or use @your-org/team-name
+# for team ownership. Lines below assign default ownership to everything in the repo.
+#
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-security/customizing-your-repository/about-code-owners
+
+* @jacarty

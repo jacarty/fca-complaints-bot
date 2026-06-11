@@ -1,0 +1,77 @@
+[project]
+name = "fca-compliance-both"
+version = "0.1.0"
+description = "A configurable RAG evaluation framework with quantified comparisons across chunking strategies, embedding models, and retrieval methods."
+readme = "README.md"
+requires-python = ">=3.13"
+
+dependencies = [
+    "python-dotenv",
+    "boto3",
+    "requests",
+    "tokenizers",
+    "pydantic>=2.13.4",
+    "fastapi",
+    "uvicorn[standard]",
+    "jinja2",
+    "python-multipart",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.0",
+    "pytest>=9.0.3",
+    "pytest-timeout>=2.4.0",
+    "ruff>=0.15.12",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/"]
+
+[tool.uv]
+exclude-newer = "7 days"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+extend-exclude = [
+    ".venv",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes (unused imports, undefined names, etc.)
+    "I",   # isort (import sorting)
+    "B",   # bugbear (common bugs and design issues)
+    "UP",  # pyupgrade (modernise syntax for the target Python version)
+    "C4",  # comprehensions (cleaner list/dict/set comprehensions)
+    "SIM", # simplify (straightforward refactors)
+]
+ignore = [
+    # Add ignores here if specific rules become noisy. Empty for now —
+    # tighten the net first, loosen only when there's a concrete reason.
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests can have longer lines and unused imports for fixtures.
+"tests/**/*.py" = ["E501"]
+"scripts/generate_policies.py" = ["E501"]
+"scripts/judge.py" = ["E501"]
+"scripts/run_eval.py" = ["E501"]
+"scripts/metrics.py" = ["E501"]
+"src/judge.py" = ["E501"]
+"src/metrics.py" = ["E501"]
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"

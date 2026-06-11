@@ -1,0 +1,167 @@
+#!/bin/sh
+#
+# Pre-commit hook: secrets detection + large file check
+# Runs on every commit to catch secrets and oversized files before they enter history.
+#
+# Install: cp .githooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+# Or set hooks path: git config core.hooksPath .githooks
+
+set -e
+
+# Colours for output
+RED='\033[0;31m'
+YELLOW='\033[0;33m'
+NC='\033[0m' # No colour
+
+# ============================================================================
+# SECRETS DETECTION
+# ============================================================================
+# Scans staged file contents for common secret patterns.
+# This is a lightweight local check — not a replacement for server-side scanning.
+
+echo "🔍 Checking for secrets in staged files..."
+
+SECRETS_FOUND=0
+
+# Get staged files (added or modified), excluding deleted files
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM 2>/dev/null)
+
+if [ -n "$STAGED_FILES" ]; then
+    for file in $STAGED_FILES; do
+        # Skip binary files
+        if file "$file" 2>/dev/null | grep -q "binary"; then
+            continue
+        fi
+
+        # Skip files that don't exist (edge case with renames)
+        if [ ! -f "$file" ]; then
+            continue
+        fi
+
+        # Get the staged content (not working directory content)
+        STAGED_CONTENT=$(git show ":$file" 2>/dev/null) || continue
+
+        # AWS Access Key ID (starts with AKIA)
+        if echo "$STAGED_CONTENT" | grep -nE 'AKIA[0-9A-Z]{16}' > /dev/null 2>&1; then
+            echo "${RED}✗ Potential AWS Access Key found in: $file${NC}" >&2
+            SECRETS_FOUND=1
+        fi
+
+        # AWS Secret Access Key (40 char base64-ish string after common key names)
+        if echo "$STAGED_CONTENT" | grep -nE '(aws_secret_access_key|AWS_SECRET_ACCESS_KEY|secret_access_key)\s*[=:]\s*[A-Za-z0-9/+=]{40}' > /dev/null 2>&1; then
+            echo "${RED}✗ Potential AWS Secret Key found in: $file${NC}" >&2
+            SECRETS_FOUND=1
+        fi
+
+        # Generic API keys and tokens (common variable name patterns)
+        if echo "$STAGED_CONTENT" | grep -nEi '(api_key|apikey|api_secret|access_token|auth_token|secret_key|private_key|client_secret)\s*[=:]\s*["\x27][A-Za-z0-9_\-\.]{20,}["\x27]' > /dev/null 2>&1; then
+            echo "${RED}✗ Potential API key/token found in: $file${NC}" >&2
+            SECRETS_FOUND=1
+        fi
+
+        # GitHub tokens (ghp_, gho_, ghu_, ghs_, ghr_)
+        if echo "$STAGED_CONTENT" | grep -nE 'gh[pousr]_[A-Za-z0-9_]{36,}' > /dev/null 2>&1; then
+            echo "${RED}✗ Potential GitHub token found in: $file${NC}" >&2
+            SECRETS_FOUND=1
+        fi
+
+        # Slack tokens
+        if echo "$STAGED_CONTENT" | grep -nE 'xox[baprs]-[0-9a-zA-Z\-]{10,}' > /dev/null 2>&1; then
+            echo "${RED}✗ Potential Slack token found in: $file${NC}" >&2
+            SECRETS_FOUND=1
+        fi
+
+        # Private keys
+        if echo "$STAGED_CONTENT" | grep -nE '\-\-\-\-\-BEGIN (RSA |EC |DSA |OPENSSH )?PRIVATE KEY\-\-\-\-\-' > /dev/null 2>&1; then
+            echo "${RED}✗ Private key found in: $file${NC}" >&2
+            SECRETS_FOUND=1
+        fi
+
+        # Generic high-entropy secrets (password/secret assignments with quoted values)
+        if echo "$STAGED_CONTENT" | grep -nEi '(password|passwd|pwd)\s*[=:]\s*["\x27][^"\x27]{8,}["\x27]' > /dev/null 2>&1; then
+            # Exclude common false positives
+            if ! echo "$file" | grep -qE '\.(md|txt|example|sample|template)$'; then
+                echo "${YELLOW}⚠ Potential hardcoded password in: $file${NC}" >&2
+                SECRETS_FOUND=1
+            fi
+        fi
+
+        # Connection strings with credentials
+        if echo "$STAGED_CONTENT" | grep -nEi '(mongodb|postgres|mysql|redis|amqp|mssql)://[^:]+:[^@]+@' > /dev/null 2>&1; then
+            echo "${RED}✗ Potential connection string with credentials in: $file${NC}" >&2
+            SECRETS_FOUND=1
+        fi
+    done
+fi
+
+if [ "$SECRETS_FOUND" -eq 1 ]; then
+    echo "" >&2
+    echo "${RED}✗ Secrets detected in staged files. Commit blocked.${NC}" >&2
+    echo "" >&2
+    echo "If these are false positives, you can:" >&2
+    echo "  1. Move the values to environment variables or a .env file" >&2
+    echo "  2. Skip this check with: git commit --no-verify" >&2
+    exit 1
+fi
+
+echo "✓ No secrets detected"
+
+# ============================================================================
+# LARGE FILE CHECK
+# ============================================================================
+# Prevents files over the threshold from being committed.
+# Default: 5MB. Override with: git config hooks.maxfilesize <bytes>
+
+MAX_FILE_SIZE=$(git config --get hooks.maxfilesize 2>/dev/null || echo 10485760)
+MAX_FILE_SIZE_MB=$((MAX_FILE_SIZE / 1048576))
+
+echo "🔍 Checking for files larger than ${MAX_FILE_SIZE_MB}MB..."
+
+LARGE_FILES_FOUND=0
+
+for file in $STAGED_FILES; do
+    # Skip deleted files
+    if [ ! -f "$file" ]; then
+        continue
+    fi
+
+    FILE_SIZE=$(wc -c < "$file" 2>/dev/null | tr -d ' ')
+
+    if [ "$FILE_SIZE" -gt "$MAX_FILE_SIZE" ] 2>/dev/null; then
+        FILE_SIZE_MB=$(echo "scale=1; $FILE_SIZE / 1048576" | bc 2>/dev/null || echo "${FILE_SIZE}B")
+        echo "${RED}✗ $file (${FILE_SIZE_MB}MB) exceeds ${MAX_FILE_SIZE_MB}MB limit${NC}" >&2
+        LARGE_FILES_FOUND=1
+    fi
+done
+
+if [ "$LARGE_FILES_FOUND" -eq 1 ]; then
+    echo "" >&2
+    echo "${RED}✗ Large files detected. Commit blocked.${NC}" >&2
+    echo "" >&2
+    echo "Add large files to .gitignore or use Git LFS." >&2
+    echo "Override threshold: git config hooks.maxfilesize <bytes>" >&2
+    echo "Skip this check with: git commit --no-verify" >&2
+    exit 1
+fi
+
+echo "✓ No oversized files"
+
+# ============================================================================
+# PRE-COMMIT FRAMEWORK
+# ============================================================================
+# Run the pre-commit hooks (ruff, trailing whitespace, etc.)
+
+echo "🔍 Running pre-commit hooks..."
+
+if command -v uv > /dev/null 2>&1; then
+    uv run pre-commit run --config .pre-commit-config.yaml || exit 1
+elif command -v pre-commit > /dev/null 2>&1; then
+    pre-commit run --config .pre-commit-config.yaml || exit 1
+else
+    echo "${YELLOW}⚠ pre-commit not found. Skipping code quality checks.${NC}" >&2
+    echo "  Install with: uv sync && uv run pre-commit install" >&2
+fi
+
+echo "✓ Pre-commit hooks passed"
+
+exit 0

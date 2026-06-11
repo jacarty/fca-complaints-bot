@@ -1,0 +1,44 @@
+# Files and directories Claude should not read.
+# Edit this list to match your project — the entries below are sensible
+# defaults for common languages and infrastructure setups.
+
+# Environment files
+.env
+.env.local
+.env.*
+*.env
+
+# Private keys and credentials
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+*.secret
+*.password
+
+# Common secret directories
+/private/
+/secrets/
+**/secrets/
+**/credentials/
+.aws/credentials
+.aws/config
+
+# Cloud / IaC state and variables (may contain secrets)
+terraform.tfvars
+*.tfvars
+*.tfvars.json
+*.tfstate
+*.tfstate.*
+backend.conf
+backend-*.conf
+
+# Large generated / build outputs
+*.log
+*.sqlite
+*.db
+/dist/
+/build/
+node_modules/

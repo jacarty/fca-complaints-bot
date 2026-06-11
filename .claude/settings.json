@@ -1,0 +1,76 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit:*)",
+      "Bash(git add:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git restore:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git fetch:*)",
+      "Bash(git cherry-pick:*)",
+      "Bash(git checkout:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(git rebase:*)",
+      "Bash(git branch:*)",
+      "Bash(git -C:*)",
+
+
+      "Bash(gh:*)",
+      "Bash(aws:*)",
+
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+
+      "Bash(python -m pytest:*)",
+      "Bash(python3 -m:*)",
+      "Bash(pytest:*)",
+      "Bash(ruff:*)",
+
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+
+      "WebSearch",
+
+      "mcp__claude_ai_Linear__list_issues",
+      "mcp__claude_ai_Linear__list_projects",
+      "mcp__claude_ai_Linear__list_milestones",
+      "mcp__claude_ai_Linear__list_comments",
+      "mcp__claude_ai_Linear__list_cycles",
+      "mcp__claude_ai_Linear__list_documents",
+      "mcp__claude_ai_Linear__list_issue_labels",
+      "mcp__claude_ai_Linear__list_issue_statuses",
+      "mcp__claude_ai_Linear__list_project_labels",
+      "mcp__claude_ai_Linear__list_teams",
+      "mcp__claude_ai_Linear__list_users",
+      "mcp__claude_ai_Linear__get_issue",
+      "mcp__claude_ai_Linear__get_issue_status",
+      "mcp__claude_ai_Linear__get_milestone",
+      "mcp__claude_ai_Linear__get_project",
+      "mcp__claude_ai_Linear__get_team",
+      "mcp__claude_ai_Linear__get_user",
+      "mcp__claude_ai_Linear__get_document",
+      "mcp__claude_ai_Linear__get_attachment",
+      "mcp__claude_ai_Linear__search_documentation",
+      "mcp__claude_ai_Linear__extract_images",
+      "mcp__claude_ai_Linear__save_issue",
+      "mcp__claude_ai_Linear__save_milestone",
+      "mcp__claude_ai_Linear__save_project",
+      "mcp__claude_ai_Linear__save_comment",
+      "mcp__claude_ai_Linear__create_attachment",
+      "mcp__claude_ai_Linear__create_document",
+      "mcp__claude_ai_Linear__create_issue_label",
+      "mcp__claude_ai_Linear__update_document"
+    ]
+  }
+}
