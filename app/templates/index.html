@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="masthead">
+  <p class="eyebrow">FCA Handbook · DISP</p>
+  <h1>Complaints Handling Assistant</h1>
+  <p class="lede">Describe a complaint scenario to retrieve the relevant FCA provisions and draft a compliant, cited response.</p>
+</header>
+
+<section class="thread" aria-label="Conversation">
+  <div id="messages" class="messages">
+    <div class="msg msg--assistant">
+      <div class="bubble">
+        Describe a complaint and I'll look up the governing FCA provisions and draft a response grounded in them. For example: <em>"A customer says we took six weeks to respond to their complaint and never mentioned the Ombudsman."</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<form class="composer"
+      hx-post="/ask"
+      hx-target="#messages"
+      hx-swap="beforeend"
+      hx-on::after-request="this.reset(); this.querySelector('textarea').focus()">
+  <textarea name="message"
+            rows="2"
+            placeholder="Describe the complaint…"
+            aria-label="Complaint scenario"
+            required></textarea>
+  <button type="submit">Draft response</button>
+</form>
+{% endblock %}

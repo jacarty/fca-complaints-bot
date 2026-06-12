@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}FCA Complaints Handling Bot{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+  <!-- CDN for the skeleton; vendor into static/ later for offline reproducibility -->
+  <script src="https://unpkg.com/htmx.org@2.0.3" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main class="app">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

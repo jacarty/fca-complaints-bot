@@ -1,0 +1,148 @@
+[
+  {
+    "question": "What are the conditions that must be satisfied for a retail investment product provider to hold capital or voting power in, or provide credit to, a firm that makes personal recommendations to retail clients on retail investment products?",
+    "answer": "According to COBS 2.3.12E(4), all of the following conditions must be satisfied: (a) the holding is acquired, or credit is provided, on commercial terms objectively comparable to those on which an independent person unconnected to a retail investment product provider would be willing to acquire the holding or provide credit; (b) the firm taking the step has reliable written evidence that condition (a) is satisfied; (c) there are no arrangements, in connection with the holding or credit, relating to the channelling of business from the advisory firm to the retail investment product provider; and (d) the retail investment product provider (and none of its associates) is able, because of the holding or credit, to exercise any influence over the personal recommendations made in relation to retail investment products or P2P agreements, or the advice given to an employer in connection with a group personal pension scheme or group stakeholder pension scheme. Contravention of these provisions may be relied upon as tending to establish contravention of the rule on inducements (COBS 2.3.1R).",
+    "source_sections": [
+      "cobs2s3"
+    ],
+    "difficulty": "medium",
+    "type": "single-module",
+    "question_id": "q024",
+    "critic_result": {
+      "verdict": "fail",
+      "correctness": "fail",
+      "correctness_reasoning": "The answer misstates condition (d). The source (COBS 2.3.12 (4)(d)) says the retail investment product provider must NOT be able, and none of its associates, to exercise influence over personal recommendations. The answer incorrectly says the provider IS able to exercise influence, which contradicts the source.",
+      "source_completeness": "pass",
+      "source_completeness_reasoning": "All required information is contained within COBS 2.3.12, which is part of the provided source section 'cobs2s3'. No additional sections are needed.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "While the source material is correctly referenced, the answer contains a factual error regarding condition (d), making the overall pair incorrect. Source coverage is adequate and the difficulty rating is appropriate."
+    }
+  },
+  {
+    "question": "A firm manufactures and distributes a personal pension scheme product that is based on designated investments to retail clients via distance contracts. What product governance obligations apply to this firm under PROD 4, and what cancellation regime must they consider under COBS 15 for these contracts?",
+    "answer": "Under PROD 1.4.1R, PROD 4 applies to an insurer or insurance intermediary with respect to manufacturing and distributing insurance products. However, a personal pension scheme product based on designated investments would need to be assessed against the PROD 4 scope \u2014 PROD 4 applies to insurance products, so if the personal pension is structured as an insurance-based product (e.g., a deferred annuity contract), the firm must comply with PROD 4's product governance requirements including target market identification, product testing, and distribution arrangements. PROD 1.4.1AR further confirms that PROD 4.5 (Additional expectations for manufacturers and distributors in relation to value measures data) applies regardless of when the product was first manufactured.\n\nUnder COBS 15.1.1G, the cancellation chapter is relevant to (1) most providers of retail financial products based on designated investments, and (2) firms entering into distance contracts with consumers relating to designated investment business. Since the personal pension scheme is based on designated investments and is sold via distance contracts to retail clients, the firm must comply with the COBS 15 cancellation regime. COBS 15.1.2R specifically defines relevant pension terminology, including that a 'non-occupational pension scheme' means a stakeholder pension scheme, a personal pension scheme, or a deferred annuity contract, confirming that personal pension schemes fall squarely within the scope of the cancellation provisions.\n\nTherefore, the firm faces dual obligations: product governance under PROD 4 (if the product is insurance-based) covering its manufacture and distribution, and cancellation rights under COBS 15 for distance contracts with consumers relating to this designated investment business.",
+    "source_sections": [
+      "prod1s4",
+      "cobs15s1"
+    ],
+    "difficulty": "hard",
+    "type": "cross-module",
+    "question_id": "q045",
+    "critic_result": {
+      "verdict": "fail",
+      "correctness": "fail",
+      "correctness_reasoning": "The answer misstates the scope of PROD 4 by suggesting it only applies if the personal pension scheme is structured as an insurance product. The source material (PROD 1.4.3B within prod1s4) shows that PROD 4 also applies to pathway investments or default options manufactured or distributed in connection with a personal pension scheme, regardless of whether the product is an insurance product. The answer therefore omits the correct basis for PROD 4 applicability and provides an incomplete description of the product governance obligations.",
+      "source_completeness": "pass",
+      "source_completeness_reasoning": "The provided source sections (prod1s4 and cobs15s1) contain the relevant rules on PROD 4 scope (including PROD 1.4.3B) and the COBS 15 cancellation regime, so no additional sections are required.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "While the answer references the correct modules, it inaccurately interprets the scope of PROD 4, leading to a factual error. The sources cited are sufficient to answer the question, and the complexity of linking product governance for personal pension schemes with designated investments and distance contract cancellation justifies a hard difficulty rating."
+    }
+  },
+  {
+    "question": "A firm that holds client money under CASS 7 and also provides investment services to clients is considering how to manage a situation where the individuals responsible for maintaining the CASS resolution pack also have a potential conflict of interest (e.g., they might benefit from delays in returning client assets in insolvency). What specific obligations does the firm have under both the CASS resolution pack requirements and the conflicts of interest regime?",
+    "answer": "The firm must comply with obligations from both CASS 10 and SYSC 10.1. Under CASS 10.1.1R(1)(b), since the firm holds client money under CASS 7, it must maintain a CASS resolution pack. Under CASS 10.1.3R, it must maintain the pack at all times and under CASS 10.1.7R, it must have adequate arrangements to ensure an insolvency practitioner can retrieve each document within 48 hours of appointment. CASS 10.1.9(1) specifies that certain critical documents (such as the most recent internal client money reconciliations and external custody reconciliations) must be retrievable immediately. CASS 10.2.1R(4) requires the firm to identify individuals with relevant responsibilities regarding the resolution pack.\n\nSimultaneously, under SYSC 10.1.3R, the firm must take all appropriate steps to identify and prevent or manage conflicts of interest between the firm (including its managers and employees) and its clients. Under SYSC 10.1.4R, the firm must consider whether relevant persons are likely to make a financial gain or avoid a financial loss at the expense of the client, or have an interest in the outcome of a service distinct from the client's interest. Under SYSC 10.1.7R, the firm must manage identified conflicts effectively, and under SYSC 10.1.10R, it must maintain a conflicts policy.\n\nTherefore, the firm must: (1) identify under SYSC 10.1.3R and 10.1.4R whether the individuals responsible for maintaining the CASS resolution pack have conflicts that could damage clients' interests (e.g., incentives to delay asset returns); (2) manage those conflicts under SYSC 10.1.7R through its conflicts policy; and (3) ensure that despite any conflicts, the CASS 10.1.7R retrieval obligations (48-hour deadline, with certain documents retrievable immediately per CASS 10.1.9(1)) are met, so that an insolvency practitioner can achieve a timely return of client money and safe custody assets as described in CASS 10.1.2G.",
+    "source_sections": [
+      "cass10s1",
+      "sysc10s1"
+    ],
+    "difficulty": "hard",
+    "type": "cross-module",
+    "question_id": "q050",
+    "critic_result": {
+      "verdict": "fail",
+      "correctness": "fail",
+      "correctness_reasoning": "The answer cites several CASS provisions that are present in the provided source (e.g., CASS 10.1.3, 10.1.4, 10.1.7, 10.1.9) and SYSC rules that are also in the source. However it also references CASS 10.2.1R(4) \u2013 a rule that is not included in the supplied source material. Because that provision cannot be verified against the given source, the answer includes information not grounded in the provided material, making the answer factually unsupported in the context of the evaluation.",
+      "source_completeness": "fail",
+      "source_completeness_reasoning": "To fully answer the question, the source should include the CASS rule that requires firms to identify individuals with responsibility for the resolution pack (CASS 10.2.1R). The listed source sections only contain cass10s1 and sysc10s1, which do not contain this rule, so the source set is incomplete.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "While the answer correctly references many relevant CASS and SYSC rules, it relies on a CASS provision (10.2.1R) that is absent from the supplied source, leading to a correctness failure. Additionally, the source list omits the necessary CASS 10.2.1R section, resulting in a source completeness failure. The difficulty rating of 'hard' is appropriate given the cross\u2011module nature of the question."
+    }
+  },
+  {
+    "question": "An SMCR firm is assessing the fitness and propriety of a candidate for an FCA certification function. The candidate previously held a senior operational risk management role at another firm, where they relied heavily on insurance policies to mitigate operational risks without implementing adequate systems and controls, which ultimately led to significant reputational damage when claims were disputed. What criteria should the SMCR firm consider in its fitness assessment, and what specific regulatory guidance exists regarding the approach to operational risk insurance that the candidate should have been aware of?",
+    "answer": "The SMCR firm must consider the criteria set out in FIT when assessing the fitness and propriety of the certification function candidate. Under FIT 1.1.2G(1)(c), the firm should apply the FIT criteria when assessing the fitness and propriety of a person whom it is proposing to certify to perform an FCA certification function. This assessment would include evaluating the candidate's competence and capability, including their past conduct and judgment in managing operational risk.\n\nRegarding the candidate's approach to operational risk management, SYSC 13.10.1G explicitly states that a firm should not assume that insurance alone can replace robust systems and controls, and that non-monetary impacts such as reputational damage may remain even where insurance is in place. Furthermore, SYSC 13.10.2G specifies that when considering utilising insurance, a firm should consider: (1) the time taken for insurers to pay claims, including potential disputes over cover; (2) the financial strength of the insurer; and (3) the effect of limiting conditions and exclusion clauses that may restrict cover.\n\nThe candidate's apparent failure to recognise these principles \u2014 particularly that insurance cannot substitute for robust systems and controls (SYSC 13.10.1G), and the risk of claim disputes delaying payment (SYSC 13.10.2G(1)) \u2014 would be relevant to the SMCR firm's assessment of whether the candidate demonstrates the competence and capability required under FIT for certification.",
+    "source_sections": [
+      "fit1s1",
+      "sysc13s10"
+    ],
+    "difficulty": "hard",
+    "type": "cross-module",
+    "question_id": "q058",
+    "critic_result": {
+      "verdict": "fail",
+      "correctness": "pass",
+      "correctness_reasoning": "The answer accurately reflects the guidance in FIT 1.1.2 that fitness and propriety assessments for certification functions are covered, and correctly summarises SYSC 13.10.1 and 13.10.2 regarding the limits of insurance and the factors to consider. The references to FIT 1.1.2G(1)(c) and SYSC clauses are consistent with the source material.",
+      "source_completeness": "fail",
+      "source_completeness_reasoning": "The question asks for the specific criteria the SMCR firm should consider when assessing fitness and propriety. While the answer cites FIT 1.1.2, the source section provided (fit1s1) only states the purpose of FIT and does not list the actual criteria (e.g., honesty, integrity, competence, capability, financial soundness). Additional FIT sections containing the detailed criteria are missing from the source list, so the answer is not fully grounded.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "The answer is factually correct regarding the regulatory guidance it cites, but the source list does not include the sections that contain the detailed fitness criteria required to fully answer the question. Therefore, the pair fails on source completeness despite being a hard\u2011level cross\u2011module question."
+    }
+  },
+  {
+    "question": "How does Crest Bank's Anti-Money Laundering Policy implement the SYSC 3.2.6F guidance on factors to consider when identifying money laundering risk and establishing systems and controls?",
+    "answer": "SYSC 3.2.6F guidance states that a firm should consider: (1) customer, product and activity profiles; (2) distribution channels; (3) complexity and volume of transactions; (4) processes and systems; and (5) operating environment when identifying money laundering risk and establishing systems and controls. Crest Bank's policy implements this through several provisions: The policy's risk-based approach (Section 5, Principle 1) explicitly states that Crest Bank will 'assess and document the money laundering and terrorist financing risks associated with its customer base, products, delivery channels, and geographies' - directly mapping to factors (1), (2), and (5) in SYSC 3.2.6F. The Scope section (Section 3) identifies specific products (personal current accounts, savings, loans, SME accounts), customer segments (retail and SME), and systems (core banking platform, transaction monitoring system, KYC/onboarding platform) - addressing factors (1), (3), and (4). However, there is a potential gap: while the policy references delivery channels and geographies in the risk-based approach principle, it does not explicitly detail how the complexity and volume of transactions (factor 3) or the broader operating environment (factor 5) are systematically assessed within the documented framework. The MLRO's responsibility to maintain the 'firm-wide AML risk assessment' (Section 6) likely captures these factors in practice, but the policy could be more explicit in demonstrating alignment with all five SYSC 3.2.6F factors.",
+    "source_sections": [
+      "sysc3s2",
+      "synthetic_anti-money-laundering-policy"
+    ],
+    "difficulty": "hard",
+    "type": "policy-regulation",
+    "question_id": "q061",
+    "critic_result": {
+      "verdict": "fail",
+      "correctness": "fail",
+      "correctness_reasoning": "The answer misstates how the policy addresses SYSC 3.2.6F factors. It claims the Scope section (Section 3) addresses factor (3) (complexity and volume of transactions), but the policy's Scope only lists products, customer segments, and systems, not transaction complexity or volume. It also refers to \"Section 5, Principle 1\" which does not exist in the policy; Section 5 is the Policy Statement and contains a risk\u2011based approach bullet, but it is not labeled as a principle. While the answer correctly identifies the five SYSC factors and notes gaps for factors (3) and (5), the mapping of factors to policy sections is inaccurate, making the answer factually incorrect.",
+      "source_completeness": "pass",
+      "source_completeness_reasoning": "The answer draws on SYSC 3.2.6F guidance (provided in sysc3s2) and the Crest Bank AML policy (synthetic_anti-money-laundering-policy). No additional source sections are required to evaluate the claim.",
+      "difficulty_reasonable": false,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The answer contains factual errors in how the policy implements the SYSC guidance, leading to a failure in correctness. The provided source sections are sufficient for the answer, so source completeness passes. The difficulty level is overstated; the task requires detailed cross\u2011referencing but is more aligned with a medium difficulty rather than hard."
+    }
+  },
+  {
+    "question": "Crest Bank's Business Continuity Policy references SYSC 13.1 as a regulatory basis for its operational risk management controls. However, given that SYSC 13.1's application provisions (SYSC 13.1.1\u201313.1.4) specify that SYSC 13 applies to insurers, Swiss general insurers, and UK ISPVs, is there a potential gap in Crest Bank's regulatory mapping, and what alternative FCA provisions might more directly apply to a retail bank?",
+    "answer": "There is a potential gap in Crest Bank's regulatory mapping. The policy's Section 4 (Regulatory Context) cites 'SYSC 13.1' as addressing 'operational risk management, requiring firms to implement appropriate systems and controls to manage risks arising from inadequate internal processes, people, systems, or external events.' However, SYSC 13.1.1\u201313.1.4 explicitly limits the application of SYSC 13 to insurers (non-directive friendly societies excluded), Swiss general insurers operating from UK branches, and UK ISPVs. As a retail bank serving 850,000 retail and 12,000 SME customers, Crest Bank does not fall within these application categories. The policy's reliance on SYSC 13.1 as a regulatory basis may be misplaced. More directly applicable provisions for a bank would include SYSC 3.1 (systems and controls for common platform firms), SYSC 4.1 (general organisational requirements, which the policy already references), SYSC 6.1 (compliance), and SYSC 7.1 (risk control). Additionally, the policy correctly references SS1/21, PS21/3, and PRIN 2 and 6, which do apply to banks. A compliance reviewer should recommend updating the regulatory mapping to remove or qualify the SYSC 13.1 reference and ensure the correct operational risk provisions applicable to banks are cited.",
+    "source_sections": [
+      "sysc13s1",
+      "synthetic_business-continuity-policy"
+    ],
+    "difficulty": "hard",
+    "type": "policy-regulation",
+    "question_id": "q064",
+    "critic_result": {
+      "verdict": "fail",
+      "correctness": "fail",
+      "correctness_reasoning": "The answer correctly identifies that SYSC 13.1 is limited to insurers and therefore may be a mismatch for a retail bank, which is supported by the sysc13s1 source. However, the answer proposes alternative FCA provisions (SYSC 3.1 and SYSC 7.1) that are not mentioned in any of the provided source sections, making that part of the answer unsupported by the given material.",
+      "source_completeness": "fail",
+      "source_completeness_reasoning": "The source list includes only sysc13s1 and the synthetic business continuity policy. While these cover SYSC 13.1 and the policy's current regulatory references, they do not contain any information about SYSC 3.1, SYSC 7.1, or other alternative provisions suggested in the answer. Therefore, the sources are incomplete for fully justifying the answer.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "The answer partially aligns with the source regarding the gap in SYSC 13.1 applicability, but it extends beyond the provided material by naming alternative provisions that are not sourced. Consequently, both correctness and source completeness fail, even though the difficulty rating is appropriate."
+    }
+  },
+  {
+    "question": "COCON 1.2 provides guidance that the term 'investments' has a wide Glossary meaning that extends beyond ordinary dictionary definitions, including rights under contracts of insurance. How does Crest Bank's Conflicts of Interest Policy address the breadth of products and activities covered by COCON, and is there a potential gap in the policy's scope given COCON 1.2's expansive definition of 'investments'?",
+    "answer": "Crest Bank's policy references COCON in Section 4 (Regulatory Context), stating that 'The Code of Conduct sourcebook sets individual conduct standards applicable to all Conduct Rules staff, including the requirement to act with integrity and to observe proper standards of market conduct.' Section 5.5 further requires staff to avoid conflicts related to 'personal account dealing, gifts and hospitality, and outside business interests.' However, COCON 1.2.1-1.2.3 clarifies that 'investments' under COCON has a wide Glossary meaning that includes rights under contracts of insurance and is not limited to ordinary dictionary definitions. The policy's scope in Section 3 explicitly lists 'personal current accounts, savings products, personal loans, and SME business current accounts' but does not mention insurance products or other instruments that fall within COCON's broad definition of 'investments.' This represents a potential gap: if Crest Bank staff are involved in any activities touching insurance rights or other broadly-defined investments, the policy may not adequately signal to staff that COCON's conduct rules (including those referencing 'investments') apply to those activities. A compliance reviewer should assess whether the policy's product scope should be expanded or whether supplementary guidance is needed to ensure staff understand the full breadth of COCON's application to their conflict-of-interest obligations.",
+    "source_sections": [
+      "cocon1s2",
+      "synthetic_conflicts-of-interest-policy"
+    ],
+    "difficulty": "hard",
+    "type": "policy-regulation",
+    "question_id": "q070",
+    "critic_result": {
+      "verdict": "fail",
+      "correctness": "fail",
+      "correctness_reasoning": "The answer correctly notes that COCON 1.2 expands the definition of 'investments' and that the policy's Scope (Section 3) lists only certain products, omitting insurance, indicating a potential gap. However, it incorrectly references a non\u2011existent 'Section 5.5' and misstates the location of the staff conduct obligations, which are in Section 5 (Policy Statement) without sub\u2011numbering. This mislabeling constitutes a factual inaccuracy.",
+      "source_completeness": "pass",
+      "source_completeness_reasoning": "The two provided source sections (cocon1s2 and synthetic_conflicts-of-interest-policy) contain all the necessary information about COCON's definition of investments and the policy's scope and regulatory context.",
+      "difficulty_reasonable": false,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "While the answer captures the substantive issue of a potential gap, the incorrect section reference undermines factual accuracy, leading to a fail verdict. The sources are sufficient, but the difficulty rating is likely overstated; the task requires moderate analysis rather than the highest level of difficulty."
+    }
+  }
+]

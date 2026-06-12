@@ -18,6 +18,7 @@ repos:
       - id: check-merge-conflict
       - id: check-added-large-files
         args: ['--maxkb=500']
+        exclude: '^src/chunking/cohere_tokenizer\.json$'
       - id: no-commit-to-branch
         args: ['--branch', 'main']
 
