@@ -17,11 +17,19 @@
   </div>
 </section>
 
+<div id="spinner" class="spinner htmx-indicator" role="status">
+  <span class="spinner__dot" aria-hidden="true"></span>
+  <span>Drafting response…</span>
+</div>
+
 <form class="composer"
       hx-post="/ask"
       hx-target="#messages"
       hx-swap="beforeend"
-      hx-on::after-request="this.reset(); this.querySelector('textarea').focus()">
+      hx-indicator="#spinner"
+      hx-disabled-elt="find button, find textarea"
+      hx-on::after-request="this.reset(); this.querySelector('textarea').focus();"
+      hx-on::after-settle="const t = document.querySelector('.thread'); if (t) { t.scrollTop = t.scrollHeight; }">
   <textarea name="message"
             rows="2"
             placeholder="Describe the complaint…"

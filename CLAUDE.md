@@ -142,11 +142,13 @@ Two public REST endpoints, no authentication:
 
 ### Structured outputs for drafting
 
-The response is a Pydantic model (the drafted reply, the provisions cited, a human-review flag). Pass its JSON schema via `outputConfig.textFormat` to constrain Claude at the grammar level — no parsing hacks. First call compiles the schema (~30s), then it's cached for 24 hours.
+The drafting output is a Pydantic model (`ComplaintResponse`) with two fields split by audience: `handler_answer` (regulatory position, recommended action, and any assumptions/caveats — always populated) and `customer_draft` (the letter to send, left as an empty string for plain questions that need only an answer). Plus typed `cited_provisions`, `human_review_required` + `human_review_reason`, and `insufficient_context`. The split keeps caveats and conditional reasoning in the handler's lane instead of leaking into the customer letter.
 
-### Ground-truth design (two ground truths)
+Pass the schema via `outputConfig.textFormat` to constrain Claude at the grammar level — no parsing hacks. First call compiles the schema (~30s), then it's cached for 24 hours. **Bedrock requires `additionalProperties: false` on every object node, including nested models under `$defs`** — Pydantic doesn't add it there, so walk the schema recursively and set it, or the nested `CitedProvision` fails schema ingestion.
 
-Each complaint scenario records (1) the FCA provisions that should be retrieved, using section-level references (e.g. "DISP 1.6.2R"), and (2) the response elements a compliant reply must contain. The harness maps sections to chunk IDs per strategy, keeping ground truth strategy-agnostic.
+### Conversation & union retrieval
+
+The pipeline is stateless; the route owns session state (history + the conversation's provisions). Each turn retrieves on the latest message, then unions the new chunks with the previously-retrieved ones (dedupe by `chunk_id`, keep the higher score, cap at `MAX_CONTEXT_CHUNKS`). This keeps the original scenario's provisions in scope for a vague follow-up ("the time limit for this?") that wouldn't retrieve them on its own. Conversation history must alternate roles and end on an assistant turn, or `converse` rejects the messages array.
 
 ### Drafting-aware eval
 

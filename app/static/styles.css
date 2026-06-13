@@ -6,6 +6,9 @@
   --line: #e1e6eb;
   --accent: #235789;
   --accent-soft: #e8eff5;
+  --warn: #c08a2e;
+  --warn-soft: #f7efe0;
+  --warn-ink: #8a6516;
   --radius: 10px;
   --maxw: 760px;
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -108,6 +111,118 @@ body {
 
 .bubble em { color: var(--muted); font-style: italic; }
 
+.bubble--response { max-width: 92%; }
+
+/* Drafted response body (preserve the letter's line breaks) */
+.draft {
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+}
+
+/* Human-review banner */
+.review-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 0.85rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  background: var(--warn-soft);
+  border-left: 3px solid var(--warn);
+  font-size: 0.85rem;
+}
+.review-banner strong { color: var(--warn-ink); }
+
+/* Insufficient-context note */
+.insufficient {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--warn-ink);
+}
+
+/* Citation chips */
+.citations { margin-top: 0.95rem; }
+.citations__label {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  border: 1px solid var(--line);
+  cursor: default;
+}
+.chip__ref { font-weight: 600; }
+.chip__type {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.chip--rule { background: var(--accent-soft); border-color: transparent; }
+.chip--rule .chip__type { color: var(--accent); }
+.chip--guidance { background: var(--warn-soft); border-color: transparent; }
+.chip--guidance .chip__type { color: var(--warn-ink); }
+.chip--evidential { background: #eef0f2; border-color: transparent; }
+
+/* Provisions-in-scope panel */
+.provisions {
+  margin-top: 0.95rem;
+  font-size: 0.85rem;
+}
+.provisions > summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.8rem;
+  user-select: none;
+}
+.provisions__list {
+  margin: 0.55rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.provisions__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+.provisions__item.is-cited { color: var(--ink); }
+.provisions__section { min-width: 7rem; font-weight: 500; }
+.provisions__badge {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+.provisions__error {
+  margin: 0.5rem 0 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+  color: var(--muted);
+  word-break: break-word;
+}
+
 /* New-message entrance, motion-safe */
 @media (prefers-reduced-motion: no-preference) {
   .msg { animation: rise 160ms ease-out; }
@@ -116,6 +231,31 @@ body {
     to   { opacity: 1; transform: translateY(0); }
   }
 }
+
+/* Spinner (HTMX indicator) */
+.spinner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.htmx-indicator { opacity: 0; transition: opacity 120ms ease; }
+.htmx-request .htmx-indicator,
+.htmx-request.htmx-indicator { opacity: 1; }
+.spinner__dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  border-top-color: var(--accent);
+  animation: spin 700ms linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .spinner__dot { animation: none; }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 /* Composer */
 .composer {
@@ -162,6 +302,7 @@ body {
 }
 
 .composer button:hover { background: #1c4a74; }
+.composer button:disabled { opacity: 0.55; cursor: default; }
 .composer button:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 2px;
@@ -170,4 +311,23 @@ body {
 @media (max-width: 520px) {
   .app { padding: 1.25rem 1rem 1rem; }
   .bubble { max-width: 88%; }
+  .bubble--response { max-width: 96%; }
+}
+
+.answer { white-space: pre-wrap; font-size: 0.95rem; }
+
+.draft-block {
+  margin-top: 0.95rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+}
+.draft-block__label {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
 }

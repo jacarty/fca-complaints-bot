@@ -2,5 +2,55 @@
   <div class="bubble">{{ question }}</div>
 </div>
 <div class="msg msg--assistant">
-  <div class="bubble">{{ answer }}</div>
+  <div class="bubble bubble--response">
+
+    {% if result.human_review_required %}
+    <div class="review-banner" role="note">
+      <strong>Human review required</strong>
+      <span>{{ result.human_review_reason }}</span>
+    </div>
+    {% endif %}
+
+    <div class="answer">{{ result.handler_answer }}</div>
+
+    {% if result.customer_draft %}
+    <div class="draft-block">
+      <p class="draft-block__label">Draft response to customer</p>
+      <div class="draft">{{ result.customer_draft }}</div>
+    </div>
+    {% endif %}
+
+    {% if result.insufficient_context %}
+    <p class="insufficient">The retrieved provisions may not fully cover this complaint — treat the response with extra caution.</p>
+    {% endif %}
+
+    {% if result.cited_provisions %}
+    <div class="citations">
+      <p class="citations__label">Cited provisions</p>
+      <ul class="chips">
+        {% for p in result.cited_provisions %}
+        <li class="chip chip--{{ p.provision_type | lower }}" title="{{ p.relevance }}">
+          <span class="chip__ref">{{ p.provision }}</span>
+          <span class="chip__type">{{ p.provision_type }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% set cited_ids = result.cited_provisions | map(attribute='chunk_id') | list %}
+    <details class="provisions">
+      <summary>Provisions in scope ({{ result.retrieved_chunks | length }})</summary>
+      <ul class="provisions__list">
+        {% for chunk in result.retrieved_chunks %}
+        <li class="provisions__item{% if chunk.chunk_id in cited_ids %} is-cited{% endif %}">
+          <span class="provisions__section">{{ chunk.metadata.get('section', '?') }}</span>
+          <span class="provisions__score">{{ '%.3f' | format(chunk.score) }}</span>
+          {% if chunk.chunk_id in cited_ids %}<span class="provisions__badge">cited</span>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </details>
+
+  </div>
 </div>
