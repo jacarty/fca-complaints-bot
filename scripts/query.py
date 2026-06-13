@@ -1,18 +1,18 @@
-"""Run the retrieval + generation pipeline from the command line.
+"""Run the retrieval + drafting pipeline from the command line.
 
 Usage:
     # Single query with default config (structure-titan)
-    uv run python scripts/query.py "What are the FCA Principles for Business?"
+    uv run python scripts/query.py "A customer says we took six weeks to respond \\
+        and never mentioned the Ombudsman."
 
-    # Specify config
-    uv run python scripts/query.py "What governance arrangements must a firm have?" \\
-        --chunking fixed --embedding cohere
+    # Specify chunking config
+    uv run python scripts/query.py "complaint about a rejected chargeback" --chunking fixed
 
-    # Run across all 4 configs for comparison
-    uv run python scripts/query.py "What are the FCA Principles for Business?" --all
+    # Run across both Titan configs (structure vs fixed) for comparison
+    uv run python scripts/query.py "time limit for a final response" --all
 
-    # Show retrieved chunks without generation
-    uv run python scripts/query.py "SYSC 10.1 conflicts of interest" --retrieve-only
+    # Show retrieved provisions without drafting
+    uv run python scripts/query.py "DISP 1.6 complaint time limits" --retrieve-only
 
     # Adjust top-k
     uv run python scripts/query.py "complaints handling" --top-k 5
@@ -27,16 +27,15 @@ from pathlib import Path
 # Add project root to path so src/ is importable
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src.pipeline import PipelineConfig, PipelineResult, query_pipeline  # noqa: E402
+from src.pipeline import PipelineConfig, PipelineResult, draft_pipeline  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
+# Titan only — the Cohere configs from the eval framework are not built here.
 ALL_CONFIGS = [
     ("fixed", "titan"),
-    ("fixed", "cohere"),
     ("structure", "titan"),
-    ("structure", "cohere"),
 ]
 
 
@@ -44,14 +43,30 @@ def print_result(result: PipelineResult, *, verbose: bool = False) -> None:
     """Print a pipeline result in a readable format."""
     config = result.config
     config_label = f"{config['chunking']}-{config['embedding']}"
+    cited_ids = {p.chunk_id for p in result.cited_provisions}
 
     print(f"\n{'=' * 70}")
     print(f"Config: {config_label}")
     print(f"{'=' * 70}")
-    print(f"\nAnswer:\n{result.answer}")
-    print(f"\nCitations: {result.citations}")
-    print(f"Confidence: {result.confidence:.2f}")
+
+    print(f"\nAnswer to handler:\n{result.handler_answer}")
+    if result.customer_draft:
+        print(f"\nCustomer draft:\n{result.customer_draft}")
+    else:
+        print("\nCustomer draft: (none)")
+
+    print(f"\nCited provisions ({len(result.cited_provisions)}):")
+    for p in result.cited_provisions:
+        print(f"  - {p.provision} [{p.provision_type}] — {p.relevance}")
+        if verbose:
+            print(f"      chunk_id: {p.chunk_id}")
+
+    review = "YES" if result.human_review_required else "no"
+    print(f"\nHuman review required: {review}")
+    if result.human_review_required and result.human_review_reason:
+        print(f"  reason: {result.human_review_reason}")
     print(f"Insufficient context: {result.insufficient_context}")
+
     print(
         f"\nLatency: {result.latency_ms:.0f}ms total "
         f"(retrieval: {result.retrieval_latency_ms:.0f}ms, "
@@ -64,10 +79,10 @@ def print_result(result: PipelineResult, *, verbose: bool = False) -> None:
             f"{result.usage.get('output_tokens', '?')} out"
         )
 
-    print(f"\nRetrieved chunks ({len(result.retrieved_chunks)}):")
+    print(f"\nProvisions in scope ({len(result.retrieved_chunks)}):")
     for i, chunk in enumerate(result.retrieved_chunks, 1):
         section = chunk.metadata.get("section", "?")
-        cited = " [CITED]" if chunk.chunk_id in result.citations else ""
+        cited = " [CITED]" if chunk.chunk_id in cited_ids else ""
         print(f"  [{i}] score={chunk.score:.4f}  section={section}{cited}")
         if verbose:
             preview = chunk.content[:200].replace("\n", " ")
@@ -77,7 +92,7 @@ def print_result(result: PipelineResult, *, verbose: bool = False) -> None:
 
 
 def print_retrieval_only(chunks: list, config_label: str) -> None:
-    """Print retrieval results without generation."""
+    """Print retrieval results without drafting."""
     print(f"\n{'=' * 70}")
     print(f"Retrieval only: {config_label}")
     print(f"{'=' * 70}")
@@ -92,11 +107,11 @@ def print_retrieval_only(chunks: list, config_label: str) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Run the RAG retrieval + generation pipeline",
+        description="Run the RAG retrieval + drafting pipeline",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
-    parser.add_argument("question", help="Question to answer")
+    parser.add_argument("question", help="Complaint scenario or follow-up question")
     parser.add_argument(
         "--chunking",
         choices=["fixed", "structure"],
@@ -105,7 +120,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--embedding",
-        choices=["titan", "cohere"],
+        choices=["titan"],
         default="titan",
         help="Embedding model (default: titan)",
     )
@@ -118,12 +133,12 @@ def main() -> None:
     parser.add_argument(
         "--all",
         action="store_true",
-        help="Run across all 4 KB configurations and compare",
+        help="Run across both Titan configs (structure vs fixed) and compare",
     )
     parser.add_argument(
         "--retrieve-only",
         action="store_true",
-        help="Only retrieve chunks, skip generation",
+        help="Only retrieve provisions, skip drafting",
     )
     parser.add_argument(
         "--verbose",
@@ -166,7 +181,7 @@ def main() -> None:
     results = []
     for chunking, embedding in configs:
         try:
-            result = query_pipeline(
+            result = draft_pipeline(
                 args.question,
                 chunking=chunking,
                 embedding=embedding,
@@ -193,14 +208,15 @@ def main() -> None:
         print(f"\n{'=' * 70}")
         print("Comparison Summary")
         print(f"{'=' * 70}")
-        print(f"{'Config':<25} {'Confidence':>10} {'Cited':>6} {'Latency':>10} {'Tokens':>8}")
+        print(f"{'Config':<20} {'Review':>8} {'Cited':>6} {'Latency':>10} {'Tokens':>8}")
         print("-" * 70)
         for r in results:
             cfg = r.config
             label = f"{cfg['chunking']}-{cfg['embedding']}"
+            review = "YES" if r.human_review_required else "no"
             tokens = r.usage.get("total_tokens", "?")
             print(
-                f"{label:<25} {r.confidence:>10.2f} {len(r.citations):>6} "
+                f"{label:<20} {review:>8} {len(r.cited_provisions):>6} "
                 f"{r.latency_ms:>8.0f}ms {tokens:>8}"
             )
         print()

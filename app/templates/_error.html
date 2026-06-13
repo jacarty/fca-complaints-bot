@@ -1,0 +1,12 @@
+<div class="msg msg--user">
+  <div class="bubble">{{ question }}</div>
+</div>
+<div class="msg msg--assistant">
+  <div class="bubble bubble--response">
+    <p class="insufficient">Sorry — something went wrong generating this response. Please try again.</p>
+    <details class="provisions">
+      <summary>Error detail</summary>
+      <p class="provisions__error">{{ error }}</p>
+    </details>
+  </div>
+</div>

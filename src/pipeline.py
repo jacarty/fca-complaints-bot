@@ -1,18 +1,31 @@
-"""Retrieval and generation pipeline for the RAG evaluation framework.
+"""Retrieval and drafting pipeline for the FCA complaints handling bot.
 
-Takes a question, queries the appropriate Bedrock Knowledge Base, feeds retrieved
-chunks to Claude Sonnet 4.6 via the converse API with structured outputs, and
-returns a typed result with citations, confidence, and latency.
+Takes a complaint scenario (and any prior conversation turns), queries the
+structure-titan Bedrock Knowledge Base, unions the newly retrieved provisions
+with those already in scope for the conversation, and feeds them to Claude
+Sonnet 4.6 via the converse API with structured outputs. Returns a typed result:
+a drafted, compliant response, the specific provisions it cites, a human-review
+flag, and latency/usage metadata.
 
 Usage as a library:
-    from src.pipeline import query_pipeline, PipelineConfig
+    from src.pipeline import draft_pipeline, ConversationTurn
 
-    result = query_pipeline(
-        question="What are the FCA Principles for Business?",
-        config=PipelineConfig(chunking="structure", embedding="titan"),
+    result = draft_pipeline(
+        "A customer says we took six weeks to respond and never mentioned the FOS.",
     )
-    print(result.answer)
-    print(result.citations)
+    print(result.drafted_response)
+    for p in result.cited_provisions:
+        print(p.provision, p.provision_type)
+
+    # Follow-up, carrying state forward:
+    result2 = draft_pipeline(
+        "What's the time limit for this type of complaint?",
+        history=[
+            ConversationTurn(role="user", content="<the scenario above>"),
+            ConversationTurn(role="assistant", content=result.drafted_response),
+        ],
+        prior_chunks=result.retrieved_chunks,
+    )
 """
 
 import json
@@ -20,6 +33,7 @@ import logging
 import os
 import time
 from pathlib import Path
+from typing import Literal
 
 import boto3
 from botocore.config import Config as BotoConfig
@@ -33,16 +47,20 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 KB_CONFIG_PATH = Path("config/knowledge_bases.json")
-PROMPT_PATH = Path("data/prompts/generation_system_prompt.txt")
+PROMPT_PATH = Path("data/prompts/drafting_system_prompt.txt")
 
 GENERATION_MODEL = "global.anthropic.claude-sonnet-4-6"
 
-# Map (chunking, embedding) -> KB config key
+# Cap on how many provisions ride in the context block for a single turn, after
+# unioning the current turn's retrieval with those already in scope for the
+# conversation. Keeps the prompt bounded across a long follow-up thread.
+MAX_CONTEXT_CHUNKS = 15
+
+# Map (chunking, embedding) -> KB config key. Titan only — the Cohere configs
+# from the eval framework are not built in this project.
 _KB_KEY_MAP = {
     ("fixed", "titan"): "fixed-titan",
-    ("fixed", "cohere"): "fixed-cohere",
     ("structure", "titan"): "structure-titan",
-    ("structure", "cohere"): "structure-cohere",
 }
 
 
@@ -54,17 +72,34 @@ _KB_KEY_MAP = {
 class PipelineConfig(BaseModel):
     """Configuration for a single pipeline run."""
 
-    chunking: str = Field(description="Chunking strategy: 'fixed' or 'structure'")
-    embedding: str = Field(description="Embedding model: 'titan' or 'cohere'")
+    chunking: str = Field(
+        default="structure", description="Chunking strategy: 'structure' or 'fixed'"
+    )
+    embedding: str = Field(default="titan", description="Embedding model: 'titan'")
     retrieval: str = Field(
         default="SEMANTIC",
         description="Retrieval method: 'SEMANTIC' (only option for S3 Vectors)",
     )
-    top_k: int = Field(default=10, description="Number of chunks to retrieve")
-    generation_model: str = Field(
-        default=GENERATION_MODEL,
-        description="Bedrock model ID for answer generation",
+    top_k: int = Field(default=10, description="Number of chunks to retrieve per turn")
+    max_context_chunks: int = Field(
+        default=MAX_CONTEXT_CHUNKS,
+        description="Cap on provisions in the context block after unioning across turns",
     )
+    generation_model: str = Field(
+        default=GENERATION_MODEL, description="Bedrock model ID for drafting"
+    )
+
+
+class ConversationTurn(BaseModel):
+    """One prior turn in the conversation, replayed into the messages array.
+
+    Assistant turns hold the previously drafted response text (not the full JSON).
+    History must alternate roles and end on an assistant turn so that appending
+    the new user turn keeps the converse messages array valid.
+    """
+
+    role: Literal["user", "assistant"]
+    content: str
 
 
 class RetrievedChunk(BaseModel):
@@ -78,31 +113,44 @@ class RetrievedChunk(BaseModel):
     )
 
 
-class GenerationResponse(BaseModel):
-    """Schema enforced on Claude's response via Bedrock structured outputs.
+class CitedProvision(BaseModel):
+    """A specific FCA provision the draft relies on."""
 
-    This model's JSON schema is passed to the converse API's outputConfig.textFormat
-    to constrain the model's output at the grammar level.
-    """
+    provision: str = Field(description="The exact provision reference, e.g. 'DISP 1.6.2R'")
+    provision_type: Literal["Rule", "Guidance", "Evidential"] = Field(
+        description="Rule = binding requirement; Guidance = non-binding; Evidential = evidential"
+    )
+    relevance: str = Field(description="One sentence on why this provision applies")
+    chunk_id: str = Field(description="S3 URI of the retrieved chunk this provision came from")
 
-    answer: str = Field(description="The answer to the question, grounded in retrieved context")
-    citations: list[str] = Field(description="List of chunk_ids that support claims in the answer")
-    confidence: float = Field(
-        description="Confidence score 0.0-1.0 based on how well context supports the answer"
+
+class ComplaintResponse(BaseModel):
+    """Schema enforced on Claude's drafting output via Bedrock structured outputs."""
+
+    handler_answer: str = Field(
+        description="Reply to the complaints handler: the regulatory position, recommended action, and any assumptions or uncertainties to confirm. Always populated."
     )
-    insufficient_context: bool = Field(
-        description="True if the retrieved context does not fully answer the question"
+    customer_draft: str = Field(
+        description="Text to send to the customer, in compliant language. Empty string if the handler's message is a question that does not call for new customer-facing text."
     )
+    cited_provisions: list[CitedProvision] = Field(description="The specific FCA provisions relied on")
+    human_review_required: bool = Field(description="True if a human must review before sending")
+    human_review_reason: str = Field(description="Why review is needed; empty string if not required")
+    insufficient_context: bool = Field(description="True if retrieved provisions do not adequately cover the complaint")
 
 
 class PipelineResult(BaseModel):
-    """Full result from a pipeline run, including retrieval + generation + metadata."""
+    """Full result from a pipeline run, including retrieval + drafting + metadata."""
 
-    answer: str = Field(description="Generated answer")
-    citations: list[str] = Field(description="Chunk IDs cited in the answer")
-    confidence: float = Field(description="Model confidence score")
-    insufficient_context: bool = Field(description="Whether context was insufficient")
-    retrieved_chunks: list[RetrievedChunk] = Field(description="Chunks from retrieval")
+    handler_answer: str = Field(description="Reply to the handler: position, action, caveats")
+    customer_draft: str = Field(description="Customer-facing draft text; empty if not applicable")
+    cited_provisions: list[CitedProvision] = Field(description="Provisions the draft relies on")
+    human_review_required: bool = Field(description="Whether a human must review before sending")
+    human_review_reason: str = Field(description="Reason for human review; empty if not required")
+    insufficient_context: bool = Field(description="Whether retrieved context was insufficient")
+    retrieved_chunks: list[RetrievedChunk] = Field(
+        description="Provisions in scope for this turn (current retrieval unioned with prior)"
+    )
     latency_ms: float = Field(description="End-to-end wall-clock time in milliseconds")
     retrieval_latency_ms: float = Field(description="Retrieval step latency in milliseconds")
     generation_latency_ms: float = Field(description="Generation step latency in milliseconds")
@@ -132,8 +180,7 @@ def _resolve_kb_id(config: PipelineConfig) -> str:
     if not config_key:
         raise ValueError(
             f"Unknown config combination: chunking={config.chunking}, "
-            f"embedding={config.embedding}. "
-            f"Valid combinations: {list(_KB_KEY_MAP.keys())}"
+            f"embedding={config.embedding}. Valid combinations: {list(_KB_KEY_MAP.keys())}"
         )
 
     kb_configs = _load_kb_config()
@@ -149,7 +196,7 @@ def _resolve_kb_id(config: PipelineConfig) -> str:
 
 
 def _load_system_prompt() -> str:
-    """Load the generation system prompt from data/prompts/."""
+    """Load the drafting system prompt from data/prompts/."""
     if not PROMPT_PATH.exists():
         raise FileNotFoundError(f"System prompt not found at {PROMPT_PATH}")
     return PROMPT_PATH.read_text().strip()
@@ -177,10 +224,7 @@ def _get_bedrock_runtime_client(profile: str | None = None):
         profile_name=profile or os.getenv("AWS_PROFILE"),
         region_name=os.getenv("AWS_REGION", "eu-west-1"),
     )
-    return session.client(
-        "bedrock-runtime",
-        config=BotoConfig(read_timeout=300),
-    )
+    return session.client("bedrock-runtime", config=BotoConfig(read_timeout=300))
 
 
 # ---------------------------------------------------------------------------
@@ -198,15 +242,7 @@ def retrieve_chunks(
 ) -> list[RetrievedChunk]:
     """Call Bedrock KB Retrieve API and return typed chunks.
 
-    Args:
-        client: bedrock-agent-runtime boto3 client
-        kb_id: Knowledge Base ID
-        question: User query
-        search_type: "SEMANTIC" (only option for S3 Vectors)
-        top_k: Number of results to return
-
-    Returns:
-        List of RetrievedChunk objects, ordered by relevance score descending.
+    Returns chunks ordered by relevance score descending.
     """
     if search_type == "HYBRID":
         raise ValueError(
@@ -227,14 +263,11 @@ def retrieve_chunks(
 
     chunks = []
     for r in response.get("retrievalResults", []):
-        # Extract S3 URI as chunk ID
         location = r.get("location", {})
         s3_uri = location.get("s3Location", {}).get("uri", "")
 
-        # Extract metadata — Bedrock returns it flat in the result
         metadata = {}
         for key, value in r.get("metadata", {}).items():
-            # Skip internal Bedrock metadata keys
             if not key.startswith("x-amz-bedrock-kb-"):
                 metadata[key] = value
 
@@ -250,34 +283,64 @@ def retrieve_chunks(
     return chunks
 
 
+def _merge_chunks(
+    prior: list[RetrievedChunk] | None,
+    new: list[RetrievedChunk],
+    cap: int,
+) -> list[RetrievedChunk]:
+    """Union prior and newly retrieved chunks, deduped by chunk_id.
+
+    Keeps the highest score seen for each chunk, sorts by score descending, and
+    caps the total so a long follow-up thread doesn't grow the context block
+    without bound. This is what keeps the original scenario's provisions in
+    scope when a later follow-up ("the time limit for this?") would not retrieve
+    them on its own.
+    """
+    by_id: dict[str, RetrievedChunk] = {}
+    for chunk in (prior or []) + new:
+        existing = by_id.get(chunk.chunk_id)
+        if existing is None or chunk.score > existing.score:
+            by_id[chunk.chunk_id] = chunk
+    merged = sorted(by_id.values(), key=lambda c: c.score, reverse=True)
+    return merged[:cap]
+
+
 # ---------------------------------------------------------------------------
 # Generation
 # ---------------------------------------------------------------------------
 
 
-def _build_generation_schema() -> str:
-    """Build the JSON schema string for Bedrock structured outputs.
+def _set_additional_properties_false(node: dict) -> None:
+    """Recursively set additionalProperties: false on every object node.
 
-    Bedrock requires:
-    - Schema passed as a JSON string (not a dict)
-    - additionalProperties: false on every object
+    Bedrock structured outputs rejects any object in the schema without it.
+    Pydantic emits nested models (CitedProvision) under $defs and does not add
+    it, so we walk the whole tree: properties, array items, and $defs.
     """
-    schema = GenerationResponse.model_json_schema()
+    if node.get("type") == "object":
+        node["additionalProperties"] = False
+        for prop in node.get("properties", {}).values():
+            _set_additional_properties_false(prop)
+    if "items" in node:
+        _set_additional_properties_false(node["items"])
+    for definition in node.get("$defs", {}).values():
+        _set_additional_properties_false(definition)
 
-    # Bedrock structured outputs requires additionalProperties: false
-    # on the root object. Pydantic doesn't add this by default.
-    schema["additionalProperties"] = False
 
+def _build_generation_schema() -> str:
+    """Build the JSON schema string for Bedrock structured outputs."""
+    schema = ComplaintResponse.model_json_schema()
+    _set_additional_properties_false(schema)
     return json.dumps(schema)
 
 
 def _format_context(chunks: list[RetrievedChunk]) -> str:
-    """Format retrieved chunks into a numbered context block for the generation prompt."""
+    """Format retrieved chunks into a numbered context block for the prompt."""
     blocks = []
     for i, chunk in enumerate(chunks, 1):
         section = chunk.metadata.get("section", "unknown")
         blocks.append(
-            f"--- Chunk {i} (chunk_id: {chunk.chunk_id}) ---\n"
+            f"--- Provision {i} (chunk_id: {chunk.chunk_id}) ---\n"
             f"Section: {section}\n"
             f"Score: {chunk.score:.4f}\n\n"
             f"{chunk.content}"
@@ -285,68 +348,64 @@ def _format_context(chunks: list[RetrievedChunk]) -> str:
     return "\n\n".join(blocks)
 
 
-def generate_answer(
+def generate_draft(
     client,
     question: str,
     chunks: list[RetrievedChunk],
     *,
+    history: list[ConversationTurn] | None = None,
     model_id: str = GENERATION_MODEL,
     system_prompt: str | None = None,
-) -> tuple[GenerationResponse, dict]:
-    """Generate a grounded answer from retrieved chunks using Claude.
+) -> tuple[ComplaintResponse, dict]:
+    """Draft a complaint response from retrieved provisions using Claude.
 
-    Uses Bedrock structured outputs (outputConfig.textFormat) to enforce
-    the GenerationResponse schema on Claude's output.
+    Uses Bedrock structured outputs (outputConfig.textFormat) to enforce the
+    ComplaintResponse schema. Prior turns are replayed as alternating user/
+    assistant messages; the current turn carries the retrieved-provisions block
+    plus the handler's latest message.
 
-    Args:
-        client: bedrock-runtime boto3 client
-        question: User question
-        chunks: Retrieved chunks to ground the answer in
-        model_id: Bedrock model ID
-        system_prompt: Override system prompt (uses default if None)
-
-    Returns:
-        Tuple of (GenerationResponse, usage_dict)
+    Returns (ComplaintResponse, usage_dict).
     """
     if system_prompt is None:
         system_prompt = _load_system_prompt()
 
-    context = _format_context(chunks)
+    messages: list[dict] = []
+    for turn in history or []:
+        messages.append({"role": turn.role, "content": [{"text": turn.content}]})
 
+    context = _format_context(chunks)
     user_message = (
-        f"Retrieved context:\n\n{context}\n\n"
+        f"Retrieved FCA provisions:\n\n{context}\n\n"
         f"---\n\n"
-        f"Question: {question}\n\n"
-        f"Answer the question using only the retrieved context above."
+        f"Handler's message:\n{question}\n\n"
+        f"Using only the retrieved provisions above, draft or update the response "
+        f"following your instructions. Record every provision you rely on — with its "
+        f"exact reference, type, and chunk_id — in cited_provisions."
     )
+    messages.append({"role": "user", "content": [{"text": user_message}]})
 
     response = client.converse(
         modelId=model_id,
         system=[{"text": system_prompt}],
-        messages=[{"role": "user", "content": [{"text": user_message}]}],
-        inferenceConfig={
-            "maxTokens": 4096,
-            "temperature": 0.1,
-        },
+        messages=messages,
+        inferenceConfig={"maxTokens": 4096, "temperature": 0.1},
         outputConfig={
             "textFormat": {
                 "type": "json_schema",
                 "structure": {
                     "jsonSchema": {
                         "schema": _build_generation_schema(),
-                        "name": "rag_generation_response",
-                        "description": "Structured answer with citations and confidence",
+                        "name": "complaint_response",
+                        "description": "Drafted complaint response with cited provisions",
                     }
                 },
             }
         },
     )
 
-    # Parse the structured response
     raw_text = response["output"]["message"]["content"][0]["text"]
-    generation = GenerationResponse.model_validate_json(raw_text)
+    draft = ComplaintResponse.model_validate_json(raw_text)
 
-    # Extract usage metadata
     usage = {}
     if "usage" in response:
         usage = {
@@ -355,7 +414,7 @@ def generate_answer(
             "total_tokens": response["usage"].get("totalTokens", 0),
         }
 
-    return generation, usage
+    return draft, usage
 
 
 # ---------------------------------------------------------------------------
@@ -363,7 +422,7 @@ def generate_answer(
 # ---------------------------------------------------------------------------
 
 
-def query_pipeline(
+def draft_pipeline(
     question: str,
     *,
     config: PipelineConfig | None = None,
@@ -371,88 +430,78 @@ def query_pipeline(
     embedding: str = "titan",
     retrieval: str = "SEMANTIC",
     top_k: int = 10,
+    history: list[ConversationTurn] | None = None,
+    prior_chunks: list[RetrievedChunk] | None = None,
     profile: str | None = None,
 ) -> PipelineResult:
-    """Run the full retrieval + generation pipeline.
-
-    Can be called with a PipelineConfig object or with individual parameters:
-
-        # Option 1: PipelineConfig
-        result = query_pipeline(
-        "question", config=PipelineConfig(chunking="fixed", embedding="cohere")
-        )
-
-        # Option 2: keyword arguments
-        result = query_pipeline("question", chunking="fixed", embedding="cohere")
+    """Run the full retrieval + drafting pipeline for one conversation turn.
 
     Args:
-        question: The user question to answer
-        config: Pipeline configuration (overrides individual params if provided)
-        chunking: Chunking strategy ("fixed" or "structure")
-        embedding: Embedding model ("titan" or "cohere")
-        retrieval: Retrieval method ("SEMANTIC" only for S3 Vectors)
-        top_k: Number of chunks to retrieve
-        profile: AWS profile name (overrides AWS_PROFILE env var)
+        question: The handler's latest message (scenario or follow-up).
+        config: Pipeline configuration (overrides individual params if provided).
+        chunking/embedding/retrieval/top_k: Config shortcuts if no config passed.
+        history: Prior conversation turns, alternating and ending on an assistant
+            turn (the caller is responsible for appending each drafted response).
+        prior_chunks: Provisions already in scope for this conversation; unioned
+            with this turn's retrieval. Pass result.retrieved_chunks back in.
+        profile: AWS profile name (overrides AWS_PROFILE env var).
 
     Returns:
-        PipelineResult with answer, citations, chunks, latency, and usage metadata.
+        PipelineResult. retrieved_chunks is the unioned, capped set in scope for
+        this turn — store it and pass it back as prior_chunks on the next turn.
     """
     load_dotenv()
 
     if config is None:
         config = PipelineConfig(
-            chunking=chunking,
-            embedding=embedding,
-            retrieval=retrieval,
-            top_k=top_k,
+            chunking=chunking, embedding=embedding, retrieval=retrieval, top_k=top_k
         )
 
     start_time = time.perf_counter()
 
-    # Resolve KB ID
     kb_id = _resolve_kb_id(config)
     logger.info(
-        "Pipeline: %s-%s, KB=%s, top_k=%d",
-        config.chunking,
-        config.embedding,
-        kb_id,
-        config.top_k,
+        "Pipeline: %s-%s, KB=%s, top_k=%d", config.chunking, config.embedding, kb_id, config.top_k
     )
 
-    # --- Retrieval ---
+    # --- Retrieval (current turn) unioned with provisions already in scope ---
     retrieval_start = time.perf_counter()
     agent_client = _get_agent_runtime_client(profile)
-    chunks = retrieve_chunks(
-        agent_client,
-        kb_id,
-        question,
-        search_type=config.retrieval,
-        top_k=config.top_k,
+    new_chunks = retrieve_chunks(
+        agent_client, kb_id, question, search_type=config.retrieval, top_k=config.top_k
     )
+    chunks = _merge_chunks(prior_chunks, new_chunks, config.max_context_chunks)
     retrieval_ms = (time.perf_counter() - retrieval_start) * 1000
-    logger.info("Retrieved %d chunks in %.0fms", len(chunks), retrieval_ms)
+    logger.info(
+        "Retrieved %d new, %d in scope after union (%.0fms)",
+        len(new_chunks),
+        len(chunks),
+        retrieval_ms,
+    )
 
     # --- Generation ---
     generation_start = time.perf_counter()
     bedrock_client = _get_bedrock_runtime_client(profile)
-    generation, usage = generate_answer(
-        bedrock_client,
-        question,
-        chunks,
-        model_id=config.generation_model,
+    draft, usage = generate_draft(
+        bedrock_client, question, chunks, history=history, model_id=config.generation_model
     )
     generation_ms = (time.perf_counter() - generation_start) * 1000
     logger.info(
-        "Generated answer in %.0fms (confidence=%.2f)", generation_ms, generation.confidence
+        "Drafted response in %.0fms (human_review=%s, insufficient_context=%s)",
+        generation_ms,
+        draft.human_review_required,
+        draft.insufficient_context,
     )
 
     total_ms = (time.perf_counter() - start_time) * 1000
 
     return PipelineResult(
-        answer=generation.answer,
-        citations=generation.citations,
-        confidence=generation.confidence,
-        insufficient_context=generation.insufficient_context,
+        handler_answer=draft.handler_answer,
+        customer_draft=draft.customer_draft,
+        cited_provisions=draft.cited_provisions,
+        human_review_required=draft.human_review_required,
+        human_review_reason=draft.human_review_reason,
+        insufficient_context=draft.insufficient_context,
         retrieved_chunks=chunks,
         latency_ms=total_ms,
         retrieval_latency_ms=retrieval_ms,
