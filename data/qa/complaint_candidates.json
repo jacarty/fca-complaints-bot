@@ -1,0 +1,1540 @@
+[
+  {
+    "seed_id": "single:disp1s2",
+    "complaint_type": "single",
+    "scenario_text": "I took out a personal loan with your bank in March 2024. At no point during the application process or at the point of sale was I given any information about your complaints procedure or told how I could complain if something went wrong. I've since had a problem with an overcharge on my account and when I tried to find out how to complain, there was nothing on my loan agreement, nothing in the paperwork I was given, and I had to spend over an hour on the phone just to find out where to send my complaint. I also notice your website has no mention of the Financial Ombudsman Service anywhere. I believe you have failed in your duty to make me aware of my rights and I want this addressed.",
+    "expected_provisions": [
+      "DISP 1.2.1R",
+      "DISP 1.2.3G",
+      "DISP 1.2.4G"
+    ],
+    "expected_provision_sections": [
+      "disp1s2"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The scenario describes a common type of complaint from a UK personal loan customer who was not provided with the required information about the bank's complaints procedure and the Financial Ombudsman Service, which is realistic and plausible.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All three listed provisions (DISP 1.2.1R, DISP 1.2.3G, DISP 1.2.4G) appear in the seed material and directly relate to the bank's duty to publish complaint\u2011handling information, to summarise internal procedures, and to make that information available in contractual documentation or leaflets.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive and can be investigated, so a 'final' response stage is appropriate even though no decision has yet been issued. Redress is warranted due to the overcharge and failure to provide required information. The firm's timeliness is not in dispute, and no vulnerability is mentioned, making the remaining flags correct.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the expected provisions are present and relevant, and the classification aligns with the guidelines for response stage, redress, timing, and vulnerability. Therefore the overall evaluation is a pass."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "single:disp1s3",
+    "complaint_type": "single",
+    "scenario_text": "I've been trying to call my bank to make a formal complaint about an incorrect fee they charged me. The only number they provide for complaints is an 0871 number, which is costing me a fortune every time I ring. I've called three times now and been on hold for extended periods, racking up charges. I'm on a basic state pension and these call costs are adding up significantly. I shouldn't have to pay premium rates just to complain. I want the bank to reimburse me for the call charges I've incurred and to provide a proper free or local-rate number for complaints.",
+    "expected_provisions": [
+      "DISP 1.3.1R",
+      "DISP 1.3.1AR",
+      "DISP 1.3.1AAR",
+      "DISP 1.3.1ABR",
+      "DISP 1.3.1ADR"
+    ],
+    "expected_provision_sections": [
+      "disp1s3"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "A UK bank customer on a state pension complaining about being charged for calling an 0871 complaint line is a plausible, everyday scenario that fits FCA complaint handling contexts.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All five listed provisions (DISP 1.3.1R, DISP 1.3.1AR, DISP 1.3.1AAR, DISP 1.3.1ABR, DISP 1.3.1ADR) are present in the seed material and directly relate to free complaint procedures and the prohibition on premium\u2011rate or revenue\u2011sharing numbers such as 0871.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive (requesting reimbursement and a free number) and can be investigated and decided, so 'final' is appropriate. Redress is warranted, timing of the firm's response is not in dispute, and the complainant's low\u2011income status constitutes vulnerability.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the expected provisions match the seed material and are relevant, and the classification aligns with FCA guidance on complaint stages and vulnerability. Therefore the scenario passes all evaluation criteria."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "single:disp1s4",
+    "complaint_type": "single",
+    "scenario_text": "I took out a personal loan with your bank in 2021 and was sold payment protection insurance at the same time. In March this year, I submitted a formal complaint explaining that the PPI was mis-sold because I already had employer sickness cover and was never asked about existing protection. Your complaints team sent me a final response letter four weeks later rejecting my complaint, but the letter simply stated 'we have reviewed your complaint and do not believe it should be upheld' with no further explanation. There was no assessment of the specific points I raised about my existing employer cover, no consideration of whether redress might be appropriate, and no explanation of how you reached your decision. I feel my complaint has not been properly investigated or fairly assessed, and the response I received was neither clear nor informative. I would like my complaint to be reconsidered properly.",
+    "expected_provisions": [
+      "DISP 1.4.1R",
+      "DISP 1.4.2G",
+      "DISP 1.4.3G"
+    ],
+    "expected_provision_sections": [
+      "disp1s4"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common scenario of a mis\u2011sold PPI policy and a terse final response lacking explanation, which is a realistic issue a UK bank customer could raise.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "DISP 1.4.1R (rules on investigation, assessment and clear explanation), DISP 1.4.2G (guidance on factors to consider) and DISP 1.4.3G (guidance on timely resolution) all appear in the seed material and are directly relevant to the complainant\u2019s grievance about an inadequate final response.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The firm has already issued a final decision (rejection), so the response_stage is correctly set to 'final'. The nature of the complaint (mis\u2011sale of PPI) makes redress likely warranted. There is no indication of a delay or vulnerability, so timing_in_issue and vulnerability_present are correctly marked false.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "All three evaluation criteria are satisfied: the scenario is realistic, the listed provisions are present and applicable, and the classification aligns with the facts of the complaint."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "single:disp1s5",
+    "complaint_type": "single",
+    "scenario_text": "I called my bank on Monday to complain about an incorrect \u00a315 fee on my current account. The adviser I spoke to agreed it was an error, reversed the charge immediately, and I told her I was happy with that resolution. However, it's now been over two weeks and I haven't received anything in writing from the bank confirming that my complaint was resolved or telling me about my rights to go to the Ombudsman if I change my mind. I feel the bank hasn't followed proper procedure \u2014 I'd like confirmation of what should have been sent to me and why it wasn't.",
+    "expected_provisions": [
+      "DISP 1.5.1R",
+      "DISP 1.5.2AR",
+      "DISP 1.5.4R",
+      "DISP 1.5.5G"
+    ],
+    "expected_provision_sections": [
+      "disp1s5"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "A customer complaining about an incorrectly charged fee, receiving an oral reversal but not receiving the required written summary communication is a common and realistic scenario for UK bank customers.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All listed provisions (DISP 1.5.1R, DISP 1.5.2AR, DISP 1.5.4R, DISP 1.5.5G) appear in the seed material and directly relate to the requirement to send a summary resolution communication after a complaint is considered resolved.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is about a resolved issue lacking the required written confirmation, so it is at the final stage. Redress is warranted (the bank should provide the summary communication). The firm's timeliness in handling the complaint is not in dispute, and no vulnerability is mentioned, making the flags accurate.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the provisions correctly map to the relevant FCA rules, and the classification aligns with the facts of the complaint. No inconsistencies were found."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "single:disp1s6",
+    "complaint_type": "single",
+    "scenario_text": "I made a formal complaint to my bank on 14 March about an incorrect fee applied to my current account. I received a brief email the same day saying 'thanks, we've got your complaint' but it didn't tell me anything about when I could expect a response or what the process would be. It's now been three weeks and I've heard absolutely nothing since that initial email \u2014 no updates, no indication of progress, nothing. I feel like my complaint has just been forgotten about. I want to know what's happening and when I'll get a proper answer.",
+    "expected_provisions": [
+      "DISP 1.6.1R",
+      "DISP 1.6.2R"
+    ],
+    "expected_provision_sections": [
+      "disp1s6"
+    ],
+    "response_stage": "holding",
+    "redress_warranted": false,
+    "timing_in_issue": true,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "eight_week_timeline",
+      "fair_treatment"
+    ],
+    "difficulty": "medium",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "fail",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common situation where a customer has lodged a formal complaint about a fee and has not received any substantive update beyond the initial acknowledgement. This is a realistic scenario for UK bank customers.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "Both DISP 1.6.1R (acknowledgement and information about timelines) and DISP 1.6.2R (requirements for the final or interim response within eight weeks) are present in the seed material (as DISP 1.6.1 and DISP 1.6.2) and are directly relevant to the complaint about lack of progress.",
+      "classification_plausible": "fail",
+      "classification_reasoning": "The classification marks the complaint as being in the 'holding' stage, but the complaint is about the handling of the current complaint, not about a prior complaint; therefore it should be classified as 'final' stage. It also sets redress_warranted to false and timing_in_issue to true, both of which contradict the facts: the customer is likely seeking redress for an incorrect fee, and the firm has not yet breached any statutory time limit (only three weeks have passed). Hence the classification is inconsistent with the scenario.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic and the listed provisions are appropriate and present in the seed material. However, the classification elements are incorrect on several counts (stage, redress, timing), leading to an overall failure of the test case."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "single:disp1s7",
+    "complaint_type": "single",
+    "scenario_text": "I made a complaint to my bank, Westfield Banking PLC, six weeks ago about a payment protection insurance policy that was sold to me through their branch but was actually underwritten by a separate insurer. Three weeks after I complained, the bank wrote to me saying they were forwarding my complaint to the insurer because the insurer was solely responsible. However, the bank didn't tell me the insurer's contact details in that letter \u2014 just said 'the relevant insurer' without a name, address, or phone number. I also feel that three weeks was not 'prompt' \u2014 I was left waiting with no update for all that time. I've now heard nothing from the insurer either, and I don't even know who to chase. I want to know why the bank took so long to forward my complaint and why they failed to give me the insurer's details so I could follow up myself.",
+    "expected_provisions": [
+      "DISP 1.7.1R"
+    ],
+    "expected_provision_sections": [
+      "disp1s7"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "fail",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common situation where a bank forwards a PPI complaint to an insurer without providing contact details and with a perceived delay, which is a realistic scenario for UK bank customers.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "DISP 1.7.1 (R) is present in the seed material and directly governs the requirement to forward complaints promptly and to give the complainant the other respondent's contact details, which matches the issues raised.",
+      "classification_plausible": "fail",
+      "classification_reasoning": "While 'final' stage and redress_warranted are appropriate, the scenario clearly raises a timeliness issue (the bank waited three weeks before forwarding and did not give prompt updates). According to the guidelines, timing_in_issue should be true when the firm's response timeliness is in question. The classification incorrectly marks timing_in_issue as false.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic and the provision cited is correct, but the classification mislabels the timeliness aspect of the complaint, leading to an overall fail."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "single:disp1s9",
+    "complaint_type": "single",
+    "scenario_text": "I took out a payment protection insurance policy with your bank in 2002 and cancelled it in 2005. I recently heard from a friend that I might have been mis-sold PPI and decided to complain. Your bank has sent me a letter saying my complaint is 'time-barred' and that you won't look into whether I was mis-sold the policy. However, the letter simply states my complaint is rejected due to time limits \u2014 it doesn't explain my right to refer the matter to the Financial Ombudsman Service or give me the six-month deadline for doing so. I feel this is unfair as I believe I should at least have been told about my options, even if you consider the complaint too old.",
+    "expected_provisions": [
+      "DISP 1.8.1R",
+      "DISP 1.6.2R"
+    ],
+    "expected_provision_sections": [
+      "disp1s9"
+    ],
+    "response_stage": "final",
+    "redress_warranted": false,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment"
+    ],
+    "difficulty": "medium",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "A complaint about a PPI policy sold in 2002, cancelled in 2005, and later rejected as time\u2011barred while not being given FOS referral information is a realistic scenario a UK bank customer could raise.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "Both DISP 1.8.1R (the time\u2011barring rule) and DISP 1.6.2R (the requirement to explain the rejection in a final response) are mentioned in the seed material and are directly relevant to the complaint about the bank\u2019s inadequate final letter.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The firm has already issued a final rejection letter, so the response stage is correctly marked as 'final'. The complaint does not allege that redress is due (the bank claims the claim is time\u2011barred), so redress_warranted = false is appropriate. The issue is not about the firm\u2019s own timeliness, so timing_in_issue = false, and no vulnerability is indicated.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the listed provisions are present and relevant in the seed material, and the classification aligns with the facts of the complaint. No criteria are violated."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:bcobs2as1+disp1s2",
+    "complaint_type": "multi",
+    "scenario_text": "I opened a current account with your bank online in January 2024. During the application process, I noticed that a 'Card Protection Plan' at \u00a37.99/month was already pre-selected as part of the account setup \u2014 there was a tick already in the box. I didn't untick it because I assumed it was a required part of the account, and the page layout made it look like it was bundled in. I've now been charged \u00a37.99 per month for the past 14 months \u2014 that's over \u00a3110 total \u2014 for something I never actively chose. When I look back at the confirmation email and all the paperwork I received when I opened the account, I also notice that at no point were you clear about how to make a complaint or that I could go to the Financial Ombudsman Service if I was unhappy. I only found out about the Ombudsman from a friend. I want a full refund of all charges for this Card Protection Plan and I want to know why I was never told about my rights to complain.",
+    "expected_provisions": [
+      "BCOBS 2A.1.1",
+      "BCOBS 2A.1.2",
+      "DISP 1.2.1"
+    ],
+    "expected_provision_sections": [
+      "bcobs2as1",
+      "disp1s2"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "A pre\u2011ticked optional add\u2011on (card protection plan) that the customer did not actively choose, resulting in ongoing charges and a lack of clear complaint\u2011rights information, is a common type of complaint seen in UK banking.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "BCOBS 2A.1.1 and 2A.1.2 directly address the prohibition on charging for an optional product unless the customer actively elects it, which matches the pre\u2011ticked\u2011box scenario. DISP 1.2.1 requires firms to give clear information about complaint procedures and the Financial Ombudsman Service, which is exactly what the complainant alleges was missing. All three provisions appear in the seed material and are relevant.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive (charges and information failure) and can be investigated and decided by the firm, so the response stage should be 'final'. Redress (refund) is clearly warranted. The issue is not about the firm's timeliness, so timing_in_issue is correctly false. No vulnerability is indicated, so vulnerability_present is correctly false.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the listed provisions are present and appropriate, and the classification aligns with FCA guidance on complaint handling stages and flags. Therefore the synthetic scenario passes all evaluation criteria."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:conc11s1+disp1s3",
+    "complaint_type": "multi",
+    "scenario_text": "I took out a personal loan of \u00a38,000 over the phone with your bank on 15 March. It was all done remotely \u2014 I never visited a branch. On 22 March, within the 14-day window, I called your cancellation line to exercise my right to cancel the distance contract. The adviser I spoke to said I couldn't cancel because the funds had already been disbursed and I'd started making use of the credit. She refused to process my cancellation and told me I'd need to repay the full loan with all interest over the term. I asked to speak to a manager but was told nobody was available and that I'd get a callback, which never came. I'm now being charged interest on a loan I tried to cancel within the legal timeframe. I'm 74 years old and on a fixed pension income \u2014 this additional debt is causing me significant financial distress. I also want to note that when I tried calling your complaints line to raise this issue, the number listed was an 0844 number which cost me over \u00a33 in call charges before I got through. I want the cancellation honoured, all interest charges refunded, and compensation for the distress caused.",
+    "expected_provisions": [
+      "CONC 11.1.1R",
+      "CONC 11.1.5R",
+      "CONC 11.1.2R",
+      "DISP 1.3.1R",
+      "DISP 1.3.1AAR",
+      "DISP 1.3.1ABR",
+      "DISP 1.3.1ADR",
+      "DISP 1.3.3R"
+    ],
+    "expected_provision_sections": [
+      "conc11s1",
+      "disp1s3"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "fail",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a plausible situation \u2013 a consumer took a personal loan remotely, attempted to cancel within the statutory 14\u2011day period, was refused, and raises issues of interest charges, vulnerability and call\u2011charge costs. This mirrors realistic UK bank complaints.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All listed provisions appear in the seed material (CONC 11.1.1, 11.1.2, 11.1.5 for cancellation rights and DISP 1.3.1, 1.3.1AA/AB/AD, 1.3.3 for complaint handling). The suffix variations (e.g., AAR vs AA) are acceptable under the matching rules, and each provision is relevant to the cancellation and free\u2011of\u2011charge complaint\u2011line issues raised.",
+      "classification_plausible": "fail",
+      "classification_reasoning": "The response_stage \"final\" is appropriate, as is redress_warranted and vulnerability_present. However, the scenario clearly includes a timeliness problem \u2013 the adviser promised a callback that never arrived, which is a breach of the firm\u2019s duty to respond promptly. According to the guidelines, timing_in_issue should be true, but the classification marks it false, making the classification inconsistent.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic and the provision list is accurate and relevant. The only flaw is the mis\u2011labelled timing_in_issue flag, which makes the overall verdict fail. The difficulty level is appropriate, though arguably medium rather than hard."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:cobs10as2+disp1s4",
+    "complaint_type": "multi",
+    "scenario_text": "I am a 72-year-old retired schoolteacher with no prior investment experience beyond a basic savings account. In January 2024, I visited my bank branch to discuss options for my \u00a345,000 in savings. The adviser suggested I purchase a structured product linked to equity indices, describing it as 'like a savings account but with better returns.' I was not asked any questions about my investment knowledge, experience with financial instruments, or understanding of risks. The adviser simply told me to sign the application form. I have since discovered the product carries significant capital-at-risk and I do not understand how it works. I have already lost approximately \u00a33,200 in value. I believe the bank failed to check whether this product was appropriate for someone like me, and I want my money back. I am also finding this situation very stressful as I rely on my savings for day-to-day living in retirement and am struggling financially as a result of this loss.",
+    "expected_provisions": [
+      "COBS 10A.2.1R",
+      "COBS 10A.2.3R",
+      "COBS 10A.2.4R",
+      "COBS 10A.2.5R",
+      "DISP 1.4.1R",
+      "DISP 1.4.2G"
+    ],
+    "expected_provision_sections": [
+      "cobs10as2",
+      "disp1s4"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a plausible scenario of an elderly, inexperienced customer being mis\u2011sold a structured product, which is a common type of complaint in UK banking.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All listed provisions (COBS 10A.2.1R, 10A.2.3R, 10A.2.4R, 10A.2.5R, DISP 1.4.1R, DISP 1.4.2G) appear in the seed material and directly relate to assessing appropriateness and complaint handling, matching the facts of the mis\u2011sale complaint.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is a substantive mis\u2011sale issue, so the response stage is correctly marked as 'final'. Redress is warranted, timing of the firm's response is not contested, and the complainant\u2019s age and financial reliance constitute vulnerability, matching the classification flags.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the provisions cited are present and relevant, and the classification aligns with FCA guidance on complaint stages and vulnerability. The difficulty level is appropriate, though it could be seen as medium rather than hard."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:disp1s5+mcob12s3",
+    "complaint_type": "multi",
+    "scenario_text": "I remortgaged my property last month and was charged an early repayment charge (ERC) of \u00a38,400 by my previous lender. When I queried this, I was told it was calculated using a method they couldn't clearly explain to me \u2014 they just said it was 'standard practice' and couldn't give me a breakdown showing it as a specific cash value or explain what costs it was meant to cover. I also never recall seeing this charge disclosed in my original mortgage illustration or offer document when I took the product out three years ago. I called to complain on Monday morning and spoke to someone who said they'd 'look into it and get back to me' but I've heard nothing since. It's now been over three weeks. I'm 74 years old and on a fixed pension income, and this unexpected charge has put me into significant financial difficulty \u2014 I had to use my savings set aside for care costs to cover it. I want the charge refunded or at minimum a clear justification showing it meets the regulatory requirements.",
+    "expected_provisions": [
+      "MCOB 12.3.1R",
+      "MCOB 12.3.4R",
+      "DISP 1.5.1R",
+      "DISP 1.5.2AR",
+      "DISP 1.5.4R"
+    ],
+    "expected_provision_sections": [
+      "disp1s5",
+      "mcob12s3"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": true,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "eight_week_timeline",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common issue with early repayment charges, lack of clear disclosure, delayed response, and vulnerability due to age and fixed income, all of which are realistic scenarios for UK bank customers.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All listed provisions (MCOB 12.3.1R, MCOB 12.3.4R, DISP 1.5.1R, DISP 1.5.2AR, DISP 1.5.4R) appear in the seed material and are plausibly relevant to the issues raised about ERC calculation, disclosure, and the handling of the complaint.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive and can be investigated and decided, so 'final' is appropriate. The lack of a response for three weeks makes the firm's timeliness an issue, and the customer's age and financial difficulty constitute vulnerability. Redress is clearly warranted.",
+      "difficulty_reasonable": false,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic and the provisions cited are present and relevant. The classification aligns with FCA guidance on complaint stages, timing, and vulnerability. The difficulty level is more in line with a medium rating rather than hard."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:disp1s6+icobs2s1",
+    "complaint_type": "multi",
+    "scenario_text": "I am writing to complain about my home insurance policy. I am a retired 78-year-old and I took out a home contents and buildings policy through your branch last year. When I purchased the policy, I specifically told your adviser that I also rent out a small annexe attached to my property on a buy-to-let basis, and asked whether this would be covered. I was assured it would be fine under my standard home policy. However, when I recently made a claim for storm damage to the annexe roof, you rejected it saying the annexe is a commercial let property and isn't covered under my consumer home insurance policy. I feel I was mis-sold this policy \u2014 I was never told I needed a separate commercial policy for the annexe, and your adviser should have categorised my needs properly. I'm now facing a \u00a34,200 repair bill I cannot afford on my pension. To make matters worse, I first raised this complaint by telephone over five weeks ago and have received no acknowledgement whatsoever \u2014 no letter, no email, nothing. I had to call again today and was told there was no record of my earlier call. This is completely unacceptable treatment of a loyal customer.",
+    "expected_provisions": [
+      "DISP 1.6.1R",
+      "DISP 1.6.2R",
+      "ICOBS 2.1.1G",
+      "ICOBS 2.1.2R",
+      "ICOBS 2.1.3G",
+      "ICOBS 2.1.4G"
+    ],
+    "expected_provision_sections": [
+      "disp1s6",
+      "icobs2s1"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": true,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "eight_week_timeline",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a plausible situation: an elderly retiree who rents out part of her home, was told by an adviser that the annex would be covered under a standard home insurance policy, later had a claim denied, and has not received any acknowledgement of her complaint. Such mis\u2011selling and procedural failures are realistic complaints a UK bank/insurer customer might raise.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All six listed provisions appear in the seed material (DISP 1.6.1, DISP 1.6.2, ICOBS 2.1.1\u20112.1.4) and each is directly relevant: DISP 1.6.1/1.6.2 cover the required acknowledgement and final response deadlines; ICOBS 2.1.1\u20112.1.4 address client categorisation, the default to treat uncertain customers as consumers, and the specific example that a buy\u2011to\u2011let property makes the customer a commercial customer. No provision is absent or irrelevant.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive (mis\u2011sale and claim denial) and therefore belongs to the 'final' response stage even though the firm has not yet issued a decision. Redress is clearly warranted. The firm\u2019s failure to acknowledge the complaint within the statutory time\u2011frame makes a timing issue true. The complainant is an elderly pensioner facing a large unaffordable bill, satisfying the vulnerability flag. All classification elements align with the scenario.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "The scenario is realistic, the expected provisions are present and pertinent, and the classification matches the facts. The combination of mis\u2011sale, procedural breach, and vulnerability makes the case suitably complex, justifying the hard difficulty rating."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:disp1s7+prin2as10",
+    "complaint_type": "multi",
+    "scenario_text": "I am a 72-year-old retired customer and I invested \u00a345,000 in a structured product through my bank two years ago. I was told it was low-risk and suitable for my retirement income needs. In reality, it was a high-risk product and I have lost approximately \u00a312,000. When I complained to my bank three weeks ago, they wrote back saying they were not responsible because the product was manufactured by another investment firm, and they forwarded my complaint to that other firm. However, my bank was the one that advised me to buy it and assessed my risk profile. They have not addressed their own role in the advice at all, and I have not received any substantive response from either firm. I am on a fixed pension income and this loss has caused me significant financial hardship \u2014 I am struggling to pay my utility bills. I want my bank to properly investigate their part in this and provide appropriate redress for the unsuitable advice they gave me.",
+    "expected_provisions": [
+      "DISP 1.7.1",
+      "DISP 1.7.3",
+      "PRIN 2A.10.1",
+      "PRIN 2A.10.2",
+      "PRIN 2A.10.5"
+    ],
+    "expected_provision_sections": [
+      "disp1s7",
+      "prin2as10"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "A 72\u2011year\u2011old retiree investing in a supposedly low\u2011risk structured product, receiving unsuitable advice, suffering a loss and financial hardship, and complaining about the bank\u2019s role is a plausible scenario a UK bank customer could raise.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All listed provisions (DISP 1.7.1, DISP 1.7.3, PRIN 2A.10.1, PRIN 2A.10.2, PRIN 2A.10.5) appear in the seed material and are directly relevant to the issues of complaint forwarding and foreseeable harm/redress arising from unsuitable advice.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive and can be investigated by the bank, so the response_stage = final is appropriate. Redress is clearly warranted, timing of the firm's response is not the core issue, and the customer's age and hardship constitute vulnerability.",
+      "difficulty_reasonable": false,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the provisions match the seed material and are relevant, and the classification aligns with FCA guidance. The difficulty is more medium than hard, but overall the case meets the benchmark criteria."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:bcobs2s2+disp1s9",
+    "complaint_type": "multi",
+    "scenario_text": "I opened a savings account with your bank in 2016 after seeing your promotional material that described the interest rate as 'guaranteed at 2.5% for the life of the account'. I now understand that the rate was only fixed for 12 months and then reverted to a variable rate, which has been as low as 0.1%. I never received any communication clarifying that 'guaranteed' only meant the introductory period. I feel I was misled by your advertising and have lost out on interest I could have earned elsewhere over the past eight years. I am 78 years old and rely on my savings income to supplement my state pension, so this has caused me real financial hardship. I would like compensation for the difference in interest I should have received. I raised this with your branch last week and they said the complaint might be 'too old' but didn't explain what that meant.",
+    "expected_provisions": [
+      "BCOBS 2.2.1",
+      "BCOBS 2.2.5",
+      "DISP 1.8.1"
+    ],
+    "expected_provision_sections": [
+      "bcobs2s2",
+      "disp1s9"
+    ],
+    "response_stage": "final",
+    "redress_warranted": false,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "fail",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a plausible situation where an elderly customer feels misled by promotional language about a guaranteed interest rate and has suffered financial hardship, which is a realistic type of complaint a UK bank might receive.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All three listed provisions (BCOBS 2.2.1, BCOBS 2.2.5, DISP 1.8.1) appear in the seed material and are directly relevant to the alleged misleading advertising and the question of whether the complaint is time\u2011barred.",
+      "classification_plausible": "fail",
+      "classification_reasoning": "Response stage 'final' is appropriate, timing_in_issue false and vulnerability_present true are correct. However, marking redress_warranted as false is implausible: the complainant alleges misrepresentation and financial loss and is seeking compensation, so redress would reasonably be considered warranted. The classification therefore does not fit the scenario.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic and the provisions are correctly identified. The classification is mostly accurate but incorrectly states that redress is not warranted, which contradicts the substance of the complaint. Hence the overall verdict is fail."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:conc11s2+disp1s2",
+    "complaint_type": "multi",
+    "scenario_text": "I took out a peer-to-peer loan of \u00a315,000 through LendConnect Platform in March this year. Within 10 days of receiving the agreement, I sent an email to the address specified in the contract stating I wished to withdraw from the agreement. I received an automated acknowledgement confirming receipt of my email. However, the platform then charged me a \u00a3250 'early exit administration fee' on top of the accrued interest, claiming this was standard for withdrawals. When I queried this, I was told it was in the terms. I also want to note that when I originally signed up to the platform, I was never given any information about how to make a complaint or about the Financial Ombudsman Service \u2014 not at the point of sale, not on their website, and not in the contract terms. I only found out about my right to complain by searching online. I believe the exit fee is unlawful and I want it refunded, and I'm unhappy that I was never told about my complaint rights.",
+    "expected_provisions": [
+      "CONC 11.2.3R",
+      "CONC 11.2.4R",
+      "DISP 1.2.1R"
+    ],
+    "expected_provision_sections": [
+      "conc11s2",
+      "disp1s2"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "A consumer withdrawing from a P2P loan within the statutory 14\u2011day period, being charged an early\u2011exit fee and not being given information about complaint procedures is a plausible scenario for a UK retail finance customer.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All three listed provisions appear in the seed material (CONC 11.2.3, CONC 11.2.4 and DISP 1.2.1) and each directly relates to the issues raised \u2013 the right of withdrawal and prohibition of fees, the prohibition of additional borrower obligations, and the requirement to provide complaint\u2011handling information.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is a substantive request for redress (refund of the exit fee and information) so the appropriate stage is 'final'. Redress is clearly warranted. There is no allegation of a delayed or missing response, so timing_in_issue is correctly false. No vulnerability factors are mentioned, so vulnerability_present is correctly false.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the provisions cited are present and relevant, and the classification aligns with the guidance on response stages and flag meanings. The overall evaluation therefore passes."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:cobs10as3+disp1s3",
+    "complaint_type": "multi",
+    "scenario_text": "I am a 72-year-old retired teacher with limited investment experience. Last month I opened an execution-only account with your firm and attempted to purchase a complex leveraged ETF product. I recall being asked some questions about my knowledge and experience, and I told your adviser that I had never traded derivatives or leveraged products before. Despite this, I was not given any warning that the product might be inappropriate for me \u2014 the transaction simply went through. The product has since lost 40% of its value. I tried to call your complaints line to raise this issue but the only number listed on your website is an 0871 number, which cost me over \u00a33 on hold before I gave up and wrote this letter instead. I believe your firm failed in its duty to warn me that this product was not appropriate given my lack of experience, and I also believe it is unacceptable that your complaints telephone line uses a revenue-sharing number that discourages customers from complaining.",
+    "expected_provisions": [
+      "COBS 10A.3.1",
+      "DISP 1.3.1",
+      "DISP 1.3.1AA",
+      "DISP 1.3.1AB",
+      "DISP 1.3.1AD",
+      "DISP 1.3.3"
+    ],
+    "expected_provision_sections": [
+      "cobs10as3",
+      "disp1s3"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a plausible situation for an elderly, inexperienced retail investor using an execution\u2011only account and being sold a complex leveraged ETF, which is a scenario the FCA expects firms to guard against. The grievance about an 0871 telephone number is also a realistic complaint.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All six listed provisions appear verbatim in the seed material (COBS 10A.3.1 and DISP 1.3.1, 1.3.1AA, 1.3.1AB, 1.3.1AD, 1.3.3) and each is directly relevant: COBS 10A.3.1 to the appropriateness warning, DISP 1.3.1 to complaint handling procedures, DISP 1.3.1AA/AB/AD to the cost of the complaints telephone line, and DISP 1.3.3 to the firm\u2019s duty to identify and remedy systemic issues.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive and can be investigated and decided, so \u2018final\u2019 is appropriate despite no decision yet being issued. Redress is warranted given the alleged breach of appropriateness and telephone\u2011line rules. There is no allegation of delayed handling, so timing_in_issue = false is correct. The complainant\u2019s age and limited experience constitute vulnerability, so vulnerability_present = true is correct.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the provision list is accurate and relevant, and the classification aligns with the FCA\u2019s guidance on complaint stages and vulnerability. Therefore the synthetic scenario meets the benchmark criteria."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:disp1s4+mcob12s4",
+    "complaint_type": "multi",
+    "scenario_text": "I have a regulated mortgage with your bank and fell into arrears three months ago after being made redundant. I agreed a repayment arrangement with your collections team to pay \u00a3850 per month, which I have stuck to without fail. Despite this, I have been charged a \u00a375 monthly arrears management fee each of those three months. When I called to query this, I was told it was 'standard policy' and no one could explain how the charge was calculated or what additional administration it covers. I also asked for a breakdown showing the charge doesn't include things like your general overheads or regulatory costs, but was told that information isn't available. On top of that, when I look at my statements, it appears my payments are being applied to these charges first rather than reducing the shortfall itself, which means my arrears balance is actually growing. I am on Universal Credit and struggling to keep up as it is. I want these charges refunded and a proper explanation of how my payments are being allocated.",
+    "expected_provisions": [
+      "MCOB 12.4.1R",
+      "MCOB 12.4.1A",
+      "MCOB 12.4.1BR",
+      "MCOB 12.4.4R",
+      "DISP 1.4.1R",
+      "DISP 1.4.2G"
+    ],
+    "expected_provision_sections": [
+      "disp1s4",
+      "mcob12s4"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common situation for mortgage customers in arrears, includes a request for refund of arrears management charges, concerns about payment allocation, and mentions vulnerability due to reliance on Universal Credit \u2013 all realistic elements for a UK bank complaint.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All listed provisions (MCOB 12.4.1R, 12.4.1A, 12.4.1BR, 12.4.4R, DISP 1.4.1R, DISP 1.4.2G) appear in the seed material and are directly relevant to the issues raised: justification of short\u2011fall charges, allocation of payments, and the complaint handling process.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive and can be investigated and decided, so 'final' is appropriate. The customer seeks redress, making redress_warranted true. No delay or failure in the firm's response timing is mentioned, so timing_in_issue is correctly false. The claimant\u2019s reliance on Universal Credit indicates vulnerability, so vulnerability_present is true.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "The scenario is realistic, the provision list matches the seed material and is relevant, and the classification aligns with the FCA rules for this type of complaint. Therefore the overall evaluation is a pass."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:disp1s5+icobs2s2",
+    "complaint_type": "multi",
+    "scenario_text": "I'm writing to complain about my home insurance renewal. In January, I received a promotional email from your bank's insurance division stating I could 'save up to 40% on my home insurance premium by switching to our new policy'. Based on this, I called your team and switched my policy. However, when I received my first premium statement, the cost was actually higher than my previous policy \u2014 not lower. When I called to query this on 3rd March, your agent apologised, said there had been a miscommunication in the marketing material, and offered to apply a one-off \u00a325 goodwill credit to my account. I accepted this on the phone that same day as I was in a rush and just wanted it sorted. However, I've since had time to think about it and I'm not satisfied \u2014 the promotional email was clearly misleading and a \u00a325 credit doesn't come close to covering the additional cost I'm now paying. I've also not received anything in writing confirming the resolution of my earlier call, or any information about what I can do if I'm unhappy. I believe the advertisement was dishonest and I want proper compensation for the increased premiums I'm now locked into paying.",
+    "expected_provisions": [
+      "ICOBS 2.2.2R",
+      "ICOBS 2.2.4G",
+      "DISP 1.5.2AR",
+      "DISP 1.5.4R",
+      "DISP 1.5.5G"
+    ],
+    "expected_provision_sections": [
+      "disp1s5",
+      "icobs2s2"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common scenario where a customer feels misled by a promotional insurance offer, receives a higher premium, and is dissatisfied with a modest goodwill credit and lack of written confirmation. This is a realistic issue a UK bank/insurance customer could raise.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All listed provisions appear in the seed material (ICOBS 2.2.2R, ICOBS 2.2.4G, DISP 1.5.2AR, DISP 1.5.4R, DISP 1.5.5G) and each is directly relevant to the complaint \u2013 misleading promotion, pricing claim guidance, acceptance of a resolution without writing, requirement to send a summary resolution communication, and the content of that communication.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive about the promotion and the adequacy of the offered redress, so the response stage is correctly marked as 'final'. Redress is warranted given the alleged misleading promotion. There is no issue with the firm's timeliness, and no vulnerability is indicated, making the remaining flags accurate.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "The scenario is realistic, the expected provisions are present and appropriate, and the classification aligns with FCA complaint-handling rules. Therefore the synthetic scenario passes all evaluation criteria."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:disp1s6+prin2as2",
+    "complaint_type": "multi",
+    "scenario_text": "I am writing to express my extreme frustration with how your bank has handled my situation. In January, I noticed that my current account had been debited with a \u00a3250 'account maintenance fee' that was never disclosed to me when I opened the account three years ago. The fee appeared without any prior notification or explanation. When I called your customer service team on 15 March to complain, the adviser acknowledged it was unusual and said someone would look into it and get back to me. I received a brief email the next day confirming receipt of my complaint, but it said nothing about timescales for a response or my right to go to the Ombudsman if I remained unhappy. It is now 20 May \u2014 over nine weeks since I complained \u2014 and I have heard absolutely nothing further. No update, no resolution, no explanation. I feel the bank has simply ignored me while continuing to benefit from the fee it took from my account. I am a pensioner on a fixed income and \u00a3250 is a significant sum for me. I believe the bank has acted unfairly by applying an undisclosed charge and then failing to deal with my complaint properly. I want the fee refunded and a proper explanation of why I have been treated this way.",
+    "expected_provisions": [
+      "DISP 1.6.1R",
+      "DISP 1.6.2R",
+      "PRIN 2A.2.1R",
+      "PRIN 2A.2.2R",
+      "PRIN 2A.2.5R",
+      "PRIN 2A.2.8R",
+      "PRIN 2A.2.10"
+    ],
+    "expected_provision_sections": [
+      "disp1s6",
+      "prin2as2"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": true,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "eight_week_timeline",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common situation \u2013 an undisclosed account fee, a delayed or absent response to a complaint, and the complainant being a pensioner on a fixed income \u2013 all of which are realistic for a UK bank customer.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All listed provisions (DISP 1.6.1R, DISP 1.6.2R, PRIN 2A.2.1R, PRIN 2A.2.2R, PRIN 2A.2.5R, PRIN 2A.2.8R, PRIN 2A.2.10) appear in the seed material and are directly relevant to the issues of failure to acknowledge/respond within the statutory time\u2011limit and the good\u2011faith/foreseeable\u2011harm obligations that arise from an undisclosed fee and the complainant\u2019s vulnerability.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is awaiting a substantive final response, so the stage is correctly marked as 'final'. The lack of a response within the eight\u2011week limit makes timing an issue, and the pensioner\u2019s circumstances constitute vulnerability. The request for a refund makes redress clearly warranted.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the provision list matches the seed material and is appropriate, and the classification aligns with FCA rules on complaint handling and vulnerability. The task is moderately complex due to the need to map several cross\u2011cutting principles, justifying a medium difficulty rating."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:bcobs2s3+disp1s7",
+    "complaint_type": "multi",
+    "scenario_text": "I opened a new savings account with your bank last month after seeing your promotional email comparing your interest rates to those of three competitor banks. The email claimed your rates were 'market-leading' and showed a comparison table, but it didn't mention that your rate was only a temporary introductory rate for 3 months, after which it drops to 0.5%. The competitors' rates shown were their standard ongoing rates. I feel this comparison was unfair and misleading \u2014 I wouldn't have switched if I'd known the rate would drop so dramatically. I transferred \u00a340,000 from my previous provider and have now missed their loyalty bonus as a result. When I raised this issue at my branch three weeks ago, the branch manager told me it wasn't their responsibility because the email was sent by your 'digital marketing partner' and forwarded my complaint to them. I've heard nothing since from either party. I want to know who is actually dealing with my complaint and I want compensation for the interest I've lost by switching.",
+    "expected_provisions": [
+      "BCOBS 2.3.1",
+      "BCOBS 2.3.7",
+      "BCOBS 2.3.5",
+      "DISP 1.7.1",
+      "DISP 1.7.2",
+      "DISP 1.7.3"
+    ],
+    "expected_provision_sections": [
+      "bcobs2s3",
+      "disp1s7"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "fail",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a plausible scenario: a misleading promotional email with an undisclosed introductory rate, a large transfer, missed loyalty bonus, and lack of response from the bank and its marketing partner. This is a type of issue UK bank customers commonly raise.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All six listed provisions appear in the seed material and are directly relevant: BCOBS 2.3.1 (accuracy), 2.3.5 (omission), 2.3.7 (fair comparison) for the promotional issue, and DISP 1.7.1\u20111.7.3 for the forwarding of the complaint to the marketing partner and the associated timing rules.",
+      "classification_plausible": "fail",
+      "classification_reasoning": "The response_stage 'final' and redress_warranted are appropriate, as is vulnerability_present = false. However, timing_in_issue is set to false despite the complaint clearly indicating a delay (no response after three weeks and the branch manager's referral). Under the guidelines, a failure to respond within the statutory time limits constitutes a timing issue, so this flag should be true.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "The scenario is realistic and the provision list matches the seed material and the complaint facts. The only problem is the classification: the timing_in_issue flag is incorrectly set to false, making the overall evaluation fail."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:conc2s10+disp1s9",
+    "complaint_type": "multi",
+    "scenario_text": "My mother, who is 78 and has been diagnosed with vascular dementia, was granted a \u00a35,000 credit card limit increase by your bank in March 2021. I am her son and hold lasting power of attorney for her financial affairs. At the time of the limit increase, she was already showing significant signs of confusion \u2014 she couldn't remember her own address when speaking to your staff on the phone, and her GP had written to you in February 2021 confirming her diagnosis. Despite this, your bank proceeded with the credit limit increase without taking any steps to help her understand the decision or contacting me as her attorney. She has since accumulated \u00a34,800 in debt she cannot repay on a state pension. I raised this complaint with you in November 2024. Your branch manager told me verbally that because the credit limit increase happened over three years ago, you won't look into it and said it's 'time-barred'. I believe you should have recognised her lack of mental capacity and never increased her limit. I want the debt written off and a proper explanation of why you are refusing to investigate.",
+    "expected_provisions": [
+      "CONC 2.10.1G",
+      "CONC 2.10.4G",
+      "CONC 2.10.5G",
+      "CONC 2.10.6G",
+      "CONC 2.10.7G",
+      "CONC 2.10.8G",
+      "DISP 1.8.1R"
+    ],
+    "expected_provision_sections": [
+      "conc2s10",
+      "disp1s9"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a plausible situation involving an elderly person with diagnosed vascular dementia, a credit limit increase, and a lasting power of attorney \u2013 a scenario that UK bank customers could realistically raise.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All listed provisions (CONC 2.10.1\u20112.10.8 guidance and DISP 1.8.1) are present in the seed material and directly relate to mental\u2011capacity obligations and the time\u2011barring rule that the complainant references.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive (a decision to increase credit) and can be investigated, so \u2018final\u2019 is appropriate. Redress is warranted given the alleged breach of mental\u2011capacity duties. The firm\u2019s timeliness is not in dispute, so timing_in_issue = false is correct. The complainant\u2019s mother is vulnerable due to dementia, so vulnerability_present = true is correct.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "The scenario is realistic, the provisions cited match the seed material and are relevant, and the classification aligns with the FCA guidance on complaint stages and vulnerability. The difficulty level is appropriate given the need to interpret mental\u2011capacity guidance and the nuance around response stage."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:cobs10as4+disp1s2",
+    "complaint_type": "multi",
+    "scenario_text": "I opened an execution-only share dealing account with your firm last year to buy and sell shares listed on the London Stock Exchange. When I signed up, I was never told anything about your complaints procedure \u2014 no leaflet, no mention of it at all. I wasn't even told about the Financial Ombudsman Service. More recently, I purchased units in a structured product through the same account. The product turned out to be far more complex than I expected \u2014 it embeds a derivative and I don't understand the risks at all. Nobody at your firm asked me any questions about my knowledge or experience before letting me buy it, and I wasn't warned that you weren't assessing whether it was appropriate for me. I've now lost a significant amount of money. I believe your firm failed in its obligations both by not assessing appropriateness for a complex product and by never informing me of my rights to complain or access the ombudsman.",
+    "expected_provisions": [
+      "COBS 10A.4.1R",
+      "COBS 10A.4.2R",
+      "DISP 1.2.1R",
+      "DISP 1.2.3G"
+    ],
+    "expected_provision_sections": [
+      "cobs10as4",
+      "disp1s2"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a plausible situation for a UK retail investor using an execution\u2011only share dealing account, being sold a complex structured product without an appropriateness assessment and without being informed of the complaints process \u2013 both common issues in real FCA complaints.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All four listed provisions appear in the seed material (COBS 10A.4.1, COBS 10A.4.2, DISP 1.2.1 and DISP 1.2.3) and each is directly relevant: COBS 10A.4.1/10A.4.2 cover the appropriateness exemption and definition of complex products, while DISP 1.2.1/1.2.3 require firms to provide information about complaints handling and the Financial Ombudsman Service, which the complainant alleges were not provided.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is a substantive grievance that can be investigated and decided, so \u2018final\u2019 is appropriate. Redress is warranted given the alleged breach of appropriateness and information duties. There is no indication of a delay in the firm\u2019s response, so timing_in_issue is correctly false, and no vulnerability factors are mentioned, so vulnerability_present is correctly false.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "The scenario is realistic, the expected provisions are present and relevant, and the classification aligns with FCA guidance on complaint stages and flag meanings. Therefore the scenario passes all evaluation criteria."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:disp1s3+mcob12s5",
+    "complaint_type": "multi",
+    "scenario_text": "I have a regulated mortgage with your bank and I'm writing to complain about two issues. First, when I fell into arrears last year, you applied a \u00a3250 'arrears management fee' each month for three consecutive months, plus compound interest on those fees. I've checked with other lenders and nobody charges anything close to that \u2014 most charge \u00a325-50 at most. I believe these charges are grossly excessive and the compound interest on a second charge mortgage is unlawful. Second, when I tried to call your complaints line to raise this issue, the only number provided was an 0871 number. I was on hold for 45 minutes and the call cost me over \u00a318. I shouldn't have to pay a premium rate number just to make a complaint. I'm currently on long-term sick leave following a cancer diagnosis and am struggling financially as a result of reduced income. I'd like a full refund of the excessive charges, the interest applied to them, and reimbursement of my phone costs.",
+    "expected_provisions": [
+      "DISP 1.3.1R",
+      "DISP 1.3.1AAR",
+      "DISP 1.3.1ABR",
+      "DISP 1.3.1ADR",
+      "MCOB 12.5.1R",
+      "MCOB 12.5.2R",
+      "MCOB 12.5.3G",
+      "MCOB 12.5.5R"
+    ],
+    "expected_provision_sections": [
+      "disp1s3",
+      "mcob12s5"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a plausible situation: a mortgage customer disputing high arrears management fees and being charged for a premium\u2011rate phone line while also indicating a serious health condition, which is a realistic scenario for a UK bank complaint.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All listed provisions appear in the seed material (DISP 1.3.1, 1.3.1A, 1.3.1AB, 1.3.1AD and MCOB 12.5.1, 12.5.2, 12.5.3, 12.5.5). The suffix variations (R, AAR, ABR, ADR, G) are acceptable matches, and each provision is directly relevant to the excessive\u2011charge claim and the premium\u2011rate telephone\u2011line issue.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive and can be decided by the firm, so 'final' is appropriate. Redress is clearly warranted, timing of the firm's response is not contested, and the customer's cancer diagnosis constitutes a vulnerability, matching the flags given.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "The scenario is realistic, the expected provisions are all present and relevant, and the classification aligns with the FCA rules and the scenario details. Therefore the synthetic case meets the benchmark criteria."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:disp1s4+icobs2s3",
+    "complaint_type": "multi",
+    "scenario_text": "I took out a home insurance policy through my bank's branch last year. I've since discovered that the bank received a significantly higher commission from the insurer they recommended compared to two other insurers whose products were arguably better suited to my needs and cheaper. When I asked the branch advisor at the time whether there were other options, they simply said 'this is the best one for you' without explaining why or mentioning any alternatives. I feel I was steered into a more expensive, less suitable policy because the bank was incentivised by the commission arrangement. I raised this with the bank's complaints team three weeks ago and received an acknowledgement, but I'm now writing to request a full resolution. I'm a retired pensioner on a fixed income and the additional premium cost has been a real stretch for my household budget.",
+    "expected_provisions": [
+      "DISP 1.4.1R",
+      "DISP 1.4.2G",
+      "DISP 1.4.3G",
+      "ICOBS 2.3.1G"
+    ],
+    "expected_provision_sections": [
+      "disp1s4",
+      "icobs2s3"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "A bank selling home insurance, steering customers towards higher\u2011commission products and a pensioner complaining about cost and vulnerability is a plausible scenario a UK bank customer could raise.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All four listed provisions appear in the seed material (DISP 1.4.1, 1.4.2, 1.4.3 and ICOBS 2.3.1) and each is directly relevant to a complaint about steering, inducements and the firm\u2019s handling of the complaint.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive and can be investigated, so 'final' is appropriate despite no decision yet. Redress is warranted given the alleged mis\u2011sale. There is no indication of a delay or missed deadline, so timing_in_issue is correctly false. The complainant\u2019s retired, fixed\u2011income status makes vulnerability present, matching the classification.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the provisions listed are present and relevant, and the classification aligns with the FCA rules and the narrative. The overall task is moderately complex, so a medium difficulty rating is more fitting than hard."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:disp1s5+prin2as3",
+    "complaint_type": "multi",
+    "scenario_text": "I am 78 years old and have limited mobility due to a hip replacement. In February, my bank switched my longstanding savings account to a new 'Digital Flex Saver' product. This account requires customers to manage everything through a smartphone app and offers no branch or telephone access for transactions. I complained to the bank by phone on Monday morning, and by Wednesday afternoon the adviser called me back saying they'd move me back to my old account type and waive the fees I'd been charged for the failed app transactions. I said that sounded fine and thanked them. However, I never received anything in writing afterwards \u2014 no letter, no email, nothing confirming what happened or telling me about the Ombudsman. I'm now worried because I've since realised the new product was completely unsuitable for someone like me who cannot use a smartphone, and I want to understand my rights. I feel the bank shouldn't have moved me onto this product in the first place given my age and circumstances, and I also want to know why I didn't get the written confirmation I believe I'm entitled to after my complaint was resolved.",
+    "expected_provisions": [
+      "DISP 1.5.1R",
+      "DISP 1.5.2AG",
+      "DISP 1.5.4R",
+      "DISP 1.5.5G",
+      "DISP 1.5.6G",
+      "PRIN 2A.3.4R",
+      "PRIN 2A.3.7R",
+      "PRIN 2A.3.8R"
+    ],
+    "expected_provision_sections": [
+      "disp1s5",
+      "prin2as3"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a plausible situation for an elderly, mobility\u2011limited customer who was moved onto a digital\u2011only product, raised a complaint, received a verbal resolution but no written confirmation \u2013 a realistic scenario for a UK bank customer.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All listed provisions (DISP 1.5.1R, 1.5.2AG, 1.5.4R, 1.5.5G, 1.5.6G, PRIN 2A.3.4R, 2A.3.7R, 2A.3.8R) appear in the seed material and are directly relevant: the complaint was resolved within three business days, a summary resolution communication is required, guidance on its content and alternative delivery methods applies, and the product governance rules concerning target market, vulnerability and remedial action are pertinent to the suitability issue.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is effectively resolved (the firm has taken remedial action), so the response_stage is correctly marked as final. Redress is warranted because the customer seeks written confirmation and may have a claim of unsuitable product placement. There is no issue with the firm\u2019s timeliness, so timing_in_issue is correctly false. The customer\u2019s age and limited mobility constitute vulnerability, making vulnerability_present true.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "The scenario is realistic, the expected provisions are present in the seed material and appropriately matched to the facts, and the classification aligns with FCA guidance on complaint stages, redress, timing, and vulnerability. Therefore the scenario passes all evaluation criteria."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:bcobs2s4+disp1s6",
+    "complaint_type": "multi",
+    "scenario_text": "I opened a cash deposit ISA with your bank in March after seeing your online promotion advertising a 4.5% fixed rate for 12 months. The promotion clearly stated '4.5% AER fixed for 12 months' with no mention of any conditions or restrictions. When I transferred \u00a320,000 from my previous ISA provider, I was placed on a 3.8% variable rate instead. I queried this immediately and was told the 4.5% rate was only available for new money, not ISA transfers \u2014 but this was never stated in the promotion I responded to. I wrote a formal complaint letter six weeks ago and received an acknowledgement email, but it didn't tell me anything about timescales for a response or what would happen if I remained unhappy. I've heard nothing since. I'm 78 years old and this ISA represents a significant portion of my retirement savings. The difference in interest rate is costing me approximately \u00a3140 over the year, and I'm worried about my finances as I rely on interest income to supplement my state pension.",
+    "expected_provisions": [
+      "BCOBS 2.4.2G",
+      "DISP 1.6.1R",
+      "DISP 1.6.2R"
+    ],
+    "expected_provision_sections": [
+      "bcobs2s4",
+      "disp1s6"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": true,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "eight_week_timeline",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "fail",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a plausible scenario of a senior customer being misled by an ISA promotion and experiencing a delay in the firm's response, which is a common type of complaint in UK banking.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All three listed provisions appear in the seed material (BCOBS 2.4.2 Guidance, DISP 1.6.1 Rules, and DISP 1.6.2 Rules) and are relevant to the promotion mis\u2011representation and the complaint\u2011acknowledgement timing requirements.",
+      "classification_plausible": "fail",
+      "classification_reasoning": "While 'final' stage, redress_warranted and vulnerability_present are appropriate, the flag 'timing_in_issue' is incorrect. The firm has only been six weeks since the acknowledgement, which is still within the eight\u2011week deadline for a final response, and the complaint does not demonstrate a breach of the response time limit. Therefore timing should be false.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic and the provision mapping is accurate. However, the classification incorrectly marks timing_in_issue as true, because the firm has not yet breached the statutory eight\u2011week response deadline. Consequently the overall verdict is fail."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "multi:conc2s13+disp1s7",
+    "complaint_type": "multi",
+    "scenario_text": "I used a price comparison website called QuickLoans Compare to find a short-term loan of \u00a3300 for 30 days. The website showed me results but the cheapest option wasn't listed first \u2014 instead, a more expensive lender called FastCash was displayed at the top with a prominent 'Recommended' badge. I later discovered FastCash pays the highest commission to QuickLoans Compare. I clicked through and took out the FastCash loan, paying \u00a390 in interest over 30 days, when I've since found that another lender on the same site would have charged me only \u00a360 for the identical loan amount and duration. I complained to QuickLoans Compare three weeks ago about being misled by their biased ranking. They wrote back saying they weren't responsible for my lending decision and forwarded my complaint to FastCash, the lender, without explaining why or giving me FastCash's contact details. I've now heard nothing from either party. I want the \u00a330 difference refunded and a proper explanation of why my complaint was passed on without my knowledge of where it went.",
+    "expected_provisions": [
+      "CONC 2.5A.2",
+      "CONC 2.5A.5",
+      "CONC 2.5A.6",
+      "DISP 1.7.1"
+    ],
+    "expected_provision_sections": [
+      "conc2s13",
+      "disp1s7"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "A consumer using a price\u2011comparison website for short\u2011term credit could be misled by a commercial\u2011interest\u2011driven ranking, complain to the site, be forwarded to the lender and receive no satisfactory reply \u2013 a plausible UK consumer complaint.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All four listed provisions appear verbatim in the seed material and each directly relates to the issues raised: CONC 2.5A.2, .5 and .6 govern unbiased ranking and prominence on price\u2011comparison sites, and DISP 1.7.1 governs the forwarding of complaints without proper notice.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is substantive (mis\u2011ranking and improper forwarding) and can be decided, so the 'final' stage is appropriate despite no decision yet. Redress is clearly warranted, there is no evidence of a timing breach, and no vulnerability is mentioned.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "The scenario is realistic, the provisions cited are present and relevant, and the classification matches the FCA guidance on complaint stages and flags. The complexity of linking multiple CONC rules with DISP forwarding makes the 'hard' difficulty label appropriate."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "escalation:disp1s4+disp2s2",
+    "complaint_type": "escalation",
+    "scenario_text": "I am writing to express my extreme dissatisfaction with the final response letter I received from your bank dated 15 November regarding my complaint about being mis-sold a packaged bank account. In your letter, you stated that you did not uphold my complaint because you believe I was given adequate information about the account benefits at the time of sale. However, I was never told about the eligibility criteria for the travel insurance included in the package \u2014 I am 78 years old and have a pre-existing heart condition, which means I have never been able to claim on the policy despite paying \u00a315 per month for it since 2016. Your response did not address this point at all, and I do not believe you investigated my complaint properly. You also failed to mention anything about my right to take this further if I remain unhappy. I want to know what my options are now, and I believe I am owed a full refund of all the fees I have paid.",
+    "expected_provisions": [
+      "DISP 1.4.1R",
+      "DISP 1.4.2G",
+      "DISP 1.4.3G",
+      "DISP 2.2.1G"
+    ],
+    "expected_provision_sections": [
+      "disp1s4",
+      "disp2s2"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "A complaint about a mis\u2011sold packaged bank account, undisclosed travel\u2011insurance eligibility, an elderly customer with a pre\u2011existing condition and a request for a refund is a plausible scenario a UK bank customer could raise.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All four listed provisions (DISP 1.4.1R, DISP 1.4.2G, DISP 1.4.3G, DISP 2.2.1G) appear in the seed material (as DISP 1.4.1, DISP 1.4.2, DISP 1.4.3, DISP 2.2.1) and are directly relevant to the complaint about investigation, assessment, resolution and the complainant\u2019s right to refer to the Financial Ombudsman Service.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint follows a final response letter, so the response_stage = final is correct. The complainant seeks a refund for a mis\u2011sale, so redress_warranted = true is appropriate. No issue is raised about the firm\u2019s timeliness, so timing_in_issue = false is right. The complainant\u2019s age and health condition constitute vulnerability, making vulnerability_present = true plausible.",
+      "difficulty_reasonable": false,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the provisions cited are present and relevant, and the classification aligns with the facts. The only shortcoming is that labeling the item as \"hard\" overstates the complexity; medium difficulty better reflects the level of analysis required."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "escalation:disp1s4+disp2s7",
+    "complaint_type": "escalation",
+    "scenario_text": "I am writing to express my extreme dissatisfaction with the final response letter I received from your bank dated 15 November regarding my complaint about being mis-sold a payment protection insurance policy alongside my personal loan in 2012. Your letter states that you do not uphold my complaint because you believe adequate information was provided at the point of sale. However, I note that your response fails to address the key issue I raised \u2014 that I was self-employed at the time and was never told the policy would not cover me for unemployment. You have not explained what evidence you considered or how you reached your decision. I was told verbally by the adviser that the PPI would cover all eventualities. I have now been left \u00a33,200 out of pocket in premiums for a policy that could never have paid out on the unemployment element. I do not accept your decision and wish to know what my options are. I also want to understand whether I can take this further, as your final response letter did not mention anything about the Financial Ombudsman Service or any time limits for escalation.",
+    "expected_provisions": [
+      "DISP 1.4.1R",
+      "DISP 1.4.2G",
+      "DISP 1.4.6G",
+      "DISP 2.7.1R",
+      "DISP 2.7.6R"
+    ],
+    "expected_provision_sections": [
+      "disp1s4",
+      "disp2s7"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "A complaint about a mis\u2011sold PPI policy, a final response that the firm says it provided adequate information, and a request for escalation to the Financial Ombudsman Service is a common and realistic scenario for UK bank customers.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All five listed provisions (DISP 1.4.1R, 1.4.2G, 1.4.6G, 2.7.1R, 2.7.6R) appear in the seed material and are directly relevant: 1.4.1 and 1.4.2 govern the need to investigate, assess evidence and explain decisions; 1.4.6 gives specific guidance for PPI complaints; 2.7.1 and 2.7.6 relate to complainant eligibility and the required relationship with the firm, which are pertinent when the complainant asks about escalation to the FOS.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint follows a final response, so the stage is correctly marked as 'final'. The nature of the grievance (mis\u2011sale of PPI) makes redress likely, so redress_warranted = true is appropriate. The complainant does not raise any issue about the firm's timeliness, so timing_in_issue = false is correct. No vulnerability factors are mentioned, so vulnerability_present = false is also correct.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the provisions listed are present in the seed material and relevant to the complaint, and the classification aligns with the facts of the escalation. Therefore the synthetic scenario meets the benchmark criteria."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "escalation:disp1s4+disp2s8",
+    "complaint_type": "escalation",
+    "scenario_text": "I am writing to express my extreme dissatisfaction with how my complaint about mis-sold payment protection insurance (PPI) has been handled. I submitted my complaint on 15 January and received your final response letter on 28 February, which rejected my claim. Your letter stated that you found no evidence of mis-selling. However, I believe your investigation was neither competent nor impartial. You failed to obtain the original point-of-sale documentation, you did not consider that I was self-employed at the time and therefore ineligible for the unemployment element of the policy, and you ignored the fact that I had a pre-existing medical condition that would have excluded me from claiming. I also note that your final response letter did not mention anything about a time limit for referring my complaint to the Financial Ombudsman Service. I want you to reconsider your decision and provide appropriate redress for the premiums I paid over seven years. If you do not resolve this satisfactorily, I intend to take this to the Ombudsman, but I need clarity on what my rights are and how long I have to do so.",
+    "expected_provisions": [
+      "DISP 1.4.1R",
+      "DISP 1.4.2G",
+      "DISP 1.4.3G",
+      "DISP 2.8.2R",
+      "DISP 2.8.3G"
+    ],
+    "expected_provision_sections": [
+      "disp1s4",
+      "disp2s8"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common scenario \u2013 a customer disputing a PPI mis\u2011sale, having received a final response, and requesting reconsideration and information on FOS referral time\u2011limits. This is a realistic issue a UK bank customer could raise.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All five listed provisions (DISP 1.4.1R, 1.4.2G, 1.4.3G, 2.8.2R, 2.8.3G) appear in the seed material and are directly relevant: 1.4.1R covers competent, impartial investigation; 1.4.2G and 1.4.3G relate to assessment factors and timely resolution; 2.8.2R and 2.8.3G deal with the six\u2011month referral time\u2011limit which the complainant mentions.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The firm has already issued a final response, so the complaint is at the \u201cfinal\u201d stage. The customer seeks redress for a alleged mis\u2011sale, so redress_warranted = true. No allegation of delayed response is made, so timing_in_issue = false. No vulnerability is indicated, so vulnerability_present = false. All classifications align with the narrative.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the expected provisions are present and pertinent, and the classification matches the facts. The task requires moderate interpretation of the rules, making a medium difficulty rating appropriate."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "escalation:disp1s5+disp2s2",
+    "complaint_type": "escalation",
+    "scenario_text": "I received a text message from my bank three days ago saying my complaint about a \u00a335 overdraft fee had been resolved after I agreed on the phone to accept a refund. However, the written summary I then received by post only said 'your complaint is now closed' \u2014 it didn't mention anything about the Financial Ombudsman Service, didn't give me their website address, and didn't tell me I could refer the matter to them if I changed my mind. Well, I have changed my mind. The \u00a335 refund doesn't address the fact that the fee was applied incorrectly in the first place due to a system error, and I believe I'm owed compensation for the stress and time spent chasing this. I want to escalate this complaint. I also want to know why the bank failed to give me proper information about my rights when it sent me that summary letter.",
+    "expected_provisions": [
+      "DISP 1.5.4R",
+      "DISP 1.5.5G",
+      "DISP 1.5.2AR",
+      "DISP 2.2.1G"
+    ],
+    "expected_provision_sections": [
+      "disp1s5",
+      "disp2s2"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "A customer complaining about an overdraft fee, receiving an inadequate summary of resolution, and seeking to escalate to the Financial Ombudsman Service is a common and realistic scenario for UK bank customers.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All four provisions are present in the seed material: DISP 1.5.4R (rules on the required summary resolution communication), DISP 1.5.5G (guidance on how that information must be presented), DISP 1.5.2AR (rules defining a complaint as resolved when the complainant accepts the response) and DISP 2.2.1G (guidance on the scope of the Financial Ombudsman Service). Each is directly relevant to the complaint about missing FOS information and the desire to escalate.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint concerns a resolved case that the customer now wishes to reopen, which is a final\u2011stage issue (not a holding complaint about lack of acknowledgement). Redress is clearly sought, there is no indication of a timeliness problem, and no vulnerability is mentioned, so the classification flags are consistent.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the listed provisions are all found in the seed material and appropriately apply, and the classification aligns with FCA guidance on complaint stages and flags. Therefore the scenario passes all evaluation criteria."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "escalation:disp1s5+disp2s7",
+    "complaint_type": "escalation",
+    "scenario_text": "I am writing to express my dissatisfaction with how my complaint was handled. Three weeks ago, I contacted your bank about an incorrect fee of \u00a345 charged to my current account. Your staff member called me back the same day and offered to refund the fee, which I accepted over the phone. I then received a short letter saying the complaint was resolved, but the letter did not mention the Financial Ombudsman Service at all \u2014 no website address, no information about my right to refer the matter if I changed my mind, nothing. I have since looked into this further and I believe the fee was actually part of a wider pattern of overcharging on my account going back several months. I am no longer satisfied with the resolution and wish to escalate this matter. I want the bank to investigate the full pattern of charges and I want to know why I was not properly informed of my rights when the complaint was first closed.",
+    "expected_provisions": [
+      "DISP 1.5.2A",
+      "DISP 1.5.4",
+      "DISP 1.5.5"
+    ],
+    "expected_provision_sections": [
+      "disp1s5",
+      "disp2s7"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common situation where a customer received a resolution without the required FOS information and now wishes to reopen/escalate, which is a realistic scenario for UK bank customers.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All three listed provisions (DISP 1.5.2A, DISP 1.5.4, DISP 1.5.5) appear in the seed material and are directly relevant: the complaint was deemed resolved by acceptance (1.5.2A), the firm failed to provide the mandatory summary resolution communication with FOS details (1.5.4), and the guidance on clear presentation of that information (1.5.5).",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint is not about a lack of acknowledgement or progress on an earlier complaint, so the 'final' stage is appropriate. Redress is warranted given the alleged pattern of overcharging. There is no allegation of delayed response, so timing_in_issue is correctly false. No vulnerability is mentioned, so vulnerability_present is correctly false.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the provisions cited match the seed material and are pertinent, and the classification aligns with FCA guidance on complaint stages and flags. The difficulty level is acceptable, though it could be considered medium rather than hard."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "escalation:disp1s5+disp2s8",
+    "complaint_type": "escalation",
+    "scenario_text": "I made a complaint to my bank three weeks ago about an incorrect fee of \u00a345 charged on my current account. They called me back the same day and offered to refund the fee, which I accepted over the phone. I then received a short letter saying the complaint was resolved. However, the letter didn't mention anything about the Financial Ombudsman Service \u2014 no website address, no information about my right to refer the complaint if I changed my mind, and nothing about any time limits. I've since looked into it further and I believe the fee was part of a broader pattern of overcharging on my account. I'm no longer satisfied with just the \u00a345 refund and I want to escalate this. I also want to know whether the bank has properly handled this, given the letter I received seems incomplete.",
+    "expected_provisions": [
+      "DISP 1.5.1R",
+      "DISP 1.5.2AR",
+      "DISP 1.5.4R",
+      "DISP 1.5.5G",
+      "DISP 2.8.2R",
+      "DISP 2.8.3G"
+    ],
+    "expected_provision_sections": [
+      "disp1s5",
+      "disp2s8"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "fail",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common situation where a customer receives a summary resolution letter lacking required FOS information and wishes to escalate, which is realistic for UK bank customers.",
+      "provisions_correct": "fail",
+      "provisions_reasoning": "All listed provisions appear in the seed material except DISP 1.5.2AR, which is not present (the seed contains DISP 1.5.2 (Guidance) and DISP 1.5.2A (Rules) but no DISP 1.5.2AR). Therefore the provision list is not fully correct.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint concerns a resolved complaint and the customer now wants to challenge the resolution, which fits the 'final' response stage. Redress is warranted, there is no issue with the firm's timeliness, and no vulnerability is indicated, so the classification matches the scenario.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic and the classification aligns with FCA guidance, but the expected provisions list includes a provision not found in the seed material, causing the overall verdict to be fail."
+    },
+    "verdict": "fail"
+  },
+  {
+    "seed_id": "escalation:disp1s6+disp2s2",
+    "complaint_type": "escalation",
+    "scenario_text": "I am writing to express my extreme dissatisfaction with the final response letter I received from your bank dated 15 November regarding my complaint about unauthorised overdraft charges totalling \u00a3340 applied to my current account between June and September this year. Your letter rejected my complaint, stating the charges were applied correctly under the account terms and conditions. However, the letter did not include any information about the Financial Ombudsman Service, no leaflet was enclosed, no website address was provided, and there was no mention of any time limits for me to refer my complaint elsewhere. I feel I have been left completely in the dark about my options. I believe the charges were unfair as I was never notified that my account had gone overdrawn before the charges were applied, and I want a full refund. I also want to know what my rights are now, since your so-called 'final response' told me nothing about where I can escalate this matter.",
+    "expected_provisions": [
+      "DISP 1.6.2R"
+    ],
+    "expected_provision_sections": [
+      "disp1s6",
+      "disp2s2"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "A UK bank customer could reasonably complain that a final response letter omitted the mandatory FOS information and that the charges are unfair, making the scenario realistic.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "DISP 1.6.2R (the rules for a final response) is present in the seed material and directly requires the inclusion of the FOS leaflet, website address and referral information, which the complaint says were missing.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint concerns a final response, so response_stage\u202f=\u202ffinal is appropriate. The customer seeks a refund, so redress_warranted\u202f=\u202fTrue. There is no allegation of delayed handling, so timing_in_issue\u202f=\u202fFalse. No vulnerability is mentioned, so vulnerability_present\u202f=\u202fFalse.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "All three evaluation criteria are satisfied: the scenario is realistic, the provision cited matches the seed material and is relevant, and the classification aligns with the facts of the complaint."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "escalation:disp1s6+disp2s7",
+    "complaint_type": "escalation",
+    "scenario_text": "I am writing to express my dissatisfaction with the final response I received from your bank dated 15 November regarding my complaint about unauthorised transactions on my current account. Your letter rejected my complaint, stating that I had failed to keep my PIN secure. However, I believe this conclusion is unfair as I have never shared my PIN with anyone and I reported the transactions within hours of them occurring. Your final response letter did not include a copy of the Financial Ombudsman Service's explanatory leaflet, nor did it provide their website address. It also failed to tell me whether you consent to waive any time limits if I refer my complaint to the Ombudsman. I feel I have been treated unfairly and I want to know what my options are now. I am a pensioner on a fixed income and the loss of \u00a31,200 from these transactions has left me unable to pay my heating bills this winter.",
+    "expected_provisions": [
+      "DISP 1.6.2R"
+    ],
+    "expected_provision_sections": [
+      "disp1s6",
+      "disp2s7"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common situation \u2013 a bank customer reporting unauthorised card transactions, receiving a final response that omits required FOS information, and invoking vulnerability as a pensioner on a fixed income. This is a realistic scenario a UK bank client could raise.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "DISP 1.6.2R is the rule governing the content of a final response, including the requirement to enclose the FOS explanatory leaflet, provide the FOS website address, and state whether the firm consents to waive time limits. All of these elements are mentioned as missing in the complaint, and the provision is present in the seed material.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint concerns a final response already issued, so response_stage = final is appropriate. The customer seeks redress for unauthorised transactions, so redress_warranted = true. There is no allegation of the firm being late, so timing_in_issue = false. The complainant is a pensioner on a fixed income, qualifying as vulnerable, so vulnerability_present = true.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic, the single provision listed matches the relevant rule in the seed material, and the classification aligns with the facts presented. No errors are found, so the overall verdict is pass."
+    },
+    "verdict": "pass"
+  },
+  {
+    "seed_id": "escalation:disp1s6+disp2s8",
+    "complaint_type": "escalation",
+    "scenario_text": "I am writing to express my extreme dissatisfaction with your bank's handling of my complaint about unauthorised overdraft charges totalling \u00a3487 applied to my current account in March 2024. I originally submitted my complaint on 15 April 2024. I received your final response letter dated 28 May 2024 which rejected my complaint, stating the charges were correctly applied under the account terms and conditions. However, I believe your response was inadequate and unfair. You failed to properly consider that I was in hospital at the time the charges accrued and had no ability to manage my account. Furthermore, I note that your final response letter did not include a copy of the Financial Ombudsman Service's standard explanatory leaflet, nor did it provide their website address. It simply said I could 'contact the ombudsman if unhappy' without any further detail about the time limits for doing so. I want to know what my rights are and whether I can still escalate this matter, as it has now been approximately five months since I received your response.",
+    "expected_provisions": [
+      "DISP 1.6.2R",
+      "DISP 2.8.2R",
+      "DISP 2.8.3G",
+      "DISP 2.8.4G"
+    ],
+    "expected_provision_sections": [
+      "disp1s6",
+      "disp2s8"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": true,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "pass",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common situation \u2013 unauthorised overdraft charges, a final response lacking required FOS information, and a claim of vulnerability due to hospitalisation \u2013 which a UK bank customer could realistically raise.",
+      "provisions_correct": "pass",
+      "provisions_reasoning": "All four listed provisions appear in the seed material: DISP 1.6.2R (final\u2011response content requirements), DISP 2.8.2R (time\u2011limit for referring to the FOS), DISP 2.8.3G (guidance on the six\u2011month limit) and DISP 2.8.4G (guidance on exceptional circumstances/vulnerability). Each is directly relevant to the complaint\u2019s issues about missing leaflet, referral time\u2011limits and the complainant\u2019s hospitalisation.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint has already received a final response, so \u2018final\u2019 is the correct stage. The complainant seeks redress for alleged unauthorised charges and a deficient response, so redress_warranted\u202f=\u202fTrue is appropriate. The firm responded within the statutory eight\u2011week window, so timing_in_issue\u202f=\u202fFalse is correct. The hospitalisation constitutes a vulnerability, making vulnerability_present\u202f=\u202fTrue accurate.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "hard",
+      "overall_reasoning": "The scenario is realistic, the expected provisions are all present and relevant, and the classification aligns with FCA rules and the narrative. Therefore the synthetic scenario passes all evaluation criteria."
+    },
+    "verdict": "pass"
+  }
+]

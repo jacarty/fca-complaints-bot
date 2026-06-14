@@ -1,0 +1,46 @@
+[
+  {
+    "seed_id": "escalation:disp1s5+disp2s8",
+    "complaint_type": "escalation",
+    "scenario_text": "I made a complaint to my bank three weeks ago about an incorrect fee of \u00a345 charged on my current account. They called me back the same day and offered to refund the fee, which I accepted over the phone. I then received a short letter saying the complaint was resolved. However, the letter didn't mention anything about the Financial Ombudsman Service \u2014 no website address, no information about my right to refer the complaint if I changed my mind, and nothing about any time limits. I've since looked into it further and I believe the fee was part of a broader pattern of overcharging on my account. I'm no longer satisfied with just the \u00a345 refund and I want to escalate this. I also want to know whether the bank has properly handled this, given the letter I received seems incomplete.",
+    "expected_provisions": [
+      "DISP 1.5.1R",
+      "DISP 1.5.2AR",
+      "DISP 1.5.4R",
+      "DISP 1.5.5G",
+      "DISP 2.8.2R",
+      "DISP 2.8.3G"
+    ],
+    "expected_provision_sections": [
+      "disp1s5",
+      "disp2s8"
+    ],
+    "response_stage": "final",
+    "redress_warranted": true,
+    "timing_in_issue": false,
+    "vulnerability_present": false,
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true,
+    "critic_result": {
+      "verdict": "fail",
+      "realism": "pass",
+      "realism_reasoning": "The complaint describes a common situation where a customer receives a summary resolution letter lacking required FOS information and wishes to escalate, which is realistic for UK bank customers.",
+      "provisions_correct": "fail",
+      "provisions_reasoning": "All listed provisions appear in the seed material except DISP 1.5.2AR, which is not present (the seed contains DISP 1.5.2 (Guidance) and DISP 1.5.2A (Rules) but no DISP 1.5.2AR). Therefore the provision list is not fully correct.",
+      "classification_plausible": "pass",
+      "classification_reasoning": "The complaint concerns a resolved complaint and the customer now wants to challenge the resolution, which fits the 'final' response stage. Redress is warranted, there is no issue with the firm's timeliness, and no vulnerability is indicated, so the classification matches the scenario.",
+      "difficulty_reasonable": true,
+      "suggested_difficulty": "medium",
+      "overall_reasoning": "The scenario is realistic and the classification aligns with FCA guidance, but the expected provisions list includes a provision not found in the seed material, causing the overall verdict to be fail."
+    },
+    "verdict": "fail"
+  }
+]
