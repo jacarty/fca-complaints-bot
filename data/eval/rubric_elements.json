@@ -1,0 +1,99 @@
+{
+  "_meta": {
+    "purpose": "Canonical definitions for the required_response_elements rubric used by the drafting-aware judge (JAM-275). A scenario's required_response_elements list selects which elements apply; the judge scores ONLY those, each as PRESENT / PARTIAL / MISSING, against the indicated audience field.",
+    "scoring": {
+      "status_values": ["PRESENT", "PARTIAL", "MISSING"],
+      "coverage_weights": { "PRESENT": 1.0, "PARTIAL": 0.5, "MISSING": 0.0 },
+      "note": "Coverage for a scenario = sum(weights) / number_of_required_elements. Only elements listed in the scenario are scored — absence of an unlisted element is never penalised."
+    },
+    "audience": {
+      "customer": "Scored against customer_draft (the text the complainant receives). A requirement met only in handler_answer does not count, because the regulatory duty is to inform the complainant.",
+      "either": "May be evidenced in handler_answer OR customer_draft."
+    },
+    "three_distinct_timing_concepts": {
+      "note": "These three are routinely conflated and MUST be kept separate when scoring. Only the first two are rubric elements; the third is never credited as a rubric element.",
+      "eight_week_timeline": "The firm's own clock — a final response is due by the end of eight weeks from receipt of the complaint.",
+      "six_month_referral_limit": "The complainant's window — six months from the date of the firm's final response to refer the complaint to the FOS (DISP 2.8.2R(1)).",
+      "eligibility_time_bar": "NOT a rubric element. The FOS eligibility limits of six years from the event complained of, or three years from awareness (DISP 2.8.2R(2)). A draft discussing the 6-year/3-year limits must NOT be credited as six_month_referral_limit."
+    },
+    "regulatory_basis_note": "regulatory_basis fields are indicative, at section granularity, for review and the write-up. The judge scores on the definition text, not the citation."
+  },
+  "elements": {
+    "acknowledgement": {
+      "label": "Acknowledgement of the complaint",
+      "audience": "customer",
+      "definition": "The response acknowledges the complaint and reflects an accurate understanding of what is being complained about.",
+      "present_if": "The customer-facing text opens by acknowledging the complaint and accurately reflects its subject matter.",
+      "partial_if": "Acknowledges receipt only in generic terms, or misstates what the complaint is about.",
+      "missing_if": "No acknowledgement; the response launches into a decision or unrelated content.",
+      "regulatory_basis": "DISP 1.6"
+    },
+    "decision_and_reasons": {
+      "label": "Decision and reasons",
+      "audience": "customer",
+      "definition": "The response states the firm's decision (uphold, partially uphold, or reject) and gives reasons that engage with the specific points the complainant raised.",
+      "present_if": "A clear decision is stated and the reasons address the substantive points raised, not merely a generic conclusion.",
+      "partial_if": "A decision is stated but reasons are absent, generic, or do not engage with the specific points; or reasons are given but the decision itself is unclear.",
+      "missing_if": "No decision, or a bare conclusion with no reasons (e.g. 'we do not uphold your complaint' and nothing further).",
+      "regulatory_basis": "DISP 1.4, DISP 1.6"
+    },
+    "fos_referral_rights": {
+      "label": "FOS referral rights",
+      "audience": "customer",
+      "definition": "The final response informs the complainant of their right to refer the complaint to the Financial Ombudsman Service, and how to do so.",
+      "present_if": "The customer-facing text states that the complainant may refer this complaint to the FOS and gives the means to (signposts FOS contact details, leaflet, or website).",
+      "partial_if": "Mentions the FOS but does not make clear the complainant can refer this complaint, or omits how to do so.",
+      "missing_if": "No mention of the right to refer to the FOS.",
+      "not_satisfied_by": "A vague reference to 'an ombudsman' without identifying the FOS, or telling the handler about the FOS without it appearing in the customer-facing draft.",
+      "regulatory_basis": "DISP 1.6"
+    },
+    "six_month_referral_limit": {
+      "label": "Six-month FOS referral deadline",
+      "audience": "customer",
+      "definition": "The final response tells the complainant they have six months from the date of this final response to refer the complaint to the FOS.",
+      "present_if": "The customer-facing text states the six-month deadline running from the firm's final response.",
+      "partial_if": "Refers to a time limit for going to the FOS but states it incorrectly or vaguely — no six-month period, or not anchored to the final-response date.",
+      "missing_if": "No six-month referral deadline is stated.",
+      "not_satisfied_by": "The firm's own eight-week response clock (that is eight_week_timeline); and the FOS eligibility time-bar of six years from the event or three years from awareness (DISP 2.8.2R(2)). Discussing the 6-year/3-year limits does NOT satisfy this element.",
+      "regulatory_basis": "DISP 1.6 (duty to inform); substance DISP 2.8.2R(1)"
+    },
+    "eight_week_timeline": {
+      "label": "Eight-week response timescale",
+      "audience": "customer",
+      "definition": "A holding response tells the complainant when to expect the firm's final response and explains that if the complaint is not resolved within eight weeks of being received, the complainant may then refer it to the FOS.",
+      "present_if": "The customer-facing text sets out the firm's eight-week timescale for a final response and the complainant's option to go to the FOS once eight weeks have passed without resolution.",
+      "partial_if": "Gives a timescale but does not tie it to the eight-week point, or omits the FOS option available at eight weeks.",
+      "missing_if": "No eight-week timescale is communicated.",
+      "not_satisfied_by": "The complainant's six-month window to refer a final response to the FOS (that is six_month_referral_limit); and the FOS eligibility time-bar. The eight-week clock is the firm's own deadline to respond, not a referral limit.",
+      "regulatory_basis": "DISP 1.6"
+    },
+    "fair_treatment": {
+      "label": "Fair treatment of the complaint",
+      "audience": "customer",
+      "definition": "The response demonstrates that the complaint has been treated fairly — engaging with the points raised competently and impartially, in clear and non-dismissive language appropriate to the complainant.",
+      "present_if": "The response addresses the substance of the complaint, reads as clear and even-handed, and does not dismiss or minimise the complainant's concerns.",
+      "partial_if": "Partly engages but is dismissive in places, leans on templated language that ignores the specifics, or treats the complaint superficially.",
+      "missing_if": "The response is dismissive, evasive, or fails to engage with the complaint on its merits.",
+      "regulatory_basis": "DISP 1.4; PRIN 2A (Consumer Duty)"
+    },
+    "redress_consideration": {
+      "label": "Consideration of redress",
+      "audience": "customer",
+      "definition": "The response addresses whether redress or remedial action is appropriate — offering redress where warranted, or explaining why none is due.",
+      "present_if": "The response reaches and communicates a position on redress: an offer with its basis, or a reasoned explanation that none is warranted.",
+      "partial_if": "Acknowledges the question of redress but reaches no clear position, or flags it only to the handler without it being reflected in the customer-facing outcome.",
+      "missing_if": "Redress is not addressed at all, where the complaint plainly raises a financial loss or detriment.",
+      "scoring_note": "handler_answer may carry the reasoning, but the position communicated to the customer is what is scored.",
+      "regulatory_basis": "DISP 1.4, DISP 1.6"
+    },
+    "vulnerability_consideration": {
+      "label": "Consideration of vulnerability",
+      "audience": "either",
+      "definition": "The response recognises indicators of the complainant's vulnerability (e.g. age, ill health, bereavement, financial hardship, reduced mental capacity) and responds appropriately — adapting the handling and the communication, and signposting support where relevant.",
+      "present_if": "The response identifies the vulnerability and acts on it: in the recommended handling (handler_answer) and/or in adapted, supportive customer-facing language (customer_draft).",
+      "partial_if": "Notes the vulnerability but does not act on it, or adapts the response without acknowledging the underlying circumstances.",
+      "missing_if": "Clear vulnerability indicators in the scenario are neither recognised nor addressed anywhere in the response.",
+      "regulatory_basis": "PRIN 2A (Consumer Duty); FCA guidance on vulnerable customers"
+    }
+  }
+}

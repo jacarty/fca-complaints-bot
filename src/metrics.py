@@ -13,24 +13,11 @@ import statistics
 
 from pydantic import BaseModel, Field
 
+# Pricing lives in the shared module; re-exported here so existing callers can
+# keep importing TOKEN_PRICES from src.metrics.
+from src.bedrock_common import TOKEN_PRICES
+
 logger = logging.getLogger(__name__)
-
-# ---------------------------------------------------------------------------
-# Pricing (on-demand, per 1k tokens)
-# ---------------------------------------------------------------------------
-
-# Approximate Bedrock on-demand pricing as of June 2026
-TOKEN_PRICES = {
-    # Generation model
-    "global.anthropic.claude-sonnet-4-6": {"input": 0.003, "output": 0.015},
-    # Judge models
-    "global.anthropic.claude-opus-4-6-v1": {"input": 0.015, "output": 0.075},
-    "eu.anthropic.claude-haiku-4-5-20251001-v1:0": {"input": 0.001, "output": 0.005},
-    "openai.gpt-oss-120b-1:0": {"input": 0.003, "output": 0.012},
-    # Embedding models (per 1k tokens, used during KB sync not per-query)
-    "amazon.titan-embed-text-v2:0": {"input": 0.00002, "output": 0.0},
-    "cohere.embed-english-v3": {"input": 0.0001, "output": 0.0},
-}
 
 
 # ---------------------------------------------------------------------------

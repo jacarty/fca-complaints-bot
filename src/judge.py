@@ -17,27 +17,15 @@ import time
 
 from pydantic import BaseModel, Field
 
+# Model presets and resolution live in the shared module; re-exported here so
+# existing callers (run_eval.py) can keep importing them from src.judge.
+from src.bedrock_common import JUDGE_PRESETS, resolve_judge_model
+
 logger = logging.getLogger(__name__)
-
-# ---------------------------------------------------------------------------
-# Model presets
-# ---------------------------------------------------------------------------
-
-JUDGE_PRESETS = {
-    "opus": "global.anthropic.claude-opus-4-6-v1",
-    "haiku": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
-    "sonnet": "global.anthropic.claude-sonnet-4-6",
-    "gpt-oss": "openai.gpt-oss-120b-1:0",
-}
 
 # Defaults
 JUDGE_PRIMARY = JUDGE_PRESETS["opus"]
 JUDGE_SECONDARY = JUDGE_PRESETS["gpt-oss"]
-
-
-def resolve_judge_model(name_or_id: str) -> str:
-    """Resolve a preset name or full model ID to a Bedrock model ID."""
-    return JUDGE_PRESETS.get(name_or_id, name_or_id)
 
 
 class Claim(BaseModel):

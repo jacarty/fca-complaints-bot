@@ -1,0 +1,36 @@
+{
+  "fixed-titan": {
+    "config_label": "fixed-titan",
+    "n_scenarios": 35,
+    "coverage_mean": 0.5280612244897959,
+    "section_precision_mean": 0.09561224489795918,
+    "section_recall_mean": 0.35714285714285715,
+    "citation_precision_mean": 0.21365079365079365,
+    "citation_recall_mean": 0.2373809523809524,
+    "retrieved_provision_recall_mean": 0.11357142857142857,
+    "drafting_gap_mean": -0.12380952380952381,
+    "grounded_pct_mean": 0.7201502729665047,
+    "grounded_pct_customer_mean": 0.5338095238095238,
+    "ungrounded_pct_mean": 0.11745210843508057,
+    "inter_judge_agreement_mean": 0.8166666666666667,
+    "latency_p50_ms": 39348.74862499419,
+    "cost_per_scenario_mean": 0.4166054571428571
+  },
+  "structure-titan": {
+    "config_label": "structure-titan",
+    "n_scenarios": 35,
+    "coverage_mean": 0.5517006802721088,
+    "section_precision_mean": 0.14,
+    "section_recall_mean": 0.35714285714285715,
+    "citation_precision_mean": 0.3068707482993197,
+    "citation_recall_mean": 0.3306122448979592,
+    "retrieved_provision_recall_mean": 0.3256122448979592,
+    "drafting_gap_mean": -0.005,
+    "grounded_pct_mean": 0.8228441272227207,
+    "grounded_pct_customer_mean": 0.6673356009070295,
+    "ungrounded_pct_mean": 0.059051634639869933,
+    "inter_judge_agreement_mean": 0.8387755102040816,
+    "latency_p50_ms": 40938.58074999298,
+    "cost_per_scenario_mean": 0.4473810857142857
+  }
+}

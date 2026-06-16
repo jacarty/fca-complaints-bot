@@ -1,0 +1,1653 @@
+{
+  "fixed-titan": [
+    {
+      "scenario_id": "c001",
+      "config": "fixed-titan",
+      "scenario_text": "I took out a personal loan with your bank in March 2024. At no point during the application process or at the point of sale was I given any information about your complaints procedure or told how I could complain if something went wrong. I've since had a problem with an overcharge on my account and when I tried to find out how to complain, there was nothing on my loan agreement, nothing in the paperwork I was given, and I had to spend over an hour on the phone just to find out where to send my complaint. I also notice your website has no mention of the Financial Ombudsman Service anywhere. I believe you have failed in your duty to make me aware of my rights and I want this addressed.",
+      "response_stage": "final",
+      "complaint_type": "single",
+      "difficulty": "medium",
+      "expected_provisions": [
+        "DISP 1.2.1R",
+        "DISP 1.2.3G",
+        "DISP 1.2.4G"
+      ],
+      "expected_provision_sections": [
+        "disp1s2"
+      ],
+      "required_response_elements": [
+        "acknowledgement",
+        "decision_and_reasons",
+        "fos_referral_rights",
+        "six_month_referral_limit",
+        "fair_treatment",
+        "redress_consideration"
+      ],
+      "handler_answer": "The customer is complaining about two distinct failures: (1) not being given information about the firm's internal complaints procedure at or around the point of sale of a personal loan in March 2024; and (2) the firm's website not referencing the Financial Ombudsman Service (FOS).\n\n**Regulatory position:**\n\n1. **Complaints procedure information at point of contact/sale:** DISP 1.2.1R requires that summary details of the firm's internal complaints handling procedures are provided to eligible complainants. DISP 1.2.1R(1) states this obligation applies at, or immediately after, the point when contact is first made with an eligible complainant. If the customer received no information about how to complain at the point of sale or in their loan documentation, this is a potential breach of DISP 1.2.1R. DISP 1.2.3G further indicates that the summary details should cover at least how the firm handles complaints and (where FOS jurisdiction applies) that unresolved complaints may be referred to the FOS.\n\n2. **FOS information on the website:** DISP 1.1A.11R requires MiFID investment firms to provide FOS information on their website. However, this provision is specific to MiFID investment firms. A personal loan is not a MiFID product, so DISP 1.1A.11R may not directly apply here. The retrieved provisions do not contain a general rule requiring all firms to display FOS information on their website for non-MiFID products \u2014 only DISP 1.2.1R (point of contact) and DISP 1.2.3G (summary details) are retrieved. You should check whether any other applicable provision (e.g. a general DISP 1.2 rule not retrieved here) requires website disclosure for retail lending. Flag this as a gap in the retrieved context.\n\n**Recommended action:**\n- Acknowledge the complaint and the customer's experience.\n- Accept that if complaints procedure information was not provided at or around the point of sale, this would be a failure under DISP 1.2.1R.\n- Do not admit liability on the website point without confirming the applicable rule for non-MiFID products \u2014 the retrieved context does not clearly establish this obligation for a personal loan firm.\n- The complaint involves a potential regulatory breach and the customer has suffered a detriment (over an hour spent locating the complaints process). This warrants human review before sending, particularly as redress or remedial action may be appropriate.\n\n**Assumptions to confirm before sending:**\n- Is the firm a MiFID investment firm? If not, DISP 1.1A.11R on website disclosure does not apply on the basis of the retrieved provisions.\n- Was any complaints information provided at any point during the loan application (e.g. in a welcome pack, terms and conditions, or online portal)? This affects whether DISP 1.2.1R was actually breached.\n- Has the underlying overcharge complaint been separately logged and is it being handled?\n- The customer draft below does not admit liability on the website point; it acknowledges the concern and commits to review. Amend if your investigation confirms a clear breach.\n\n**Human review is required** before sending \u2014 potential regulatory breach, possible redress for time/inconvenience, and an unresolved factual question about what information was provided at sale.",
+      "customer_draft": "Dear [Customer name],\n\nThank you for getting in touch and for taking the time to raise these concerns. I am sorry to hear about the difficulty you experienced when trying to find out how to make a complaint, and I want to assure you that we take this seriously.\n\n**What you have told us**\n\nYou have told us that when you took out your personal loan in March 2024, you were not given any information about how to make a complaint \u2014 either during the application process, at the point of sale, or in the paperwork you received. You have also raised a concern that our website does not refer to the Financial Ombudsman Service. As a result of not knowing how to complain, you spent over an hour on the phone trying to find out where to direct your complaint.\n\n**Our obligations**\n\nWe are required to make information about our internal complaints handling procedure available to customers, including how to raise a complaint and \u2014 where relevant \u2014 that unresolved complaints may be referred to the Financial Ombudsman Service. This information should be provided at or around the time we first deal with you as a customer. We take this obligation seriously.\n\n**What we are doing**\n\nWe are investigating your concerns. Specifically, we will review what information was provided to you at the time your loan was taken out and whether our processes met the standard required of us. We will also review your concern about the information available on our website.\n\nWe will write to you again with the outcome of our investigation. If we find that we fell short of what was required, we will tell you what steps we are taking to put things right.\n\n**Your right to refer to the Financial Ombudsman Service**\n\nIf you are not satisfied with our final response, you have the right to refer your complaint to the Financial Ombudsman Service, free of charge. I have enclosed their explanatory leaflet, which sets out how to contact them and the time limits for doing so. You can also find further information on their website at www.financial-ombudsman.org.uk.\n\nThank you again for bringing this to our attention.\n\nYours sincerely,\n\n[Handler name]\n[Job title]\n[Date]",
+      "cited_provisions": [
+        {
+          "provision": "DISP 1.2.1R",
+          "provision_type": "Rule",
+          "relevance": "Requires firms to provide summary details of their internal complaints handling procedures to eligible complainants at or immediately after the point of first contact, which is directly relevant to the customer's allegation that no such information was given at the point of sale.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s2.md"
+        },
+        {
+          "provision": "DISP 1.2.3G",
+          "provision_type": "Guidance",
+          "relevance": "Indicates that the summary details of complaints handling procedures should cover at least how the firm handles complaints and, where FOS jurisdiction applies, that unresolved complaints may be referred to the FOS \u2014 relevant to the standard of information the customer should have received.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s2.md"
+        },
+        {
+          "provision": "DISP 1.1A.11R",
+          "provision_type": "Rule",
+          "relevance": "Requires MiFID investment firms to provide FOS information on their website; cited to note its limited application (MiFID firms only) and that it does not straightforwardly cover the personal loan context, supporting the flag of insufficient context on the website point.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s20.md"
+        },
+        {
+          "provision": "DISP 1.6.4R",
+          "provision_type": "Rule",
+          "relevance": "Sets out the requirements for a final response, including enclosing the FOS explanatory leaflet and informing the complainant of their right to refer to the FOS \u2014 relevant to the referral rights wording in the customer draft.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s6.md"
+        }
+      ],
+      "human_review_required": true,
+      "insufficient_context": true,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/dispapp3s13.md",
+          "score": 0.6574029922485352,
+          "section": "dispapp3s13"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s2.md",
+          "score": 0.6480223536491394,
+          "section": "disp1s2"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp2s8.md",
+          "score": 0.646699994802475,
+          "section": "disp2s8"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/mcob5as7.md",
+          "score": 0.6444555521011353,
+          "section": "mcob5as7"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/mcob5as8.md",
+          "score": 0.6383699774742126,
+          "section": "mcob5as8"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s20.md",
+          "score": 0.637787938117981,
+          "section": "disp1s20"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s6.md",
+          "score": 0.6376837491989136,
+          "section": "disp1s6"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp2s3.md",
+          "score": 0.6350434720516205,
+          "section": "disp2s3"
+        }
+      ],
+      "retrieval_metrics": {
+        "citation": {
+          "precision": 0.5,
+          "recall": 0.6666666666666666,
+          "f1": 0.5714285714285715,
+          "n_cited": 4,
+          "n_expected": 3,
+          "n_matched": 2,
+          "matched": [
+            "DISP 1.2.1",
+            "DISP 1.2.3"
+          ],
+          "cited_not_expected": [
+            "DISP 1.1A.11",
+            "DISP 1.6.4"
+          ],
+          "expected_not_cited": [
+            "DISP 1.2.4"
+          ]
+        },
+        "section": {
+          "precision": 0.125,
+          "recall": 1.0,
+          "n_retrieved": 8,
+          "n_relevant": 1,
+          "expected_sections": [
+            "disp1s2"
+          ],
+          "retrieved_sections": [
+            "dispapp3s13",
+            "disp1s2",
+            "disp2s8",
+            "mcob5as7",
+            "mcob5as8",
+            "disp1s20",
+            "disp1s6",
+            "disp2s3"
+          ],
+          "matched_sections": [
+            "disp1s2"
+          ],
+          "missing_sections": []
+        },
+        "retrieved_provision_recall": {
+          "recall": 0.0,
+          "n_expected": 3,
+          "n_present": 0,
+          "matched": [],
+          "missing": [
+            "DISP 1.2.1",
+            "DISP 1.2.3",
+            "DISP 1.2.4"
+          ],
+          "present_in_text": []
+        }
+      },
+      "judge_rubric_primary": {
+        "verdicts": [
+          {
+            "element": "acknowledgement",
+            "status": "PRESENT",
+            "evidence": "Thank you for getting in touch... I am sorry to hear about the difficulty you experienced... **What you have told us** You have told us that when you took out your personal loan in March 2024, you were not given any information about how to make a complaint...",
+            "reasoning": "The opening paragraph and the \u201cWhat you have told us\u201d section explicitly acknowledge the complaint and accurately restate the issues raised."
+          },
+          {
+            "element": "decision_and_reasons",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "The draft states the firm is investigating and will write back with an outcome, but it does not provide a decision (uphold, partially uphold, reject) nor reasons for a decision."
+          },
+          {
+            "element": "fos_referral_rights",
+            "status": "PRESENT",
+            "evidence": "**Your right to refer to the Financial Ombudsman Service** If you are not satisfied with our final response, you have the right to refer your complaint to the Financial Ombudsman Service, free of charge. I have enclosed their explanatory leaflet, which sets out how to contact them...",
+            "reasoning": "The customer\u2011facing text clearly informs the complainant of the right to refer the complaint to the FOS and provides contact details."
+          },
+          {
+            "element": "six_month_referral_limit",
+            "status": "PARTIAL",
+            "evidence": "I have enclosed their explanatory leaflet, which sets out how to contact them and the time limits for doing so.",
+            "reasoning": "The draft mentions that there are time limits but does not specify the required six\u2011month period from the date of the final response, making the compliance only partial."
+          },
+          {
+            "element": "fair_treatment",
+            "status": "PRESENT",
+            "evidence": "We are investigating your concerns... We will write to you again with the outcome of our investigation. If we find that we fell short of what was required, we will tell you what steps we are taking to put things right.",
+            "reasoning": "The response engages with the complaint points, uses neutral and apologetic language, and does not dismiss or minimise the complainant\u2019s concerns."
+          },
+          {
+            "element": "redress_consideration",
+            "status": "PARTIAL",
+            "evidence": "If we find that we fell short of what was required, we will tell you what steps we are taking to put things right.",
+            "reasoning": "The draft acknowledges the possibility of redress but does not state a definitive position or offer; it only promises to consider redress after further investigation."
+          }
+        ],
+        "required_elements": [
+          "acknowledgement",
+          "decision_and_reasons",
+          "fos_referral_rights",
+          "six_month_referral_limit",
+          "fair_treatment",
+          "redress_consideration"
+        ],
+        "judge_model": "openai.gpt-oss-120b-1:0",
+        "latency_ms": 8247.175791999325,
+        "usage": {
+          "input_tokens": 2625,
+          "output_tokens": 1712,
+          "total_tokens": 4337
+        }
+      },
+      "judge_rubric_secondary": {
+        "verdicts": [
+          {
+            "element": "acknowledgement",
+            "status": "PRESENT",
+            "evidence": "Thank you for getting in touch and for taking the time to raise these concerns. I am sorry to hear about the difficulty you experienced when trying to find out how to make a complaint, and I want to assure you that we take this seriously. [Section 'What you have told us' then accurately restates both complaints: lack of information at point of sale and website omission of FOS reference.]",
+            "reasoning": "The customer draft opens with a clear acknowledgement and apology, then provides a detailed and accurate restatement of both complaints raised (no complaints procedure information at sale, and FOS not mentioned on website). This satisfies the PRESENT band."
+          },
+          {
+            "element": "decision_and_reasons",
+            "status": "PARTIAL",
+            "evidence": "We are investigating your concerns. Specifically, we will review what information was provided to you at the time your loan was taken out and whether our processes met the standard required of us. We will also review your concern about the information available on our website. We will write to you again with the outcome of our investigation. If we find that we fell short of what was required, we will tell you what steps we are taking to put things right.",
+            "reasoning": "The response does not state a final decision (uphold, partially uphold, or reject). Instead, it announces an investigation and promises a future response. This is a holding response structure, not a final decision. Although the handler answer notes this is a final response stage, the customer draft defers the decision entirely. The response engages with the specific points (what information was provided, website review) but does not reach or communicate a substantive decision on the complaint itself. This falls short of PRESENT and meets PARTIAL."
+          },
+          {
+            "element": "fos_referral_rights",
+            "status": "PRESENT",
+            "evidence": "If you are not satisfied with our final response, you have the right to refer your complaint to the Financial Ombudsman Service, free of charge. I have enclosed their explanatory leaflet, which sets out how to contact them and the time limits for doing so. You can also find further information on their website at www.financial-ombudsman.org.uk.",
+            "reasoning": "The customer draft clearly states the right to refer to the FOS and provides multiple means of contact: an enclosed leaflet, the FOS website URL, and reference to their contact details. This satisfies the PRESENT band."
+          },
+          {
+            "element": "six_month_referral_limit",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "The customer draft mentions 'time limits for doing so' (referring to the enclosed FOS leaflet) but does not state the six-month deadline in the customer-facing text itself. The reference to the leaflet is indirect and does not communicate the specific six-month period running from the date of the final response. This does not meet the PRESENT band requirement that the customer-facing text itself states the six-month deadline. MISSING."
+          },
+          {
+            "element": "fair_treatment",
+            "status": "PRESENT",
+            "evidence": "I am sorry to hear about the difficulty you experienced when trying to find out how to make a complaint, and I want to assure you that we take this seriously. [Accurate restatement of complaint.] We are required to make information about our internal complaints handling procedure available to customers... We take this obligation seriously. [Engages with the regulatory standard.] If we find that we fell short of what was required, we will tell you what steps we are taking to put things right.",
+            "reasoning": "The response is clear, non-dismissive, and even-handed. It acknowledges the customer's inconvenience, accurately restates the complaint, explains the firm's obligations in plain language, and commits to investigation and remedial action if warranted. The tone is respectful and the substance engages with the specific points raised. This satisfies the PRESENT band."
+          },
+          {
+            "element": "redress_consideration",
+            "status": "PARTIAL",
+            "evidence": "If we find that we fell short of what was required, we will tell you what steps we are taking to put things right.",
+            "reasoning": "The response acknowledges that redress may be appropriate ('put things right') but does not reach or communicate a clear position on redress in this final response. The handler answer notes that redress may be warranted (time/inconvenience) and flags this for human review, but the customer draft defers the redress decision to a future communication pending investigation. The complaint plainly raises a detriment (over an hour spent locating the complaints process), yet no position on redress is communicated to the customer in this final response. This is PARTIAL: the question is flagged but no clear position is reached or communicated."
+          }
+        ],
+        "required_elements": [
+          "acknowledgement",
+          "decision_and_reasons",
+          "fos_referral_rights",
+          "six_month_referral_limit",
+          "fair_treatment",
+          "redress_consideration"
+        ],
+        "judge_model": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
+        "latency_ms": 10220.0434999977,
+        "usage": {
+          "input_tokens": 2818,
+          "output_tokens": 1125,
+          "total_tokens": 3943
+        }
+      },
+      "judge_grounding": {
+        "claims": [
+          {
+            "claim": "DISP 1.2.1R requires that summary details of the firm's internal complaints handling procedures are provided to eligible complainants.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s2.md",
+            "reasoning": "The retrieved DISP 1.2.1R rule (included in the disp1s2 section) obliges firms to give summary details of internal complaints procedures to eligible complainants."
+          },
+          {
+            "claim": "DISP 1.2.1R(1) states this obligation applies at, or immediately after, the point when contact is first made with an eligible complainant.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s2.md",
+            "reasoning": "The disp1s2 provision explicitly says the rule \"shall apply at, or immediately after, the point when contact is first made with an eligible complainant\"."
+          },
+          {
+            "claim": "DISP 1.2.3G further indicates that the summary details should cover at least how the firm handles complaints and (where FOS jurisdiction applies) that unresolved complaints may be referred to the FOS.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s2.md",
+            "reasoning": "DISP 1.2.3 (Guidance) in the same section lists the required content of the summary details, matching the claim."
+          },
+          {
+            "claim": "DISP 1.1A.11R requires MiFID investment firms to provide FOS information on their website.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s20.md",
+            "reasoning": "The disp1s20 provision contains DISP 1.1A.11 (Rules) which states that a MiFID investment firm must provide information about the Financial Ombudsman Service on its website."
+          },
+          {
+            "claim": "DISP 1.1A.11R may not directly apply here because personal loan is not a MiFID product.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s20.md",
+            "reasoning": "DISP 1.1A.11R is limited to MiFID investment firms; therefore it does not automatically apply to a non\u2011MiFID personal\u2011loan business."
+          },
+          {
+            "claim": "The retrieved provisions do not contain a general rule requiring all firms to display FOS information on their website for non\u2011MiFID products.",
+            "source_field": "handler_answer",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "No retrieved provision expressly states the absence of such a rule; the claim is an observation about the set, not supported by a specific provision."
+          },
+          {
+            "claim": "If complaints procedure information was not provided at or around the point of sale, this would be a failure under DISP 1.2.1R.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s2.md",
+            "reasoning": "DISP 1.2.1R obliges firms to give the summary details at or immediately after first contact; failure to do so would breach the rule."
+          },
+          {
+            "claim": "We are required to make information about our internal complaints handling procedure available to customers, including how to raise a complaint and \u2014 where relevant \u2014 that unresolved complaints may be referred to the Financial Ombudsman Service.",
+            "source_field": "customer_draft",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s2.md",
+            "reasoning": "DISP 1.2.1R and the guidance in DISP 1.2.3 together set this requirement."
+          },
+          {
+            "claim": "This information should be provided at or around the time we first deal with you as a customer.",
+            "source_field": "customer_draft",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s2.md",
+            "reasoning": "The rule in DISP 1.2.1R specifies the timing as at, or immediately after, first contact."
+          },
+          {
+            "claim": "If you are not satisfied with our final response, you have the right to refer your complaint to the Financial Ombudsman Service, free of charge.",
+            "source_field": "customer_draft",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s6.md",
+            "reasoning": "DISP 1.6 (as captured in the disp1s6 provision) requires firms to inform complainants of the right to refer to the FOS and to provide the explanatory leaflet."
+          },
+          {
+            "claim": "We will write to you again with the outcome of our investigation.",
+            "source_field": "customer_draft",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "No provision mandates a follow\u2011up letter after an internal investigation; the statement is a factual intention, not backed by a rule."
+          },
+          {
+            "claim": "If we find that we fell short of what was required, we will tell you what steps we are taking to put things right.",
+            "source_field": "customer_draft",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "The FCA Handbook does not contain a specific rule requiring this exact wording or promise; therefore the claim is not grounded."
+          },
+          {
+            "claim": "You spent over an hour on the phone trying to find out where to direct your complaint.",
+            "source_field": "customer_draft",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "The statement is a factual description of the customer's experience and is not supported by any retrieved provision."
+          },
+          {
+            "claim": "You were not given any information about how to make a complaint \u2014 either during the application process, at the point of sale, or in the paperwork you received.",
+            "source_field": "customer_draft",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "The claim asserts a fact about what was (not) provided; the provisions set the requirement but do not confirm the factual circumstance."
+          },
+          {
+            "claim": "Our website does not refer to the Financial Ombudsman Service.",
+            "source_field": "customer_draft",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "No provision confirms the website's content; the statement is a factual observation not backed by the retrieved rules."
+          }
+        ],
+        "judge_model": "openai.gpt-oss-120b-1:0",
+        "latency_ms": 24893.972457997734,
+        "usage": {
+          "input_tokens": 5306,
+          "output_tokens": 5155,
+          "total_tokens": 10461
+        }
+      },
+      "inter_judge_agreement": 0.6666666666666666,
+      "cost": {
+        "generation_cost": 0.047742,
+        "judge_cost": 0.11464000000000002,
+        "total_cost": 0.16238200000000003,
+        "breakdown": {
+          "generation": 0.047742,
+          "rubric_primary": 0.028419,
+          "rubric_secondary": 0.008442999999999999,
+          "grounding": 0.07777800000000001
+        }
+      },
+      "metrics": {
+        "scenario_id": "c001",
+        "config_label": "fixed-titan",
+        "coverage": 0.6666666666666666,
+        "present_count": 3,
+        "n_required": 6,
+        "section_precision": 0.125,
+        "section_recall": 1.0,
+        "citation_precision": 0.5,
+        "citation_recall": 0.6666666666666666,
+        "retrieved_provision_recall": 0.0,
+        "drafting_gap": -0.6666666666666666,
+        "grounded_pct": 0.6,
+        "grounded_pct_customer": 0.375,
+        "grounded_pct_handler": 0.8571428571428571,
+        "ungrounded_pct": 0.4,
+        "inter_judge_agreement": 0.6666666666666666,
+        "latency_ms": 34716.27516699664,
+        "total_cost": 0.16238200000000003
+      },
+      "latency_ms": 34716.27516699664,
+      "usage": {
+        "input_tokens": 6804,
+        "output_tokens": 1822,
+        "total_tokens": 8626
+      }
+    },
+    {
+      "scenario_id": "c002",
+      "config": "fixed-titan",
+      "scenario_text": "I've been trying to call my bank to make a formal complaint about an incorrect fee they charged me. The only number they provide for complaints is an 0871 number, which is costing me a fortune every time I ring. I've called three times now and been on hold for extended periods, racking up charges. I'm on a basic state pension and these call costs are adding up significantly. I shouldn't have to pay premium rates just to complain. I want the bank to reimburse me for the call charges I've incurred and to provide a proper free or local-rate number for complaints.",
+      "response_stage": "final",
+      "complaint_type": "single",
+      "difficulty": "medium",
+      "expected_provisions": [
+        "DISP 1.3.1R",
+        "DISP 1.3.1AR",
+        "DISP 1.3.1AAR",
+        "DISP 1.3.1ABR",
+        "DISP 1.3.1ADR"
+      ],
+      "expected_provision_sections": [
+        "disp1s3"
+      ],
+      "required_response_elements": [
+        "acknowledgement",
+        "decision_and_reasons",
+        "fos_referral_rights",
+        "six_month_referral_limit",
+        "fair_treatment",
+        "redress_consideration",
+        "vulnerability_consideration"
+      ],
+      "handler_answer": "This complaint raises a clear regulatory breach. GEN 7.2.1R requires that a firm operating a telephone line for consumers to contact it in relation to a contract must not bind the consumer to pay more than the basic rate. GEN 7.2.5R explicitly lists 0871 numbers as non-compliant with this call charges rule, as their cost can exceed the geographic rate and varies by tariff. Using an 0871 number as the sole complaints contact line is therefore a breach of GEN 7.2.1R and GEN 7.2.5R.\n\nThe customer is also indicating potential vulnerability (basic state pension, significant financial impact of call charges), which requires careful handling.\n\nRecommended action:\n1. Acknowledge the breach \u2014 the 0871 number does not comply with the call charges rule.\n2. The customer is requesting reimbursement of call charges incurred. The retrieved provisions establish the regulatory obligation but do not themselves specify a redress mechanism or quantum. Any decision to reimburse must be made by a human reviewer with authority to approve financial redress.\n3. The bank should provide the customer with a compliant contact number (geographic 01/02/03, freephone 0800/0808, or standard mobile 07 per GEN 7.2.4R) going forward.\n4. Human review is required before sending: (a) the complaint involves potential financial redress; (b) there are clear signs of customer vulnerability; and (c) the systemic issue of the non-compliant number may need escalation under the bank's own complaints policy (PRIN 12 / internal policy).\n\nAssumptions to confirm before sending: (i) confirm the bank's actual compliant contact number to include in the letter; (ii) confirm whether the bank will reimburse call charges and the amount, as this cannot be committed to in the draft without authorisation; (iii) confirm whether a final response letter is appropriate at this stage or whether an acknowledgement/holding response is needed while the fee complaint and call charge reimbursement are investigated.",
+      "customer_draft": "Dear [Customer Name],\n\nThank you for getting in touch, and I am sorry to hear about the difficulties you have experienced when trying to contact us. I also want to apologise for the distress and inconvenience caused by the call charges you have incurred.\n\nWe take your concerns very seriously. Our regulator's rules require that any telephone line we operate for customers to contact us in connection with their account or contract must not cost more than the basic rate of connection. Numbers beginning with 0871 do not meet this standard, and we recognise that this has caused you a real financial burden \u2014 particularly given the extended time you have spent on hold.\n\nWe are investigating your complaint, which covers two matters:\n1. The incorrect fee you were charged on your account.\n2. The call charges you have incurred trying to reach us on a non-compliant number.\n\nWe will write to you again with our findings and conclusions. In the meantime, if you need to contact us, please use [INSERT COMPLIANT NUMBER \u2014 e.g. 0800 / 01 / 02 / 03 number], which is free or charged at no more than the basic geographic rate.\n\nIf you are not satisfied with our final response, or if we have not resolved your complaint within eight weeks of receiving it, you have the right to refer your complaint to the Financial Ombudsman Service, free of charge. We will provide you with details of how to do this when we send our final response.\n\nThank you for bringing this to our attention.\n\nYours sincerely,\n[Handler Name]\n[Job Title]\nCrest Bank",
+      "cited_provisions": [
+        {
+          "provision": "GEN 7.2.1R",
+          "provision_type": "Rule",
+          "relevance": "Requires that a firm operating a telephone line for consumers to contact it in relation to a contract must not bind the consumer to pay more than the basic rate \u2014 the core obligation breached here.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md"
+        },
+        {
+          "provision": "GEN 7.2.3R",
+          "provision_type": "Rule",
+          "relevance": "Defines 'basic rate' as the simple cost of connection, which must not provide the firm with a contribution to its costs or revenues.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md"
+        },
+        {
+          "provision": "GEN 7.2.4R",
+          "provision_type": "Rule",
+          "relevance": "Sets out the types of numbers that would comply with the call charges rule, including 01/02/03 geographic numbers, 0800/0808 freephone numbers, and standard 07 mobile numbers \u2014 relevant to advising the bank on a compliant alternative.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md"
+        },
+        {
+          "provision": "GEN 7.2.5R",
+          "provision_type": "Rule",
+          "relevance": "Explicitly lists 0871 numbers as non-compliant with the call charges rule, directly establishing the breach in this complaint.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md"
+        }
+      ],
+      "human_review_required": true,
+      "insufficient_context": false,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md",
+          "score": 0.6751217842102051,
+          "section": "gen7s2"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/synthetic/policies/customer-complaints-handling-procedure.md",
+          "score": 0.6513983011245728,
+          "section": null
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/conc8s7.md",
+          "score": 0.6507602632045746,
+          "section": "conc8s7"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s23.md",
+          "score": 0.6468750238418579,
+          "section": "disp1s23"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s21.md",
+          "score": 0.6390749514102936,
+          "section": "disp1s21"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/disp1s22.md",
+          "score": 0.6310071349143982,
+          "section": "disp1s22"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/bcobs7s8.md",
+          "score": 0.6270848214626312,
+          "section": "bcobs7s8"
+        }
+      ],
+      "retrieval_metrics": {
+        "citation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "n_cited": 4,
+          "n_expected": 5,
+          "n_matched": 0,
+          "matched": [],
+          "cited_not_expected": [
+            "GEN 7.2.1",
+            "GEN 7.2.3",
+            "GEN 7.2.4",
+            "GEN 7.2.5"
+          ],
+          "expected_not_cited": [
+            "DISP 1.3.1",
+            "DISP 1.3.1A",
+            "DISP 1.3.1AA",
+            "DISP 1.3.1AB",
+            "DISP 1.3.1AD"
+          ]
+        },
+        "section": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n_retrieved": 7,
+          "n_relevant": 0,
+          "expected_sections": [
+            "disp1s3"
+          ],
+          "retrieved_sections": [
+            "gen7s2",
+            "conc8s7",
+            "disp1s23",
+            "disp1s21",
+            "disp1s22",
+            "bcobs7s8"
+          ],
+          "matched_sections": [],
+          "missing_sections": [
+            "disp1s3"
+          ]
+        },
+        "retrieved_provision_recall": {
+          "recall": 0.0,
+          "n_expected": 5,
+          "n_present": 0,
+          "matched": [],
+          "missing": [
+            "DISP 1.3.1",
+            "DISP 1.3.1A",
+            "DISP 1.3.1AA",
+            "DISP 1.3.1AB",
+            "DISP 1.3.1AD"
+          ],
+          "present_in_text": []
+        }
+      },
+      "judge_rubric_primary": {
+        "verdicts": [
+          {
+            "element": "acknowledgement",
+            "status": "PRESENT",
+            "evidence": "Thank you for getting in touch, and I am sorry to hear about the difficulties you have experienced when trying to contact us. I also want to apologise for the distress and inconvenience caused by the call charges you have incurred.",
+            "reasoning": "The opening sentences directly acknowledge the complainant's difficulty contacting the bank and the call charges, matching the complaint's subject."
+          },
+          {
+            "element": "decision_and_reasons",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "The customer draft states the complaint is being investigated and that a further letter will follow, but it does not provide a firm decision (uphold, partially uphold, reject) nor reasons for such a decision."
+          },
+          {
+            "element": "fos_referral_rights",
+            "status": "PRESENT",
+            "evidence": "If you are not satisfied with our final response, or if we have not resolved your complaint within eight weeks of receiving it, you have the right to refer your complaint to the Financial Ombudsman Service, free of charge.",
+            "reasoning": "The text clearly informs the complainant of the right to refer the complaint to the FOS."
+          },
+          {
+            "element": "six_month_referral_limit",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "The draft mentions the eight\u2011week response deadline but does not state the six\u2011month period within which the complainant may refer the matter to the FOS."
+          },
+          {
+            "element": "fair_treatment",
+            "status": "PRESENT",
+            "evidence": "I also want to apologise for the distress and inconvenience caused... We are investigating your complaint... In the meantime, if you need to contact us, please use [INSERT COMPLIANT NUMBER]...",
+            "reasoning": "The response engages with the complaint, apologises, promises investigation, and offers a compliant contact number, using clear, non\u2011dismissive language."
+          },
+          {
+            "element": "redress_consideration",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "The draft does not address whether the bank will reimburse the call charges or any other redress; it only says the matter is under investigation."
+          },
+          {
+            "element": "vulnerability_consideration",
+            "status": "PRESENT",
+            "evidence": "The customer is also indicating potential vulnerability (basic state pension, significant financial impact of call charges), which requires careful handling.",
+            "reasoning": "Both the handler answer and the customer draft recognise the complainant's vulnerability and recommend careful handling, satisfying the element for either audience."
+          }
+        ],
+        "required_elements": [
+          "acknowledgement",
+          "decision_and_reasons",
+          "fos_referral_rights",
+          "six_month_referral_limit",
+          "fair_treatment",
+          "redress_consideration",
+          "vulnerability_consideration"
+        ],
+        "judge_model": "openai.gpt-oss-120b-1:0",
+        "latency_ms": 6043.791082993266,
+        "usage": {
+          "input_tokens": 2356,
+          "output_tokens": 1147,
+          "total_tokens": 3503
+        }
+      },
+      "judge_rubric_secondary": {
+        "verdicts": [
+          {
+            "element": "acknowledgement",
+            "status": "PRESENT",
+            "evidence": "Thank you for getting in touch, and I am sorry to hear about the difficulties you have experienced when trying to contact us. I also want to apologise for the distress and inconvenience caused by the call charges you have incurred. We take your concerns very seriously.",
+            "reasoning": "The customer draft opens with a clear acknowledgement of the complaint and accurately reflects both elements: the difficulty contacting the bank via the 0871 number and the call charges incurred. The tone is appropriately apologetic and demonstrates understanding of the subject matter."
+          },
+          {
+            "element": "decision_and_reasons",
+            "status": "PARTIAL",
+            "evidence": "Our regulator's rules require that any telephone line we operate for customers to contact us in connection with their account or contract must not cost more than the basic rate of connection. Numbers beginning with 0871 do not meet this standard, and we recognise that this has caused you a real financial burden.",
+            "reasoning": "The draft explains the regulatory breach and acknowledges the customer's loss, but does not state a clear decision on the complaint itself (uphold/partially uphold/reject) or on the specific redress request (reimbursement of call charges). It states 'We are investigating' and promises a future response, which defers the decision. The reasons given engage with the regulatory position but not with a final determination on the complaint."
+          },
+          {
+            "element": "fos_referral_rights",
+            "status": "PARTIAL",
+            "evidence": "If you are not satisfied with our final response, or if we have not resolved your complaint within eight weeks of receiving it, you have the right to refer your complaint to the Financial Ombudsman Service, free of charge. We will provide you with details of how to do this when we send our final response.",
+            "reasoning": "The draft mentions the FOS and states the right to refer, but does not provide the means to do so in this letter. It defers provision of FOS contact details to 'when we send our final response', which is problematic because this is stated to be a final response. The signposting is incomplete in the current draft."
+          },
+          {
+            "element": "six_month_referral_limit",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "The draft does not state the six-month deadline running from the date of this final response. It mentions the eight-week response clock ('within eight weeks of receiving it') but does not inform the customer of the six-month period within which they may refer to the FOS after receiving the firm's final response."
+          },
+          {
+            "element": "fair_treatment",
+            "status": "PRESENT",
+            "evidence": "We take your concerns very seriously. Our regulator's rules require that any telephone line we operate for customers to contact us in connection with their account or contract must not cost more than the basic rate of connection. Numbers beginning with 0871 do not meet this standard, and we recognise that this has caused you a real financial burden \u2014 particularly given the extended time you have spent on hold.",
+            "reasoning": "The response engages substantively with the complaint, acknowledges the regulatory breach, validates the customer's financial hardship, and demonstrates understanding of the specific circumstances (extended hold times, vulnerability due to pension income). The language is clear, non-dismissive, and appropriately empathetic. The tone is even-handed and treats the complaint on its merits."
+          },
+          {
+            "element": "redress_consideration",
+            "status": "PARTIAL",
+            "evidence": "We are investigating your complaint, which covers two matters: 1. The incorrect fee you were charged on your account. 2. The call charges you have incurred trying to reach us on a non-compliant number. We will write to you again with our findings and conclusions.",
+            "reasoning": "The draft acknowledges that call charges are part of the complaint and flags them for investigation, but does not reach or communicate a position on redress. It defers the decision to a future response. The handler answer notes that redress requires human authorisation and cannot be committed to without it, but this means the customer-facing draft does not address whether redress is warranted or what the firm's position is. This is a holding response masquerading as a final response, leaving redress unresolved."
+          },
+          {
+            "element": "vulnerability_consideration",
+            "status": "PRESENT",
+            "evidence": "Handler answer: 'The customer is also indicating potential vulnerability (basic state pension, significant financial impact of call charges), which requires careful handling.' Customer draft: 'particularly given the extended time you have spent on hold' and 'I am sorry to hear about the difficulties you have experienced when trying to contact us. I also want to apologise for the distress and inconvenience caused by the call charges you have incurred.'",
+            "reasoning": "The handler answer explicitly identifies vulnerability (state pension, financial hardship) and flags it for careful handling. The customer draft responds with appropriately supportive and empathetic language, acknowledging the specific burden on the customer and avoiding dismissive tone. The response adapts to the vulnerability by validating the customer's concerns and demonstrating understanding of the financial impact. This satisfies the 'either' audience rule."
+          }
+        ],
+        "required_elements": [
+          "acknowledgement",
+          "decision_and_reasons",
+          "fos_referral_rights",
+          "six_month_referral_limit",
+          "fair_treatment",
+          "redress_consideration",
+          "vulnerability_consideration"
+        ],
+        "judge_model": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
+        "latency_ms": 11303.581000000122,
+        "usage": {
+          "input_tokens": 2534,
+          "output_tokens": 1229,
+          "total_tokens": 3763
+        }
+      },
+      "judge_grounding": {
+        "claims": [
+          {
+            "claim": "GEN 7.2.1R requires that a firm operating a telephone line for consumers to contact it in relation to a contract must not bind the consumer to pay more than the basic rate.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md",
+            "reasoning": "Provision 1 (GEN 7.2.1) states exactly this requirement."
+          },
+          {
+            "claim": "GEN 7.2.5R explicitly lists 0871 numbers as non\u2011compliant with this call charges rule, as their cost can exceed the geographic rate and varies by tariff.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md",
+            "reasoning": "Provision 1 (GEN 7.2.5) lists 0871 numbers among numbers that would not comply with the call charges rule."
+          },
+          {
+            "claim": "Using an 0871 number as the sole complaints contact line is therefore a breach of GEN 7.2.1R and GEN 7.2.5R.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md",
+            "reasoning": "Because GEN 7.2.1 prohibits charging above the basic rate and GEN 7.2.5 identifies 0871 numbers as non\u2011compliant, the use of such a number breaches both rules."
+          },
+          {
+            "claim": "The customer is also indicating potential vulnerability (basic state pension, significant financial impact of call charges), which requires careful handling.",
+            "source_field": "handler_answer",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "No retrieved FCA provision addresses vulnerability handling in the supplied excerpts."
+          },
+          {
+            "claim": "The bank should provide the customer with a compliant contact number (geographic 01/02/03, freephone 0800/0808, or standard mobile 07 per GEN 7.2.4R) going forward.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md",
+            "reasoning": "Provision 1 (GEN 7.2.4) lists exactly those number types as compliant."
+          },
+          {
+            "claim": "Any decision to reimburse must be made by a human reviewer with authority to approve financial redress.",
+            "source_field": "handler_answer",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "The retrieved provisions do not contain any rule or guidance about who must approve redress."
+          },
+          {
+            "claim": "The retrieved provisions establish the regulatory obligation but do not themselves specify a redress mechanism or quantum.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md",
+            "reasoning": "Provision 1 sets out the call\u2011charges obligations and contains no language about redress or amounts."
+          },
+          {
+            "claim": "Our regulator's rules require that any telephone line we operate for customers to contact us in connection with their account or contract must not cost more than the basic rate of connection.",
+            "source_field": "customer_draft",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md",
+            "reasoning": "Matches the wording of GEN 7.2.1 in Provision 1."
+          },
+          {
+            "claim": "Numbers beginning with 0871 do not meet this standard.",
+            "source_field": "customer_draft",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md",
+            "reasoning": "GEN 7.2.5 (Provision 1) lists 0871 numbers as non\u2011compliant."
+          },
+          {
+            "claim": "If you are not satisfied with our final response, or if we have not resolved your complaint within eight weeks of receiving it, you have the right to refer your complaint to the Financial Ombudsman Service, free of charge.",
+            "source_field": "customer_draft",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "The supplied provisions do not contain a rule or guidance specifying an eight\u2011week resolution time or the right to refer to the Financial Ombudsman Service."
+          },
+          {
+            "claim": "We will provide you with a compliant number (free or charged at no more than the basic geographic rate).",
+            "source_field": "customer_draft",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections/gen7s2.md",
+            "reasoning": "GEN 7.2.4 (Provision 1) defines the types of numbers that meet the basic\u2011rate requirement."
+          }
+        ],
+        "judge_model": "openai.gpt-oss-120b-1:0",
+        "latency_ms": 12228.332040991518,
+        "usage": {
+          "input_tokens": 3413,
+          "output_tokens": 3357,
+          "total_tokens": 6770
+        }
+      },
+      "inter_judge_agreement": 0.5714285714285714,
+      "cost": {
+        "generation_cost": 0.034914,
+        "judge_cost": 0.080034,
+        "total_cost": 0.114948,
+        "breakdown": {
+          "generation": 0.034914,
+          "rubric_primary": 0.020832,
+          "rubric_secondary": 0.008679,
+          "grounding": 0.050523
+        }
+      },
+      "metrics": {
+        "scenario_id": "c002",
+        "config_label": "fixed-titan",
+        "coverage": 0.5714285714285714,
+        "present_count": 4,
+        "n_required": 7,
+        "section_precision": 0.0,
+        "section_recall": 0.0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0,
+        "retrieved_provision_recall": 0.0,
+        "drafting_gap": 0.0,
+        "grounded_pct": 0.7272727272727273,
+        "grounded_pct_customer": 0.75,
+        "grounded_pct_handler": 0.7142857142857143,
+        "ungrounded_pct": 0.2727272727272727,
+        "inter_judge_agreement": 0.5714285714285714,
+        "latency_ms": 30644.105832994683,
+        "total_cost": 0.114948
+      },
+      "latency_ms": 30644.105832994683,
+      "usage": {
+        "input_tokens": 5093,
+        "output_tokens": 1309,
+        "total_tokens": 6402
+      }
+    }
+  ],
+  "structure-titan": [
+    {
+      "scenario_id": "c001",
+      "config": "structure-titan",
+      "scenario_text": "I took out a personal loan with your bank in March 2024. At no point during the application process or at the point of sale was I given any information about your complaints procedure or told how I could complain if something went wrong. I've since had a problem with an overcharge on my account and when I tried to find out how to complain, there was nothing on my loan agreement, nothing in the paperwork I was given, and I had to spend over an hour on the phone just to find out where to send my complaint. I also notice your website has no mention of the Financial Ombudsman Service anywhere. I believe you have failed in your duty to make me aware of my rights and I want this addressed.",
+      "response_stage": "final",
+      "complaint_type": "single",
+      "difficulty": "medium",
+      "expected_provisions": [
+        "DISP 1.2.1R",
+        "DISP 1.2.3G",
+        "DISP 1.2.4G"
+      ],
+      "expected_provision_sections": [
+        "disp1s2"
+      ],
+      "required_response_elements": [
+        "acknowledgement",
+        "decision_and_reasons",
+        "fos_referral_rights",
+        "six_month_referral_limit",
+        "fair_treatment",
+        "redress_consideration"
+      ],
+      "handler_answer": "The customer's complaint raises two distinct regulatory issues under DISP 1.2.1R (Consumer awareness rules):\n\n1. **Failure to provide complaints procedure information at point of sale**: DISP 1.2.1R(2)(b) requires respondents to refer eligible complainants to the availability of complaints procedure information in writing at, or immediately after, the point of sale (for non-payment service products). A personal loan taken out in March 2024 would fall under this provision. The customer states they received nothing in their loan agreement or accompanying paperwork \u2014 if accurate, this is a prima facie breach of DISP 1.2.1R(2)(b).\n\n2. **Failure to provide FOS information on the website**: DISP 1.2.1R(4)(a) requires respondents to provide information about the Financial Ombudsman Service (including its website address) on the respondent's website, where one exists. The customer states there is no mention of the FOS on your website \u2014 if accurate, this is a prima facie breach of DISP 1.2.1R(4)(a).\n\n3. **Failure to provide complaints information when acknowledging the complaint**: DISP 1.2.1R(3)(b) requires complaints procedure information to be provided in writing and free of charge when acknowledging a complaint. You should confirm whether this was done when the customer's complaint was acknowledged.\n\n**Recommended action**: Investigate whether (a) complaints procedure information was included in the loan documentation issued in March 2024, (b) the bank's website currently carries FOS information and whether it did at the relevant time, and (c) whether the complaint acknowledgement included the required written information. If the failures are confirmed, the customer is owed an apology and remediation of the process failures. There is no financial redress directly indicated by these provisions, but the complaint about the overcharge itself will need to be handled separately.\n\n**Assumptions to confirm before sending the customer draft**: (1) This is a standard personal loan, not a payment service \u2014 if it were a payment service, DISP 1.2.1R(2)(a) and the Payment Services Regulations would apply instead. (2) The bank does have a website. (3) The complaint has been formally acknowledged. Human review is required given the potential regulatory breach and the separate underlying overcharge complaint which may involve financial redress.",
+      "customer_draft": "Dear [Customer name],\n\nThank you for getting in touch and for raising these concerns. I am sorry to hear about the difficulties you experienced in finding out how to make a complaint, and I want to assure you that we take this seriously.\n\nWe are required to publish clear information about our internal complaints procedure and to make that information available to you in writing at or around the time you take out a product with us. We are also required to provide information about the Financial Ombudsman Service \u2014 including its website address \u2014 on our website. You have told us that neither of these things happened in your case, and we are investigating this as a matter of priority.\n\nWe will review the documentation provided to you when your personal loan was arranged in March 2024, and we will check the information currently available on our website, to establish whether we fell short of our obligations. We will write to you with our findings.\n\nIn the meantime, I want to make sure you have the information you should have received from the outset:\n\n- Our complaints procedure: [insert link or description of where to find it]\n- The Financial Ombudsman Service can be contacted at www.financial-ombudsman.org.uk or by calling 0800 023 4567. Their service is free of charge to customers.\n\nWe are also aware that your complaint includes a concern about an overcharge on your account. We are treating this as part of your complaint and will address it in our full response.\n\nIf you remain dissatisfied with our response once we have completed our investigation, you have the right to refer your complaint to the Financial Ombudsman Service. I have enclosed their explanatory leaflet, which sets out the time limits for doing so.\n\nThank you again for bringing this to our attention.\n\nYours sincerely,\n[Handler name]\n[Job title]",
+      "cited_provisions": [
+        {
+          "provision": "DISP 1.2.1R",
+          "provision_type": "Rule",
+          "relevance": "Requires respondents to publish complaints procedure information, refer eligible complainants to it in writing at or after the point of sale, provide it free of charge on request and when acknowledging a complaint, and provide FOS information on their website \u2014 all of which the customer alleges were not done.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s2-000.md"
+        },
+        {
+          "provision": "DISP 1.6 (enclosure of FOS leaflet and website address)",
+          "provision_type": "Rule",
+          "relevance": "Requires that a final response encloses a copy of the FOS standard explanatory leaflet and provides the FOS website address, which must be included in the customer response.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s6-002.md"
+        }
+      ],
+      "human_review_required": true,
+      "insufficient_context": false,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp2s8-005.md",
+          "score": 0.6625633239746094,
+          "section": "disp2s8"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp2s8-004.md",
+          "score": 0.6589735448360443,
+          "section": "disp2s8"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s2-000.md",
+          "score": 0.6530969142913818,
+          "section": "disp1s2"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s6-002.md",
+          "score": 0.6460549235343933,
+          "section": "disp1s6"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/dispapp3s13-001.md",
+          "score": 0.6460245847702026,
+          "section": "dispapp3s13"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp2s8-003.md",
+          "score": 0.6448182463645935,
+          "section": "disp2s8"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/dispintros1-001.md",
+          "score": 0.6443988680839539,
+          "section": "dispintros1"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/dispapp3s13-003.md",
+          "score": 0.6399600803852081,
+          "section": "dispapp3s13"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp2s8-001.md",
+          "score": 0.6370719969272614,
+          "section": "disp2s8"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp2s8-000.md",
+          "score": 0.6338962614536285,
+          "section": "disp2s8"
+        }
+      ],
+      "retrieval_metrics": {
+        "citation": {
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "f1": 0.4,
+          "n_cited": 2,
+          "n_expected": 3,
+          "n_matched": 1,
+          "matched": [
+            "DISP 1.2.1"
+          ],
+          "cited_not_expected": [
+            "DISP 1.6"
+          ],
+          "expected_not_cited": [
+            "DISP 1.2.3",
+            "DISP 1.2.4"
+          ]
+        },
+        "section": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "n_retrieved": 10,
+          "n_relevant": 1,
+          "expected_sections": [
+            "disp1s2"
+          ],
+          "retrieved_sections": [
+            "disp2s8",
+            "disp1s2",
+            "disp1s6",
+            "dispapp3s13",
+            "dispintros1"
+          ],
+          "matched_sections": [
+            "disp1s2"
+          ],
+          "missing_sections": []
+        },
+        "retrieved_provision_recall": {
+          "recall": 0.3333333333333333,
+          "n_expected": 3,
+          "n_present": 1,
+          "matched": [
+            "DISP 1.2.1"
+          ],
+          "missing": [
+            "DISP 1.2.3",
+            "DISP 1.2.4"
+          ],
+          "present_in_text": [
+            "DISP 1.2.1",
+            "DISP 2.8.1",
+            "DISP 2.8.1A",
+            "DISP 2.8.2",
+            "DISP 2.8.2A",
+            "DISP 2.8.3",
+            "DISP 2.8.4",
+            "DISP 2.8.7",
+            "DISP 2.8.8",
+            "DISP 2.8.9"
+          ]
+        }
+      },
+      "judge_rubric_primary": {
+        "verdicts": [
+          {
+            "element": "acknowledgement",
+            "status": "PRESENT",
+            "evidence": "Thank you for getting in touch and for raising these concerns. I am sorry to hear about the difficulties you experienced in finding out how to make a complaint...",
+            "reasoning": "The opening paragraph directly acknowledges the complainant\u2019s issue about not being told how to complain and reflects the subject of the complaint."
+          },
+          {
+            "element": "decision_and_reasons",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "The draft does not state a firm decision (uphold, partially uphold, reject) nor provide reasons for such a decision; it only says an investigation will be carried out."
+          },
+          {
+            "element": "fos_referral_rights",
+            "status": "PRESENT",
+            "evidence": "If you remain dissatisfied with our response once we have completed our investigation, you have the right to refer your complaint to the Financial Ombudsman Service. I have enclosed their explanatory leaflet...",
+            "reasoning": "The customer\u2011facing text clearly informs the complainant of the right to refer the complaint to the FOS and provides contact details."
+          },
+          {
+            "element": "six_month_referral_limit",
+            "status": "PARTIAL",
+            "evidence": "I have enclosed their explanatory leaflet, which sets out the time limits for doing so.",
+            "reasoning": "A time\u2011limit is mentioned via the leaflet, but the specific six\u2011month period from the date of the final response is not stated."
+          },
+          {
+            "element": "fair_treatment",
+            "status": "PRESENT",
+            "evidence": "I am sorry to hear about the difficulties you experienced... We are investigating this as a matter of priority... We will write to you with our findings.",
+            "reasoning": "The response engages with the complaint, uses courteous language, and shows an impartial intent to investigate, satisfying the fair\u2011treatment requirement."
+          },
+          {
+            "element": "redress_consideration",
+            "status": "PARTIAL",
+            "evidence": "We are also aware that your complaint includes a concern about an overcharge on your account. We are treating this as part of your complaint and will address it in our full response.",
+            "reasoning": "The draft acknowledges the overcharge issue but does not provide a decision or explanation about any redress; it merely promises to consider it later, which meets the partial threshold."
+          }
+        ],
+        "required_elements": [
+          "acknowledgement",
+          "decision_and_reasons",
+          "fos_referral_rights",
+          "six_month_referral_limit",
+          "fair_treatment",
+          "redress_consideration"
+        ],
+        "judge_model": "openai.gpt-oss-120b-1:0",
+        "latency_ms": 8296.599291992607,
+        "usage": {
+          "input_tokens": 2366,
+          "output_tokens": 1650,
+          "total_tokens": 4016
+        }
+      },
+      "judge_rubric_secondary": {
+        "verdicts": [
+          {
+            "element": "acknowledgement",
+            "status": "PRESENT",
+            "evidence": "Thank you for getting in touch and for raising these concerns. I am sorry to hear about the difficulties you experienced in finding out how to make a complaint, and I want to assure you that we take this seriously. You have told us that neither of these things happened in your case, and we are investigating this as a matter of priority.",
+            "reasoning": "The customer draft opens with a clear acknowledgement of receipt and accurately reflects the complaint's subject matter: failure to provide complaints procedure information at point of sale and failure to provide FOS information on the website. The response demonstrates understanding of what the customer is complaining about."
+          },
+          {
+            "element": "decision_and_reasons",
+            "status": "PARTIAL",
+            "evidence": "We will review the documentation provided to you when your personal loan was arranged in March 2024, and we will check the information currently available on our website, to establish whether we fell short of our obligations. We will write to you with our findings.",
+            "reasoning": "The response does not state a clear decision (uphold, partially uphold, or reject). Instead, it announces an investigation and promises a future response. While the handler answer identifies potential breaches of DISP 1.2.1R, the customer draft defers the decision entirely, stating 'we will write to you with our findings' rather than reaching and communicating a position now. This is a holding response structure, not a final decision. For a final response, a decision and substantive reasons must be communicated to the customer."
+          },
+          {
+            "element": "fos_referral_rights",
+            "status": "PRESENT",
+            "evidence": "If you remain dissatisfied with our response once we have completed our investigation, you have the right to refer your complaint to the Financial Ombudsman Service. I have enclosed their explanatory leaflet, which sets out the time limits for doing so.",
+            "reasoning": "The customer draft clearly states the right to refer to the FOS and signposts the means to do so (explanatory leaflet enclosed). The FOS is identified by name and the complainant is told they may refer 'this complaint' to the FOS."
+          },
+          {
+            "element": "six_month_referral_limit",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "The customer draft does not state the six-month deadline running from the date of the final response. It refers to 'time limits' in the enclosed FOS leaflet but does not communicate the specific six-month period to the customer in the letter itself. The reference to the leaflet is not a substitute for stating the deadline in the response."
+          },
+          {
+            "element": "fair_treatment",
+            "status": "PARTIAL",
+            "evidence": "I am sorry to hear about the difficulties you experienced in finding out how to make a complaint, and I want to assure you that we take this seriously. We are required to publish clear information... You have told us that neither of these things happened in your case, and we are investigating this as a matter of priority.",
+            "reasoning": "The response is respectful and acknowledges the customer's frustration. However, it does not engage substantively with the complaint on its merits because it defers the decision. The response reads as fair in tone but superficial in substance\u2014it promises investigation rather than addressing the complaint. For a final response, this falls short of fair treatment because the customer is not given a reasoned position on whether the firm breached its obligations."
+          },
+          {
+            "element": "redress_consideration",
+            "status": "PARTIAL",
+            "evidence": "We are also aware that your complaint includes a concern about an overcharge on your account. We are treating this as part of your complaint and will address it in our full response.",
+            "reasoning": "The response acknowledges that redress may be relevant (the overcharge complaint) but defers consideration to a future response. The handler answer notes 'there is no financial redress directly indicated by these provisions' for the procedural breaches, but the customer draft does not communicate this reasoning to the customer. The overcharge is flagged but not addressed. For a final response, redress should be addressed now, not deferred."
+          }
+        ],
+        "required_elements": [
+          "acknowledgement",
+          "decision_and_reasons",
+          "fos_referral_rights",
+          "six_month_referral_limit",
+          "fair_treatment",
+          "redress_consideration"
+        ],
+        "judge_model": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
+        "latency_ms": 9332.712917006575,
+        "usage": {
+          "input_tokens": 2521,
+          "output_tokens": 987,
+          "total_tokens": 3508
+        }
+      },
+      "judge_grounding": {
+        "claims": [
+          {
+            "claim": "DISP 1.2.1R(2)(b) requires respondents to refer eligible complainants to the availability of complaints procedure information in writing at, or immediately after, the point of sale (for non\u2011payment service products).",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s2-000.md",
+            "reasoning": "Provision 3 contains DISP 1.2.1 (Rules) paragraph (2)(b) which states that respondents must refer eligible complainants to the availability of complaints\u2011procedure information in writing at, or immediately after, the point of sale for non\u2011payment service products."
+          },
+          {
+            "claim": "A personal loan taken out in March 2024 would fall under this provision.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s2-000.md",
+            "reasoning": "The provision\u2019s wording \u201cotherwise, in writing at, or immediately after, the point of sale\u201d applies to products that are not payment services, such as a standard personal loan, so the claim is supported."
+          },
+          {
+            "claim": "DISP 1.2.1R(4)(a) requires respondents to provide information about the Financial Ombudsman Service (including its website address) on the respondent's website, where one exists.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s2-000.md",
+            "reasoning": "Provision 3 includes paragraph (4)(a) which obliges firms to provide FOS information, including the website address, on their own website where one exists."
+          },
+          {
+            "claim": "DISP 1.2.1R(3)(b) requires complaints procedure information to be provided in writing and free of charge when acknowledging a complaint.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s2-000.md",
+            "reasoning": "Paragraph (3) of DISP 1.2.1 states that information must be provided in writing and free of charge when acknowledging a complaint (sub\u2011paragraph (b))."
+          },
+          {
+            "claim": "If the failures are confirmed, the customer is owed an apology and remediation of the process failures. There is no financial redress directly indicated by these provisions.",
+            "source_field": "handler_answer",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "The retrieved provisions do not prescribe an apology or remediation, nor do they state that no financial redress is available; they only set information\u2011provision obligations."
+          },
+          {
+            "claim": "If it were a payment service, DISP 1.2.1R(2)(a) and the Payment Services Regulations would apply instead.",
+            "source_field": "handler_answer",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s2-000.md",
+            "reasoning": "Paragraph (2)(a) of DISP 1.2.1 refers to the requirement for payment\u2011service products, linking to the Payment Services Regulations, which matches the claim."
+          },
+          {
+            "claim": "We are required to publish clear information about our internal complaints procedure and to make that information available to you in writing at or around the time you take out a product with us.",
+            "source_field": "customer_draft",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s2-000.md",
+            "reasoning": "DISP 1.2.1(1) obliges firms to publish appropriate information about internal complaint procedures, and DISP 1.2.1(2)(b) requires that information to be provided in writing at or immediately after the point of sale."
+          },
+          {
+            "claim": "We are also required to provide information about the Financial Ombudsman Service \u2014 including its website address \u2014 on our website.",
+            "source_field": "customer_draft",
+            "grounding": "GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s2-000.md",
+            "reasoning": "DISP 1.2.1(4)(a) sets the requirement to provide FOS information, including the website address, on the respondent\u2019s website where one exists."
+          },
+          {
+            "claim": "If you remain dissatisfied with our response once we have completed our investigation, you have the right to refer your complaint to the Financial Ombudsman Service.",
+            "source_field": "customer_draft",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "The retrieved provisions discuss time\u2011limits for referring a complaint (DISP 2.8) but do not expressly state that a complainant has a right to refer; therefore the claim is not directly supported."
+          },
+          {
+            "claim": "I have enclosed their explanatory leaflet, which sets out the time limits for doing so.",
+            "source_field": "customer_draft",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "No provision in the retrieved set mentions the provision of an explanatory leaflet or its content; the claim is factual but not grounded in the supplied rules."
+          }
+        ],
+        "judge_model": "openai.gpt-oss-120b-1:0",
+        "latency_ms": 9520.59879200533,
+        "usage": {
+          "input_tokens": 4957,
+          "output_tokens": 2985,
+          "total_tokens": 7942
+        }
+      },
+      "inter_judge_agreement": 0.5,
+      "cost": {
+        "generation_cost": 0.040392,
+        "judge_cost": 0.085045,
+        "total_cost": 0.125437,
+        "breakdown": {
+          "generation": 0.040392,
+          "rubric_primary": 0.026898,
+          "rubric_secondary": 0.007456,
+          "grounding": 0.050691
+        }
+      },
+      "metrics": {
+        "scenario_id": "c001",
+        "config_label": "structure-titan",
+        "coverage": 0.6666666666666666,
+        "present_count": 3,
+        "n_required": 6,
+        "section_precision": 0.1,
+        "section_recall": 1.0,
+        "citation_precision": 0.5,
+        "citation_recall": 0.3333333333333333,
+        "retrieved_provision_recall": 0.3333333333333333,
+        "drafting_gap": 0.0,
+        "grounded_pct": 0.7,
+        "grounded_pct_customer": 0.5,
+        "grounded_pct_handler": 0.8333333333333334,
+        "ungrounded_pct": 0.3,
+        "inter_judge_agreement": 0.5,
+        "latency_ms": 27599.90524999739,
+        "total_cost": 0.125437
+      },
+      "latency_ms": 27599.90524999739,
+      "usage": {
+        "input_tokens": 6854,
+        "output_tokens": 1322,
+        "total_tokens": 8176
+      }
+    },
+    {
+      "scenario_id": "c002",
+      "config": "structure-titan",
+      "scenario_text": "I've been trying to call my bank to make a formal complaint about an incorrect fee they charged me. The only number they provide for complaints is an 0871 number, which is costing me a fortune every time I ring. I've called three times now and been on hold for extended periods, racking up charges. I'm on a basic state pension and these call costs are adding up significantly. I shouldn't have to pay premium rates just to complain. I want the bank to reimburse me for the call charges I've incurred and to provide a proper free or local-rate number for complaints.",
+      "response_stage": "final",
+      "complaint_type": "single",
+      "difficulty": "medium",
+      "expected_provisions": [
+        "DISP 1.3.1R",
+        "DISP 1.3.1AR",
+        "DISP 1.3.1AAR",
+        "DISP 1.3.1ABR",
+        "DISP 1.3.1ADR"
+      ],
+      "expected_provision_sections": [
+        "disp1s3"
+      ],
+      "required_response_elements": [
+        "acknowledgement",
+        "decision_and_reasons",
+        "fos_referral_rights",
+        "six_month_referral_limit",
+        "fair_treatment",
+        "redress_consideration",
+        "vulnerability_consideration"
+      ],
+      "handler_answer": "This complaint raises two distinct regulatory issues, both well-supported by the retrieved provisions.\n\n**1. Use of an 0871 number for complaints \u2014 clear regulatory breach**\n\nDISP 1.3.1AAR (binding rule) requires that where a respondent operates a telephone line enabling an eligible complainant to submit a complaint, the complainant must not be bound to pay more than the basic rate. DISP 1.3.1ABR defines the basic rate as the simple cost of connection, which must not provide the respondent with a contribution to its costs or revenues. DISP 1.3.1ADR explicitly lists 0871 numbers as non-compliant. This is a clear breach of binding FCA rules.\n\nAdditionally, GEN 7.2.1R (binding rule) requires that a firm operating a telephone line enabling a consumer to contact the firm in relation to a contract must not bind the consumer to pay more than the basic rate. GEN 7.2.5R also lists 0871 numbers as non-compliant. This provides a second, independent regulatory basis for the breach.\n\n**2. Reimbursement of call charges incurred**\n\nThe customer is seeking reimbursement of the call charges they have already paid. The retrieved provisions establish the regulatory obligation not to charge above basic rate, but do not themselves specify a remedy or quantum of redress for historic overcharging. This is a financial redress question that requires human review and likely a senior decision-maker.\n\n**3. Vulnerability indicator**\n\nThe customer has indicated they are on a basic state pension and that the accumulated call charges are causing financial difficulty. This is a potential vulnerability indicator and must be factored into how the complaint is handled and prioritised.\n\n**Recommended action:**\n- Escalate to a senior complaints handler or compliance team given the potential regulatory breach, the redress element, and the vulnerability indicator.\n- The bank should urgently review whether its complaints telephone number complies with DISP 1.3.1AAR and GEN 7.2.1R. If it is using an 0871 number for complaints, this is a breach that may need to be reported or remediated more broadly.\n- On reimbursement: the provisions support the principle that the customer should not have been charged above basic rate, but the quantum and mechanism of redress is a matter for the bank's decision-maker, not this draft. Do not commit to a specific sum in the customer letter.\n- The draft below acknowledges the complaint, confirms the regulatory position in plain English, and commits to investigation \u2014 but does not admit liability or quantify redress. A human must review before sending.\n\n**Assumptions to confirm before sending:**\n- Confirm whether the bank is in fact using an 0871 number as its sole complaints line (the customer asserts this \u2014 verify against your own records).\n- Confirm whether the customer has documentary evidence of the call charges (e.g. phone bill).\n- Confirm vulnerability status and whether any additional support should be offered.",
+      "customer_draft": "Dear [Customer Name],\n\nThank you for getting in touch with us. I am sorry to hear about the difficulties you have experienced when trying to raise your complaint with us, and I want to assure you that we are taking this matter seriously.\n\nYou have raised two concerns, and I want to address both.\n\n**The telephone number used for complaints**\n\nOur regulator's rules are clear that customers must not be required to pay more than a basic call rate when contacting us to make a complaint. Numbers beginning with 0871 do not meet this standard. We are investigating the concern you have raised about the number provided to you, and I apologise unreservedly if you have been directed to a number that does not comply with this requirement.\n\n**The call charges you have incurred**\n\nWe understand that you have made three calls and incurred charges as a result. We are reviewing this as part of our investigation into your complaint. We will write to you again once we have completed our review to let you know our findings and what steps we propose to take.\n\nWe aim to resolve complaints promptly and will keep you informed of our progress. If you have a copy of your telephone bill showing the charges you have incurred, it would be helpful if you could share this with us, as it will assist our investigation.\n\nIf you have any questions in the meantime, please do not hesitate to contact us. Your complaint reference number is [REFERENCE NUMBER] and your dedicated handler is [HANDLER NAME], who can be reached at [CONTACT DETAILS].\n\nYours sincerely,\n[Handler Name]\n[Job Title]\nCrest Bank",
+      "cited_provisions": [
+        {
+          "provision": "DISP 1.3.1AAR",
+          "provision_type": "Rule",
+          "relevance": "Requires that where a respondent operates a telephone line for complaints, the eligible complainant must not be bound to pay more than the basic rate \u2014 directly engaged by the use of an 0871 number for the complaints line.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s3-000.md"
+        },
+        {
+          "provision": "DISP 1.3.1ABR",
+          "provision_type": "Rule",
+          "relevance": "Defines the basic rate as the simple cost of connection, which must not provide the respondent with a contribution to its costs or revenues \u2014 the 0871 number fails this definition.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s3-000.md"
+        },
+        {
+          "provision": "DISP 1.3.1ADR",
+          "provision_type": "Rule",
+          "relevance": "Explicitly lists 0871 numbers as non-compliant with the basic rate requirement for complaints telephone lines.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s3-001.md"
+        },
+        {
+          "provision": "GEN 7.2.1R",
+          "provision_type": "Rule",
+          "relevance": "Requires that a firm operating a telephone line enabling a consumer to contact the firm in relation to a contract must not bind the consumer to pay more than the basic rate \u2014 provides an independent regulatory basis for the breach.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/gen7s2-000.md"
+        },
+        {
+          "provision": "GEN 7.2.3R",
+          "provision_type": "Rule",
+          "relevance": "Defines the basic rate for the purposes of GEN 7.2.1R as the simple cost of connection, not providing the firm with a contribution to its costs or revenues.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/gen7s2-000.md"
+        },
+        {
+          "provision": "GEN 7.2.5R",
+          "provision_type": "Rule",
+          "relevance": "Explicitly lists 0871 numbers as non-compliant with the call charges rule under GEN 7.2.1R.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/gen7s2-000.md"
+        },
+        {
+          "provision": "DISP 1.3.1R",
+          "provision_type": "Rule",
+          "relevance": "Requires respondents to establish, implement and maintain effective and transparent procedures for the reasonable and prompt handling of complaints \u2014 relevant to the broader obligation to handle this complaint properly.",
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s3-000.md"
+        }
+      ],
+      "human_review_required": true,
+      "insufficient_context": false,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s3-000.md",
+          "score": 0.6824160218238831,
+          "section": "disp1s3"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s3-001.md",
+          "score": 0.6779857873916626,
+          "section": "disp1s3"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/gen7s2-000.md",
+          "score": 0.6756927371025085,
+          "section": "gen7s2"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/synthetic/policies-structure/customer-complaints-handling-procedure-002.md",
+          "score": 0.6513212323188782,
+          "section": "customer-complaints-handling-procedure"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s21-000.md",
+          "score": 0.6465275287628174,
+          "section": "disp1s21"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s24-001.md",
+          "score": 0.642707347869873,
+          "section": "disp1s24"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s23-000.md",
+          "score": 0.6406441628932953,
+          "section": "disp1s23"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/synthetic/policies-structure/customer-complaints-handling-procedure-004.md",
+          "score": 0.6396017670631409,
+          "section": "customer-complaints-handling-procedure"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s23-002.md",
+          "score": 0.6378060579299927,
+          "section": "disp1s23"
+        },
+        {
+          "chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/conc8s7-005.md",
+          "score": 0.631659209728241,
+          "section": "conc8s7"
+        }
+      ],
+      "retrieval_metrics": {
+        "citation": {
+          "precision": 0.5714285714285714,
+          "recall": 0.8,
+          "f1": 0.6666666666666666,
+          "n_cited": 7,
+          "n_expected": 5,
+          "n_matched": 4,
+          "matched": [
+            "DISP 1.3.1",
+            "DISP 1.3.1AA",
+            "DISP 1.3.1AB",
+            "DISP 1.3.1AD"
+          ],
+          "cited_not_expected": [
+            "GEN 7.2.1",
+            "GEN 7.2.3",
+            "GEN 7.2.5"
+          ],
+          "expected_not_cited": [
+            "DISP 1.3.1A"
+          ]
+        },
+        "section": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "n_retrieved": 10,
+          "n_relevant": 2,
+          "expected_sections": [
+            "disp1s3"
+          ],
+          "retrieved_sections": [
+            "disp1s3",
+            "gen7s2",
+            "customer-complaints-handling-procedure",
+            "disp1s21",
+            "disp1s24",
+            "disp1s23",
+            "conc8s7"
+          ],
+          "matched_sections": [
+            "disp1s3"
+          ],
+          "missing_sections": []
+        },
+        "retrieved_provision_recall": {
+          "recall": 1.0,
+          "n_expected": 5,
+          "n_present": 5,
+          "matched": [
+            "DISP 1.3.1",
+            "DISP 1.3.1A",
+            "DISP 1.3.1AA",
+            "DISP 1.3.1AB",
+            "DISP 1.3.1AD"
+          ],
+          "missing": [],
+          "present_in_text": [
+            "DISP 1.10B.1",
+            "DISP 1.10B.2",
+            "DISP 1.10B.3",
+            "DISP 1.10B.4",
+            "DISP 1.3.1",
+            "DISP 1.3.1A",
+            "DISP 1.3.1AA",
+            "DISP 1.3.1AB",
+            "DISP 1.3.1AC",
+            "DISP 1.3.1AD",
+            "DISP 1.3.1B",
+            "DISP 1.3.2",
+            "GEN 7.2.1",
+            "GEN 7.2.2",
+            "GEN 7.2.3",
+            "GEN 7.2.4",
+            "GEN 7.2.5"
+          ]
+        }
+      },
+      "judge_rubric_primary": {
+        "verdicts": [
+          {
+            "element": "acknowledgement",
+            "status": "PRESENT",
+            "evidence": "Thank you for getting in touch with us. I am sorry to hear about the difficulties you have experienced when trying to raise your complaint with us...",
+            "reasoning": "The customer\u2011facing draft opens by acknowledging the complaint and accurately restates the two issues raised (the phone number and the call charges)."
+          },
+          {
+            "element": "decision_and_reasons",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "The draft does not state a firm decision (uphold, partially uphold, reject) nor provide reasons for such a decision; it only says the matter is under investigation."
+          },
+          {
+            "element": "fos_referral_rights",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "There is no mention of the complainant\u2019s right to refer the complaint to the Financial Ombudsman Service in the customer\u2011facing text."
+          },
+          {
+            "element": "six_month_referral_limit",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "The draft does not state the six\u2011month deadline for referring the complaint to the FOS."
+          },
+          {
+            "element": "fair_treatment",
+            "status": "PRESENT",
+            "evidence": "We are investigating the concern you have raised... We will write to you again once we have completed our review...",
+            "reasoning": "The response engages with the substance of the complaint, uses courteous, non\u2011dismissive language and promises to keep the complainant informed, satisfying the fair\u2011treatment requirement."
+          },
+          {
+            "element": "redress_consideration",
+            "status": "PARTIAL",
+            "evidence": "We understand that you have made three calls and incurred charges... We are reviewing this as part of our investigation...",
+            "reasoning": "The draft acknowledges the issue of call\u2011charge redress but does not reach or communicate a clear position on whether redress will be provided."
+          },
+          {
+            "element": "vulnerability_consideration",
+            "status": "PRESENT",
+            "evidence": "Vulnerability indicator ... must be factored into how the complaint is handled and prioritised.",
+            "reasoning": "The handler answer identifies the vulnerability indicator (basic state pension, financial difficulty) and recommends appropriate handling; audience is either, so this satisfies the element."
+          }
+        ],
+        "required_elements": [
+          "acknowledgement",
+          "decision_and_reasons",
+          "fos_referral_rights",
+          "six_month_referral_limit",
+          "fair_treatment",
+          "redress_consideration",
+          "vulnerability_consideration"
+        ],
+        "judge_model": "openai.gpt-oss-120b-1:0",
+        "latency_ms": 6321.535916998982,
+        "usage": {
+          "input_tokens": 2545,
+          "output_tokens": 1115,
+          "total_tokens": 3660
+        }
+      },
+      "judge_rubric_secondary": {
+        "verdicts": [
+          {
+            "element": "acknowledgement",
+            "status": "PRESENT",
+            "evidence": "Thank you for getting in touch with us. I am sorry to hear about the difficulties you have experienced when trying to raise your complaint with us, and I want to assure you that we are taking this matter seriously. You have raised two concerns, and I want to address both.",
+            "reasoning": "The customer draft opens with a clear acknowledgement of receipt and accurately reflects the subject matter: difficulties with the complaints telephone number and the call charges incurred. The response demonstrates understanding of both concerns raised."
+          },
+          {
+            "element": "decision_and_reasons",
+            "status": "PARTIAL",
+            "evidence": "Our regulator's rules are clear that customers must not be required to pay more than a basic call rate when contacting us to make a complaint. Numbers beginning with 0871 do not meet this standard. We are investigating the concern you have raised about the number provided to you, and I apologise unreservedly if you have been directed to a number that does not comply with this requirement. We are reviewing this as part of our investigation into your complaint.",
+            "reasoning": "The response does not state a clear decision (uphold, partially uphold, or reject). Instead, it commits to investigation and apologises conditionally ('if you have been directed to a number that does not comply'). The reasons engage with the regulatory position but defer the actual decision to a future letter. For a final response, this is insufficient\u2014a decision must be reached and communicated, not deferred."
+          },
+          {
+            "element": "fos_referral_rights",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "The customer draft contains no mention of the Financial Ombudsman Service or the complainant's right to refer the complaint to the FOS. This is a mandatory element of a final response under DISP 1.8.2R."
+          },
+          {
+            "element": "six_month_referral_limit",
+            "status": "MISSING",
+            "evidence": "",
+            "reasoning": "The customer draft does not state the six-month deadline for referring the complaint to the FOS from the date of this final response. This is required by DISP 1.8.2R(2)."
+          },
+          {
+            "element": "fair_treatment",
+            "status": "PRESENT",
+            "evidence": "I am sorry to hear about the difficulties you have experienced... I want to assure you that we are taking this matter seriously... I apologise unreservedly if you have been directed to a number that does not comply... We understand that you have made three calls and incurred charges as a result.",
+            "reasoning": "The response addresses the substance of both concerns raised, uses clear and empathetic language, and does not dismiss or minimise the complainant's concerns. The tone is even-handed and acknowledges the customer's specific circumstances (three calls, financial impact). The language is accessible and non-dismissive."
+          },
+          {
+            "element": "redress_consideration",
+            "status": "PARTIAL",
+            "evidence": "We understand that you have made three calls and incurred charges as a result. We are reviewing this as part of our investigation into your complaint. We will write to you again once we have completed our review to let you know our findings and what steps we propose to take.",
+            "reasoning": "The response acknowledges the redress question (call charges incurred) and flags it for investigation, but does not reach or communicate a position on whether redress is warranted or what form it will take. The handler answer correctly notes that redress requires human review and senior decision-making, but the customer draft defers the decision entirely without even indicating the likely outcome or timeline. This is PARTIAL because the issue is flagged but not resolved."
+          },
+          {
+            "element": "vulnerability_consideration",
+            "status": "PARTIAL",
+            "evidence": "Handler answer: 'The customer has indicated they are on a basic state pension and that the accumulated call charges are causing financial difficulty. This is a potential vulnerability indicator and must be factored into how the complaint is handled and prioritised.' Customer draft: no reference to vulnerability or additional support.",
+            "reasoning": "The handler answer identifies the vulnerability indicator (state pension, financial hardship from call charges) and recommends appropriate escalation and prioritisation. However, the customer draft does not acknowledge or respond to the vulnerability. There is no adapted, supportive language, no signposting of support services, and no indication that the customer's circumstances have been recognised. The vulnerability is noted in the handler reasoning but not acted upon in the customer-facing communication."
+          }
+        ],
+        "required_elements": [
+          "acknowledgement",
+          "decision_and_reasons",
+          "fos_referral_rights",
+          "six_month_referral_limit",
+          "fair_treatment",
+          "redress_consideration",
+          "vulnerability_consideration"
+        ],
+        "judge_model": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
+        "latency_ms": 10068.969416010077,
+        "usage": {
+          "input_tokens": 2740,
+          "output_tokens": 1069,
+          "total_tokens": 3809
+        }
+      },
+      "judge_grounding": {
+        "claims": [
+          {
+            "claim": "DISP 1.3.1AAR (binding rule) requires that where a respondent operates a telephone line enabling an eligible complainant to submit a complaint, the complainant must not be bound to pay more than the basic rate.",
+            "source_field": "handler_answer",
+            "grounding": "PARTIALLY_GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s3-000.md",
+            "reasoning": "Provision 1 contains DISP 1.3.1AA which imposes the same requirement, but the claim cites a different rule identifier (AAR vs AA). The substantive requirement is present, so the claim is only partially grounded."
+          },
+          {
+            "claim": "DISP 1.3.1ABR defines the basic rate as the simple cost of connection, which must not provide the respondent with a contribution to its costs or revenues.",
+            "source_field": "handler_answer",
+            "grounding": "PARTIALLY_GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s3-000.md",
+            "reasoning": "Provision 1 includes DISP 1.3.1AB which defines the basic rate in the same way, but the claim uses the identifier ABR instead of AB."
+          },
+          {
+            "claim": "DISP 1.3.1ADR explicitly lists 0871 numbers as non\u2011compliant.",
+            "source_field": "handler_answer",
+            "grounding": "PARTIALLY_GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s3-001.md",
+            "reasoning": "Provision 2 contains DISP 1.3.1AD which lists 0871 numbers as non\u2011compliant. The claim\u2019s reference to ADR is a mis\u2011label, so the claim is only partially grounded."
+          },
+          {
+            "claim": "GEN 7.2.1R (binding rule) requires that a firm which operates a telephone line enabling a consumer to contact the firm in relation to a contract must not bind the consumer to pay more than the basic rate for the telephone call.",
+            "source_field": "handler_answer",
+            "grounding": "PARTIALLY_GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/gen7s2-000.md",
+            "reasoning": "Provision 3 includes GEN 7.2.1 which imposes the same requirement; the claim adds an \u2018R\u2019 suffix that is not present in the provision."
+          },
+          {
+            "claim": "GEN 7.2.5R also lists 0871 numbers as non\u2011compliant.",
+            "source_field": "handler_answer",
+            "grounding": "PARTIALLY_GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/gen7s2-000.md",
+            "reasoning": "Provision 3 contains GEN 7.2.5 which lists 0871 numbers as non\u2011compliant; the claim\u2019s reference to GEN 7.2.5R is a mis\u2011label."
+          },
+          {
+            "claim": "The retrieved provisions establish the regulatory obligation not to charge above basic rate, but do not themselves specify a remedy or quantum of redress for historic overcharging.",
+            "source_field": "handler_answer",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "None of the supplied provisions address the remedy or quantum of redress for historic over\u2011charging, so the claim is not supported by any provision."
+          },
+          {
+            "claim": "The customer\u2019s vulnerability indicator must be factored into how the complaint is handled and prioritised.",
+            "source_field": "handler_answer",
+            "grounding": "UNGROUNDED",
+            "supporting_chunk_id": null,
+            "reasoning": "No retrieved provision contains a requirement to factor vulnerability indicators into handling or prioritisation."
+          },
+          {
+            "claim": "Our regulator's rules are clear that customers must not be required to pay more than a basic call rate when contacting us to make a complaint.",
+            "source_field": "customer_draft",
+            "grounding": "PARTIALLY_GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s3-000.md",
+            "reasoning": "Provision 1 (DISP 1.3.1AA) contains the same requirement; the claim\u2019s wording is correct but the cited rule identifier is not present."
+          },
+          {
+            "claim": "Numbers beginning with 0871 do not meet this standard.",
+            "source_field": "customer_draft",
+            "grounding": "PARTIALLY_GROUNDED",
+            "supporting_chunk_id": "s3://fca-complaints-bot/fca-handbook/sections-structure/disp1s3-001.md",
+            "reasoning": "Provision 2 (DISP 1.3.1AD) lists 0871 numbers as non\u2011compliant; the claim is accurate though it does not reference the exact rule identifier."
+          }
+        ],
+        "judge_model": "openai.gpt-oss-120b-1:0",
+        "latency_ms": 17590.993458012235,
+        "usage": {
+          "input_tokens": 4787,
+          "output_tokens": 3313,
+          "total_tokens": 8100
+        }
+      },
+      "inter_judge_agreement": 0.7142857142857143,
+      "cost": {
+        "generation_cost": 0.047112,
+        "judge_cost": 0.083217,
+        "total_cost": 0.130329,
+        "breakdown": {
+          "generation": 0.047112,
+          "rubric_primary": 0.021015,
+          "rubric_secondary": 0.008085,
+          "grounding": 0.054117
+        }
+      },
+      "metrics": {
+        "scenario_id": "c002",
+        "config_label": "structure-titan",
+        "coverage": 0.5,
+        "present_count": 3,
+        "n_required": 7,
+        "section_precision": 0.2,
+        "section_recall": 1.0,
+        "citation_precision": 0.5714285714285714,
+        "citation_recall": 0.8,
+        "retrieved_provision_recall": 1.0,
+        "drafting_gap": 0.19999999999999996,
+        "grounded_pct": 0.0,
+        "grounded_pct_customer": 0.0,
+        "grounded_pct_handler": 0.0,
+        "ungrounded_pct": 0.2222222222222222,
+        "inter_judge_agreement": 0.7142857142857143,
+        "latency_ms": 32048.345542003517,
+        "total_cost": 0.130329
+      },
+      "latency_ms": 32048.345542003517,
+      "usage": {
+        "input_tokens": 6524,
+        "output_tokens": 1836,
+        "total_tokens": 8360
+      }
+    }
+  ]
+}

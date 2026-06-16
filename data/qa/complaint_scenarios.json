@@ -1,0 +1,936 @@
+[
+  {
+    "scenario_id": "c001",
+    "complaint_type": "single",
+    "response_stage": "final",
+    "scenario_text": "I took out a personal loan with your bank in March 2024. At no point during the application process or at the point of sale was I given any information about your complaints procedure or told how I could complain if something went wrong. I've since had a problem with an overcharge on my account and when I tried to find out how to complain, there was nothing on my loan agreement, nothing in the paperwork I was given, and I had to spend over an hour on the phone just to find out where to send my complaint. I also notice your website has no mention of the Financial Ombudsman Service anywhere. I believe you have failed in your duty to make me aware of my rights and I want this addressed.",
+    "expected_provisions": [
+      "DISP 1.2.1R",
+      "DISP 1.2.3G",
+      "DISP 1.2.4G"
+    ],
+    "expected_provision_sections": [
+      "disp1s2"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c002",
+    "complaint_type": "single",
+    "response_stage": "final",
+    "scenario_text": "I've been trying to call my bank to make a formal complaint about an incorrect fee they charged me. The only number they provide for complaints is an 0871 number, which is costing me a fortune every time I ring. I've called three times now and been on hold for extended periods, racking up charges. I'm on a basic state pension and these call costs are adding up significantly. I shouldn't have to pay premium rates just to complain. I want the bank to reimburse me for the call charges I've incurred and to provide a proper free or local-rate number for complaints.",
+    "expected_provisions": [
+      "DISP 1.3.1R",
+      "DISP 1.3.1AR",
+      "DISP 1.3.1AAR",
+      "DISP 1.3.1ABR",
+      "DISP 1.3.1ADR"
+    ],
+    "expected_provision_sections": [
+      "disp1s3"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c003",
+    "complaint_type": "single",
+    "response_stage": "final",
+    "scenario_text": "I took out a personal loan with your bank in 2021 and was sold payment protection insurance at the same time. In March this year, I submitted a formal complaint explaining that the PPI was mis-sold because I already had employer sickness cover and was never asked about existing protection. Your complaints team sent me a final response letter four weeks later rejecting my complaint, but the letter simply stated 'we have reviewed your complaint and do not believe it should be upheld' with no further explanation. There was no assessment of the specific points I raised about my existing employer cover, no consideration of whether redress might be appropriate, and no explanation of how you reached your decision. I feel my complaint has not been properly investigated or fairly assessed, and the response I received was neither clear nor informative. I would like my complaint to be reconsidered properly.",
+    "expected_provisions": [
+      "DISP 1.4.1R",
+      "DISP 1.4.2G",
+      "DISP 1.4.3G"
+    ],
+    "expected_provision_sections": [
+      "disp1s4"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c004",
+    "complaint_type": "single",
+    "response_stage": "final",
+    "scenario_text": "I called my bank on Monday to complain about an incorrect \u00a315 fee on my current account. The adviser I spoke to agreed it was an error, reversed the charge immediately, and I told her I was happy with that resolution. However, it's now been over two weeks and I haven't received anything in writing from the bank confirming that my complaint was resolved or telling me about my rights to go to the Ombudsman if I change my mind. I feel the bank hasn't followed proper procedure \u2014 I'd like confirmation of what should have been sent to me and why it wasn't.",
+    "expected_provisions": [
+      "DISP 1.5.1R",
+      "DISP 1.5.2AR",
+      "DISP 1.5.4R",
+      "DISP 1.5.5G"
+    ],
+    "expected_provision_sections": [
+      "disp1s5"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c005",
+    "complaint_type": "single",
+    "response_stage": "holding",
+    "scenario_text": "I made a formal complaint to my bank on 14 March about an incorrect fee applied to my current account. I received a brief email the same day saying 'thanks, we've got your complaint' but it didn't tell me anything about when I could expect a response or what the process would be. It's now been three weeks and I've heard absolutely nothing since that initial email \u2014 no updates, no indication of progress, nothing. I feel like my complaint has just been forgotten about. I want to know what's happening and when I'll get a proper answer.",
+    "expected_provisions": [
+      "DISP 1.6.1R",
+      "DISP 1.6.2R"
+    ],
+    "expected_provision_sections": [
+      "disp1s6"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "eight_week_timeline",
+      "fair_treatment"
+    ],
+    "difficulty": "medium",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c006",
+    "complaint_type": "single",
+    "response_stage": "final",
+    "scenario_text": "I made a complaint to my bank, Westfield Banking PLC, six weeks ago about a payment protection insurance policy that was sold to me through their branch but was actually underwritten by a separate insurer. Three weeks after I complained, the bank wrote to me saying they were forwarding my complaint to the insurer because the insurer was solely responsible. However, the bank didn't tell me the insurer's contact details in that letter \u2014 just said 'the relevant insurer' without a name, address, or phone number. I also feel that three weeks was not 'prompt' \u2014 I was left waiting with no update for all that time. I've now heard nothing from the insurer either, and I don't even know who to chase. I want to know why the bank took so long to forward my complaint and why they failed to give me the insurer's details so I could follow up myself.",
+    "expected_provisions": [
+      "DISP 1.7.1R"
+    ],
+    "expected_provision_sections": [
+      "disp1s7"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c007",
+    "complaint_type": "single",
+    "response_stage": "final",
+    "scenario_text": "I took out a payment protection insurance policy with your bank in 2002 and cancelled it in 2005. I recently heard from a friend that I might have been mis-sold PPI and decided to complain. Your bank has sent me a letter saying my complaint is 'time-barred' and that you won't look into whether I was mis-sold the policy. However, the letter simply states my complaint is rejected due to time limits \u2014 it doesn't explain my right to refer the matter to the Financial Ombudsman Service or give me the six-month deadline for doing so. I feel this is unfair as I believe I should at least have been told about my options, even if you consider the complaint too old.",
+    "expected_provisions": [
+      "DISP 1.8.1R",
+      "DISP 1.6.2R"
+    ],
+    "expected_provision_sections": [
+      "disp1s9"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment"
+    ],
+    "difficulty": "medium",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c008",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I opened a current account with your bank online in January 2024. During the application process, I noticed that a 'Card Protection Plan' at \u00a37.99/month was already pre-selected as part of the account setup \u2014 there was a tick already in the box. I didn't untick it because I assumed it was a required part of the account, and the page layout made it look like it was bundled in. I've now been charged \u00a37.99 per month for the past 14 months \u2014 that's over \u00a3110 total \u2014 for something I never actively chose. When I look back at the confirmation email and all the paperwork I received when I opened the account, I also notice that at no point were you clear about how to make a complaint or that I could go to the Financial Ombudsman Service if I was unhappy. I only found out about the Ombudsman from a friend. I want a full refund of all charges for this Card Protection Plan and I want to know why I was never told about my rights to complain.",
+    "expected_provisions": [
+      "BCOBS 2A.1.1",
+      "BCOBS 2A.1.2",
+      "DISP 1.2.1"
+    ],
+    "expected_provision_sections": [
+      "bcobs2as1",
+      "disp1s2"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c009",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I took out a personal loan of \u00a38,000 over the phone with your bank on 15 March. It was all done remotely \u2014 I never visited a branch. On 22 March, within the 14-day window, I called your cancellation line to exercise my right to cancel the distance contract. The adviser I spoke to said I couldn't cancel because the funds had already been disbursed and I'd started making use of the credit. She refused to process my cancellation and told me I'd need to repay the full loan with all interest over the term. I asked to speak to a manager but was told nobody was available and that I'd get a callback, which never came. I'm now being charged interest on a loan I tried to cancel within the legal timeframe. I'm 74 years old and on a fixed pension income \u2014 this additional debt is causing me significant financial distress. I also want to note that when I tried calling your complaints line to raise this issue, the number listed was an 0844 number which cost me over \u00a33 in call charges before I got through. I want the cancellation honoured, all interest charges refunded, and compensation for the distress caused.",
+    "expected_provisions": [
+      "CONC 11.1.1R",
+      "CONC 11.1.5R",
+      "CONC 11.1.2R",
+      "DISP 1.3.1R",
+      "DISP 1.3.1AAR",
+      "DISP 1.3.1ABR",
+      "DISP 1.3.1ADR",
+      "DISP 1.3.3R"
+    ],
+    "expected_provision_sections": [
+      "conc11s1",
+      "disp1s3"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c010",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I am a 72-year-old retired schoolteacher with no prior investment experience beyond a basic savings account. In January 2024, I visited my bank branch to discuss options for my \u00a345,000 in savings. The adviser suggested I purchase a structured product linked to equity indices, describing it as 'like a savings account but with better returns.' I was not asked any questions about my investment knowledge, experience with financial instruments, or understanding of risks. The adviser simply told me to sign the application form. I have since discovered the product carries significant capital-at-risk and I do not understand how it works. I have already lost approximately \u00a33,200 in value. I believe the bank failed to check whether this product was appropriate for someone like me, and I want my money back. I am also finding this situation very stressful as I rely on my savings for day-to-day living in retirement and am struggling financially as a result of this loss.",
+    "expected_provisions": [
+      "COBS 10A.2.1R",
+      "COBS 10A.2.3R",
+      "COBS 10A.2.4R",
+      "COBS 10A.2.5R",
+      "DISP 1.4.1R",
+      "DISP 1.4.2G"
+    ],
+    "expected_provision_sections": [
+      "cobs10as2",
+      "disp1s4"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c011",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I remortgaged my property last month and was charged an early repayment charge (ERC) of \u00a38,400 by my previous lender. When I queried this, I was told it was calculated using a method they couldn't clearly explain to me \u2014 they just said it was 'standard practice' and couldn't give me a breakdown showing it as a specific cash value or explain what costs it was meant to cover. I also never recall seeing this charge disclosed in my original mortgage illustration or offer document when I took the product out three years ago. I called to complain on Monday morning and spoke to someone who said they'd 'look into it and get back to me' but I've heard nothing since. It's now been over three weeks. I'm 74 years old and on a fixed pension income, and this unexpected charge has put me into significant financial difficulty \u2014 I had to use my savings set aside for care costs to cover it. I want the charge refunded or at minimum a clear justification showing it meets the regulatory requirements.",
+    "expected_provisions": [
+      "MCOB 12.3.1R",
+      "MCOB 12.3.4R",
+      "DISP 1.5.1R",
+      "DISP 1.5.2AR",
+      "DISP 1.5.4R"
+    ],
+    "expected_provision_sections": [
+      "disp1s5",
+      "mcob12s3"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "eight_week_timeline",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c012",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I am writing to complain about my home insurance policy. I am a retired 78-year-old and I took out a home contents and buildings policy through your branch last year. When I purchased the policy, I specifically told your adviser that I also rent out a small annexe attached to my property on a buy-to-let basis, and asked whether this would be covered. I was assured it would be fine under my standard home policy. However, when I recently made a claim for storm damage to the annexe roof, you rejected it saying the annexe is a commercial let property and isn't covered under my consumer home insurance policy. I feel I was mis-sold this policy \u2014 I was never told I needed a separate commercial policy for the annexe, and your adviser should have categorised my needs properly. I'm now facing a \u00a34,200 repair bill I cannot afford on my pension. To make matters worse, I first raised this complaint by telephone over five weeks ago and have received no acknowledgement whatsoever \u2014 no letter, no email, nothing. I had to call again today and was told there was no record of my earlier call. This is completely unacceptable treatment of a loyal customer.",
+    "expected_provisions": [
+      "DISP 1.6.1R",
+      "DISP 1.6.2R",
+      "ICOBS 2.1.1G",
+      "ICOBS 2.1.2R",
+      "ICOBS 2.1.3G",
+      "ICOBS 2.1.4G"
+    ],
+    "expected_provision_sections": [
+      "disp1s6",
+      "icobs2s1"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "eight_week_timeline",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c013",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I am a 72-year-old retired customer and I invested \u00a345,000 in a structured product through my bank two years ago. I was told it was low-risk and suitable for my retirement income needs. In reality, it was a high-risk product and I have lost approximately \u00a312,000. When I complained to my bank three weeks ago, they wrote back saying they were not responsible because the product was manufactured by another investment firm, and they forwarded my complaint to that other firm. However, my bank was the one that advised me to buy it and assessed my risk profile. They have not addressed their own role in the advice at all, and I have not received any substantive response from either firm. I am on a fixed pension income and this loss has caused me significant financial hardship \u2014 I am struggling to pay my utility bills. I want my bank to properly investigate their part in this and provide appropriate redress for the unsuitable advice they gave me.",
+    "expected_provisions": [
+      "DISP 1.7.1",
+      "DISP 1.7.3",
+      "PRIN 2A.10.1",
+      "PRIN 2A.10.2",
+      "PRIN 2A.10.5"
+    ],
+    "expected_provision_sections": [
+      "disp1s7",
+      "prin2as10"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c014",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I opened a savings account with your bank in 2016 after seeing your promotional material that described the interest rate as 'guaranteed at 2.5% for the life of the account'. I now understand that the rate was only fixed for 12 months and then reverted to a variable rate, which has been as low as 0.1%. I never received any communication clarifying that 'guaranteed' only meant the introductory period. I feel I was misled by your advertising and have lost out on interest I could have earned elsewhere over the past eight years. I am 78 years old and rely on my savings income to supplement my state pension, so this has caused me real financial hardship. I would like compensation for the difference in interest I should have received. I raised this with your branch last week and they said the complaint might be 'too old' but didn't explain what that meant.",
+    "expected_provisions": [
+      "BCOBS 2.2.1",
+      "BCOBS 2.2.5",
+      "DISP 1.8.1"
+    ],
+    "expected_provision_sections": [
+      "bcobs2s2",
+      "disp1s9"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c015",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I took out a peer-to-peer loan of \u00a315,000 through LendConnect Platform in March this year. Within 10 days of receiving the agreement, I sent an email to the address specified in the contract stating I wished to withdraw from the agreement. I received an automated acknowledgement confirming receipt of my email. However, the platform then charged me a \u00a3250 'early exit administration fee' on top of the accrued interest, claiming this was standard for withdrawals. When I queried this, I was told it was in the terms. I also want to note that when I originally signed up to the platform, I was never given any information about how to make a complaint or about the Financial Ombudsman Service \u2014 not at the point of sale, not on their website, and not in the contract terms. I only found out about my right to complain by searching online. I believe the exit fee is unlawful and I want it refunded, and I'm unhappy that I was never told about my complaint rights.",
+    "expected_provisions": [
+      "CONC 11.2.3R",
+      "CONC 11.2.4R",
+      "DISP 1.2.1R"
+    ],
+    "expected_provision_sections": [
+      "conc11s2",
+      "disp1s2"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c016",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I am a 72-year-old retired teacher with limited investment experience. Last month I opened an execution-only account with your firm and attempted to purchase a complex leveraged ETF product. I recall being asked some questions about my knowledge and experience, and I told your adviser that I had never traded derivatives or leveraged products before. Despite this, I was not given any warning that the product might be inappropriate for me \u2014 the transaction simply went through. The product has since lost 40% of its value. I tried to call your complaints line to raise this issue but the only number listed on your website is an 0871 number, which cost me over \u00a33 on hold before I gave up and wrote this letter instead. I believe your firm failed in its duty to warn me that this product was not appropriate given my lack of experience, and I also believe it is unacceptable that your complaints telephone line uses a revenue-sharing number that discourages customers from complaining.",
+    "expected_provisions": [
+      "COBS 10A.3.1",
+      "DISP 1.3.1",
+      "DISP 1.3.1AA",
+      "DISP 1.3.1AB",
+      "DISP 1.3.1AD",
+      "DISP 1.3.3"
+    ],
+    "expected_provision_sections": [
+      "cobs10as3",
+      "disp1s3"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c017",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I have a regulated mortgage with your bank and fell into arrears three months ago after being made redundant. I agreed a repayment arrangement with your collections team to pay \u00a3850 per month, which I have stuck to without fail. Despite this, I have been charged a \u00a375 monthly arrears management fee each of those three months. When I called to query this, I was told it was 'standard policy' and no one could explain how the charge was calculated or what additional administration it covers. I also asked for a breakdown showing the charge doesn't include things like your general overheads or regulatory costs, but was told that information isn't available. On top of that, when I look at my statements, it appears my payments are being applied to these charges first rather than reducing the shortfall itself, which means my arrears balance is actually growing. I am on Universal Credit and struggling to keep up as it is. I want these charges refunded and a proper explanation of how my payments are being allocated.",
+    "expected_provisions": [
+      "MCOB 12.4.1R",
+      "MCOB 12.4.1A",
+      "MCOB 12.4.1BR",
+      "MCOB 12.4.4R",
+      "DISP 1.4.1R",
+      "DISP 1.4.2G"
+    ],
+    "expected_provision_sections": [
+      "disp1s4",
+      "mcob12s4"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c018",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I'm writing to complain about my home insurance renewal. In January, I received a promotional email from your bank's insurance division stating I could 'save up to 40% on my home insurance premium by switching to our new policy'. Based on this, I called your team and switched my policy. However, when I received my first premium statement, the cost was actually higher than my previous policy \u2014 not lower. When I called to query this on 3rd March, your agent apologised, said there had been a miscommunication in the marketing material, and offered to apply a one-off \u00a325 goodwill credit to my account. I accepted this on the phone that same day as I was in a rush and just wanted it sorted. However, I've since had time to think about it and I'm not satisfied \u2014 the promotional email was clearly misleading and a \u00a325 credit doesn't come close to covering the additional cost I'm now paying. I've also not received anything in writing confirming the resolution of my earlier call, or any information about what I can do if I'm unhappy. I believe the advertisement was dishonest and I want proper compensation for the increased premiums I'm now locked into paying.",
+    "expected_provisions": [
+      "ICOBS 2.2.2R",
+      "ICOBS 2.2.4G",
+      "DISP 1.5.2AR",
+      "DISP 1.5.4R",
+      "DISP 1.5.5G"
+    ],
+    "expected_provision_sections": [
+      "disp1s5",
+      "icobs2s2"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c019",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I am writing to express my extreme frustration with how your bank has handled my situation. In January, I noticed that my current account had been debited with a \u00a3250 'account maintenance fee' that was never disclosed to me when I opened the account three years ago. The fee appeared without any prior notification or explanation. When I called your customer service team on 15 March to complain, the adviser acknowledged it was unusual and said someone would look into it and get back to me. I received a brief email the next day confirming receipt of my complaint, but it said nothing about timescales for a response or my right to go to the Ombudsman if I remained unhappy. It is now 20 May \u2014 over nine weeks since I complained \u2014 and I have heard absolutely nothing further. No update, no resolution, no explanation. I feel the bank has simply ignored me while continuing to benefit from the fee it took from my account. I am a pensioner on a fixed income and \u00a3250 is a significant sum for me. I believe the bank has acted unfairly by applying an undisclosed charge and then failing to deal with my complaint properly. I want the fee refunded and a proper explanation of why I have been treated this way.",
+    "expected_provisions": [
+      "DISP 1.6.1R",
+      "DISP 1.6.2R",
+      "PRIN 2A.2.1R",
+      "PRIN 2A.2.2R",
+      "PRIN 2A.2.5R",
+      "PRIN 2A.2.8R",
+      "PRIN 2A.2.10"
+    ],
+    "expected_provision_sections": [
+      "disp1s6",
+      "prin2as2"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "eight_week_timeline",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c020",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I opened a new savings account with your bank last month after seeing your promotional email comparing your interest rates to those of three competitor banks. The email claimed your rates were 'market-leading' and showed a comparison table, but it didn't mention that your rate was only a temporary introductory rate for 3 months, after which it drops to 0.5%. The competitors' rates shown were their standard ongoing rates. I feel this comparison was unfair and misleading \u2014 I wouldn't have switched if I'd known the rate would drop so dramatically. I transferred \u00a340,000 from my previous provider and have now missed their loyalty bonus as a result. When I raised this issue at my branch three weeks ago, the branch manager told me it wasn't their responsibility because the email was sent by your 'digital marketing partner' and forwarded my complaint to them. I've heard nothing since from either party. I want to know who is actually dealing with my complaint and I want compensation for the interest I've lost by switching.",
+    "expected_provisions": [
+      "BCOBS 2.3.1",
+      "BCOBS 2.3.7",
+      "BCOBS 2.3.5",
+      "DISP 1.7.1",
+      "DISP 1.7.2",
+      "DISP 1.7.3"
+    ],
+    "expected_provision_sections": [
+      "bcobs2s3",
+      "disp1s7"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c021",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "My mother, who is 78 and has been diagnosed with vascular dementia, was granted a \u00a35,000 credit card limit increase by your bank in March 2021. I am her son and hold lasting power of attorney for her financial affairs. At the time of the limit increase, she was already showing significant signs of confusion \u2014 she couldn't remember her own address when speaking to your staff on the phone, and her GP had written to you in February 2021 confirming her diagnosis. Despite this, your bank proceeded with the credit limit increase without taking any steps to help her understand the decision or contacting me as her attorney. She has since accumulated \u00a34,800 in debt she cannot repay on a state pension. I raised this complaint with you in November 2024. Your branch manager told me verbally that because the credit limit increase happened over three years ago, you won't look into it and said it's 'time-barred'. I believe you should have recognised her lack of mental capacity and never increased her limit. I want the debt written off and a proper explanation of why you are refusing to investigate.",
+    "expected_provisions": [
+      "CONC 2.10.1G",
+      "CONC 2.10.4G",
+      "CONC 2.10.5G",
+      "CONC 2.10.6G",
+      "CONC 2.10.7G",
+      "CONC 2.10.8G",
+      "DISP 1.8.1R"
+    ],
+    "expected_provision_sections": [
+      "conc2s10",
+      "disp1s9"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c022",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I opened an execution-only share dealing account with your firm last year to buy and sell shares listed on the London Stock Exchange. When I signed up, I was never told anything about your complaints procedure \u2014 no leaflet, no mention of it at all. I wasn't even told about the Financial Ombudsman Service. More recently, I purchased units in a structured product through the same account. The product turned out to be far more complex than I expected \u2014 it embeds a derivative and I don't understand the risks at all. Nobody at your firm asked me any questions about my knowledge or experience before letting me buy it, and I wasn't warned that you weren't assessing whether it was appropriate for me. I've now lost a significant amount of money. I believe your firm failed in its obligations both by not assessing appropriateness for a complex product and by never informing me of my rights to complain or access the ombudsman.",
+    "expected_provisions": [
+      "COBS 10A.4.1R",
+      "COBS 10A.4.2R",
+      "DISP 1.2.1R",
+      "DISP 1.2.3G"
+    ],
+    "expected_provision_sections": [
+      "cobs10as4",
+      "disp1s2"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c023",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I have a regulated mortgage with your bank and I'm writing to complain about two issues. First, when I fell into arrears last year, you applied a \u00a3250 'arrears management fee' each month for three consecutive months, plus compound interest on those fees. I've checked with other lenders and nobody charges anything close to that \u2014 most charge \u00a325-50 at most. I believe these charges are grossly excessive and the compound interest on a second charge mortgage is unlawful. Second, when I tried to call your complaints line to raise this issue, the only number provided was an 0871 number. I was on hold for 45 minutes and the call cost me over \u00a318. I shouldn't have to pay a premium rate number just to make a complaint. I'm currently on long-term sick leave following a cancer diagnosis and am struggling financially as a result of reduced income. I'd like a full refund of the excessive charges, the interest applied to them, and reimbursement of my phone costs.",
+    "expected_provisions": [
+      "DISP 1.3.1R",
+      "DISP 1.3.1AAR",
+      "DISP 1.3.1ABR",
+      "DISP 1.3.1ADR",
+      "MCOB 12.5.1R",
+      "MCOB 12.5.2R",
+      "MCOB 12.5.3G",
+      "MCOB 12.5.5R"
+    ],
+    "expected_provision_sections": [
+      "disp1s3",
+      "mcob12s5"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c024",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I took out a home insurance policy through my bank's branch last year. I've since discovered that the bank received a significantly higher commission from the insurer they recommended compared to two other insurers whose products were arguably better suited to my needs and cheaper. When I asked the branch advisor at the time whether there were other options, they simply said 'this is the best one for you' without explaining why or mentioning any alternatives. I feel I was steered into a more expensive, less suitable policy because the bank was incentivised by the commission arrangement. I raised this with the bank's complaints team three weeks ago and received an acknowledgement, but I'm now writing to request a full resolution. I'm a retired pensioner on a fixed income and the additional premium cost has been a real stretch for my household budget.",
+    "expected_provisions": [
+      "DISP 1.4.1R",
+      "DISP 1.4.2G",
+      "DISP 1.4.3G",
+      "ICOBS 2.3.1G"
+    ],
+    "expected_provision_sections": [
+      "disp1s4",
+      "icobs2s3"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c025",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I am 78 years old and have limited mobility due to a hip replacement. In February, my bank switched my longstanding savings account to a new 'Digital Flex Saver' product. This account requires customers to manage everything through a smartphone app and offers no branch or telephone access for transactions. I complained to the bank by phone on Monday morning, and by Wednesday afternoon the adviser called me back saying they'd move me back to my old account type and waive the fees I'd been charged for the failed app transactions. I said that sounded fine and thanked them. However, I never received anything in writing afterwards \u2014 no letter, no email, nothing confirming what happened or telling me about the Ombudsman. I'm now worried because I've since realised the new product was completely unsuitable for someone like me who cannot use a smartphone, and I want to understand my rights. I feel the bank shouldn't have moved me onto this product in the first place given my age and circumstances, and I also want to know why I didn't get the written confirmation I believe I'm entitled to after my complaint was resolved.",
+    "expected_provisions": [
+      "DISP 1.5.1R",
+      "DISP 1.5.2AG",
+      "DISP 1.5.4R",
+      "DISP 1.5.5G",
+      "DISP 1.5.6G",
+      "PRIN 2A.3.4R",
+      "PRIN 2A.3.7R",
+      "PRIN 2A.3.8R"
+    ],
+    "expected_provision_sections": [
+      "disp1s5",
+      "prin2as3"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c026",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I opened a cash deposit ISA with your bank in March after seeing your online promotion advertising a 4.5% fixed rate for 12 months. The promotion clearly stated '4.5% AER fixed for 12 months' with no mention of any conditions or restrictions. When I transferred \u00a320,000 from my previous ISA provider, I was placed on a 3.8% variable rate instead. I queried this immediately and was told the 4.5% rate was only available for new money, not ISA transfers \u2014 but this was never stated in the promotion I responded to. I wrote a formal complaint letter six weeks ago and received an acknowledgement email, but it didn't tell me anything about timescales for a response or what would happen if I remained unhappy. I've heard nothing since. I'm 78 years old and this ISA represents a significant portion of my retirement savings. The difference in interest rate is costing me approximately \u00a3140 over the year, and I'm worried about my finances as I rely on interest income to supplement my state pension.",
+    "expected_provisions": [
+      "BCOBS 2.4.2G",
+      "DISP 1.6.1R",
+      "DISP 1.6.2R"
+    ],
+    "expected_provision_sections": [
+      "bcobs2s4",
+      "disp1s6"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "eight_week_timeline",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c027",
+    "complaint_type": "multi",
+    "response_stage": "final",
+    "scenario_text": "I used a price comparison website called QuickLoans Compare to find a short-term loan of \u00a3300 for 30 days. The website showed me results but the cheapest option wasn't listed first \u2014 instead, a more expensive lender called FastCash was displayed at the top with a prominent 'Recommended' badge. I later discovered FastCash pays the highest commission to QuickLoans Compare. I clicked through and took out the FastCash loan, paying \u00a390 in interest over 30 days, when I've since found that another lender on the same site would have charged me only \u00a360 for the identical loan amount and duration. I complained to QuickLoans Compare three weeks ago about being misled by their biased ranking. They wrote back saying they weren't responsible for my lending decision and forwarded my complaint to FastCash, the lender, without explaining why or giving me FastCash's contact details. I've now heard nothing from either party. I want the \u00a330 difference refunded and a proper explanation of why my complaint was passed on without my knowledge of where it went.",
+    "expected_provisions": [
+      "CONC 2.5A.2",
+      "CONC 2.5A.5",
+      "CONC 2.5A.6",
+      "DISP 1.7.1"
+    ],
+    "expected_provision_sections": [
+      "conc2s13",
+      "disp1s7"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c028",
+    "complaint_type": "escalation",
+    "response_stage": "final",
+    "scenario_text": "I am writing to express my extreme dissatisfaction with the final response letter I received from your bank dated 15 November regarding my complaint about being mis-sold a packaged bank account. In your letter, you stated that you did not uphold my complaint because you believe I was given adequate information about the account benefits at the time of sale. However, I was never told about the eligibility criteria for the travel insurance included in the package \u2014 I am 78 years old and have a pre-existing heart condition, which means I have never been able to claim on the policy despite paying \u00a315 per month for it since 2016. Your response did not address this point at all, and I do not believe you investigated my complaint properly. You also failed to mention anything about my right to take this further if I remain unhappy. I want to know what my options are now, and I believe I am owed a full refund of all the fees I have paid.",
+    "expected_provisions": [
+      "DISP 1.4.1R",
+      "DISP 1.4.2G",
+      "DISP 1.4.3G",
+      "DISP 2.2.1G"
+    ],
+    "expected_provision_sections": [
+      "disp1s4",
+      "disp2s2"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c029",
+    "complaint_type": "escalation",
+    "response_stage": "final",
+    "scenario_text": "I am writing to express my extreme dissatisfaction with the final response letter I received from your bank dated 15 November regarding my complaint about being mis-sold a payment protection insurance policy alongside my personal loan in 2012. Your letter states that you do not uphold my complaint because you believe adequate information was provided at the point of sale. However, I note that your response fails to address the key issue I raised \u2014 that I was self-employed at the time and was never told the policy would not cover me for unemployment. You have not explained what evidence you considered or how you reached your decision. I was told verbally by the adviser that the PPI would cover all eventualities. I have now been left \u00a33,200 out of pocket in premiums for a policy that could never have paid out on the unemployment element. I do not accept your decision and wish to know what my options are. I also want to understand whether I can take this further, as your final response letter did not mention anything about the Financial Ombudsman Service or any time limits for escalation.",
+    "expected_provisions": [
+      "DISP 1.4.1R",
+      "DISP 1.4.2G",
+      "DISP 1.4.6G",
+      "DISP 2.7.1R",
+      "DISP 2.7.6R"
+    ],
+    "expected_provision_sections": [
+      "disp1s4",
+      "disp2s7"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c030",
+    "complaint_type": "escalation",
+    "response_stage": "final",
+    "scenario_text": "I am writing to express my extreme dissatisfaction with how my complaint about mis-sold payment protection insurance (PPI) has been handled. I submitted my complaint on 15 January and received your final response letter on 28 February, which rejected my claim. Your letter stated that you found no evidence of mis-selling. However, I believe your investigation was neither competent nor impartial. You failed to obtain the original point-of-sale documentation, you did not consider that I was self-employed at the time and therefore ineligible for the unemployment element of the policy, and you ignored the fact that I had a pre-existing medical condition that would have excluded me from claiming. I also note that your final response letter did not mention anything about a time limit for referring my complaint to the Financial Ombudsman Service. I want you to reconsider your decision and provide appropriate redress for the premiums I paid over seven years. If you do not resolve this satisfactorily, I intend to take this to the Ombudsman, but I need clarity on what my rights are and how long I have to do so.",
+    "expected_provisions": [
+      "DISP 1.4.1R",
+      "DISP 1.4.2G",
+      "DISP 1.4.3G",
+      "DISP 2.8.2R",
+      "DISP 2.8.3G"
+    ],
+    "expected_provision_sections": [
+      "disp1s4",
+      "disp2s8"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c031",
+    "complaint_type": "escalation",
+    "response_stage": "final",
+    "scenario_text": "I received a text message from my bank three days ago saying my complaint about a \u00a335 overdraft fee had been resolved after I agreed on the phone to accept a refund. However, the written summary I then received by post only said 'your complaint is now closed' \u2014 it didn't mention anything about the Financial Ombudsman Service, didn't give me their website address, and didn't tell me I could refer the matter to them if I changed my mind. Well, I have changed my mind. The \u00a335 refund doesn't address the fact that the fee was applied incorrectly in the first place due to a system error, and I believe I'm owed compensation for the stress and time spent chasing this. I want to escalate this complaint. I also want to know why the bank failed to give me proper information about my rights when it sent me that summary letter.",
+    "expected_provisions": [
+      "DISP 1.5.4R",
+      "DISP 1.5.5G",
+      "DISP 1.5.2AR",
+      "DISP 2.2.1G"
+    ],
+    "expected_provision_sections": [
+      "disp1s5",
+      "disp2s2"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c032",
+    "complaint_type": "escalation",
+    "response_stage": "final",
+    "scenario_text": "I am writing to express my dissatisfaction with how my complaint was handled. Three weeks ago, I contacted your bank about an incorrect fee of \u00a345 charged to my current account. Your staff member called me back the same day and offered to refund the fee, which I accepted over the phone. I then received a short letter saying the complaint was resolved, but the letter did not mention the Financial Ombudsman Service at all \u2014 no website address, no information about my right to refer the matter if I changed my mind, nothing. I have since looked into this further and I believe the fee was actually part of a wider pattern of overcharging on my account going back several months. I am no longer satisfied with the resolution and wish to escalate this matter. I want the bank to investigate the full pattern of charges and I want to know why I was not properly informed of my rights when the complaint was first closed.",
+    "expected_provisions": [
+      "DISP 1.5.2A",
+      "DISP 1.5.4",
+      "DISP 1.5.5"
+    ],
+    "expected_provision_sections": [
+      "disp1s5",
+      "disp2s7"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c033",
+    "complaint_type": "escalation",
+    "response_stage": "final",
+    "scenario_text": "I am writing to express my extreme dissatisfaction with the final response letter I received from your bank dated 15 November regarding my complaint about unauthorised overdraft charges totalling \u00a3340 applied to my current account between June and September this year. Your letter rejected my complaint, stating the charges were applied correctly under the account terms and conditions. However, the letter did not include any information about the Financial Ombudsman Service, no leaflet was enclosed, no website address was provided, and there was no mention of any time limits for me to refer my complaint elsewhere. I feel I have been left completely in the dark about my options. I believe the charges were unfair as I was never notified that my account had gone overdrawn before the charges were applied, and I want a full refund. I also want to know what my rights are now, since your so-called 'final response' told me nothing about where I can escalate this matter.",
+    "expected_provisions": [
+      "DISP 1.6.2R"
+    ],
+    "expected_provision_sections": [
+      "disp1s6",
+      "disp2s2"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration"
+    ],
+    "difficulty": "medium",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c034",
+    "complaint_type": "escalation",
+    "response_stage": "final",
+    "scenario_text": "I am writing to express my dissatisfaction with the final response I received from your bank dated 15 November regarding my complaint about unauthorised transactions on my current account. Your letter rejected my complaint, stating that I had failed to keep my PIN secure. However, I believe this conclusion is unfair as I have never shared my PIN with anyone and I reported the transactions within hours of them occurring. Your final response letter did not include a copy of the Financial Ombudsman Service's explanatory leaflet, nor did it provide their website address. It also failed to tell me whether you consent to waive any time limits if I refer my complaint to the Ombudsman. I feel I have been treated unfairly and I want to know what my options are now. I am a pensioner on a fixed income and the loss of \u00a31,200 from these transactions has left me unable to pay my heating bills this winter.",
+    "expected_provisions": [
+      "DISP 1.6.2R"
+    ],
+    "expected_provision_sections": [
+      "disp1s6",
+      "disp2s7"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  },
+  {
+    "scenario_id": "c035",
+    "complaint_type": "escalation",
+    "response_stage": "final",
+    "scenario_text": "I am writing to express my extreme dissatisfaction with your bank's handling of my complaint about unauthorised overdraft charges totalling \u00a3487 applied to my current account in March 2024. I originally submitted my complaint on 15 April 2024. I received your final response letter dated 28 May 2024 which rejected my complaint, stating the charges were correctly applied under the account terms and conditions. However, I believe your response was inadequate and unfair. You failed to properly consider that I was in hospital at the time the charges accrued and had no ability to manage my account. Furthermore, I note that your final response letter did not include a copy of the Financial Ombudsman Service's standard explanatory leaflet, nor did it provide their website address. It simply said I could 'contact the ombudsman if unhappy' without any further detail about the time limits for doing so. I want to know what my rights are and whether I can still escalate this matter, as it has now been approximately five months since I received your response.",
+    "expected_provisions": [
+      "DISP 1.6.2R",
+      "DISP 2.8.2R",
+      "DISP 2.8.3G",
+      "DISP 2.8.4G"
+    ],
+    "expected_provision_sections": [
+      "disp1s6",
+      "disp2s8"
+    ],
+    "required_response_elements": [
+      "acknowledgement",
+      "decision_and_reasons",
+      "fos_referral_rights",
+      "six_month_referral_limit",
+      "fair_treatment",
+      "redress_consideration",
+      "vulnerability_consideration"
+    ],
+    "difficulty": "hard",
+    "synthetic": true
+  }
+]
