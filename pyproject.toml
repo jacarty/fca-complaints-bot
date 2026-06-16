@@ -14,7 +14,8 @@ dependencies = [
     "fastapi",
     "uvicorn[standard]",
     "jinja2",
-    "python-multipart",
+    "python-multipart>=0.0.31",
+    "starlette>=1.3.1",
 ]
 
 [dependency-groups]
@@ -34,6 +35,7 @@ packages = ["src/"]
 
 [tool.uv]
 exclude-newer = "7 days"
+exclude-newer-package = { starlette = "2026-06-13T00:00:00Z" }
 
 [tool.ruff]
 line-length = 100
