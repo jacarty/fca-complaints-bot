@@ -2,18 +2,21 @@
 
 A retrieval-augmented assistant for bank complaints handlers. Given a complaint scenario, it looks up the relevant FCA Handbook provisions, drafts a compliant response grounded in the retrieved regulatory text, and cites the specific provisions it relied on. Built on AWS Bedrock Knowledge Bases, with output quality measured by a drafting-aware adaptation of the dual LLM-as-judge harness from [rag-eval-framework](https://github.com/jacarty/rag-eval-framework).
 
+> **Educational project — not a real system.** This was built as a learning exercise for an Imperial College London course, to demonstrate RAG techniques end to end (structure-aware chunking, grounded drafting with structured outputs, and LLM-as-judge evaluation). It is **not** a production tool, and its output is **not** legal, regulatory, or compliance advice. It runs on synthetic bank policies and synthetic complaint scenarios; nothing here should be used to handle a real complaint or relied on as an interpretation of the FCA Handbook.
+
 ## Status
 
-Work in progress. This repository clones the evaluation framework from `rag-eval-framework` and applies it to a working use case: an FCA complaints handling assistant. The eval framework quantified that **structure-aware chunking delivers ~3× the retrieval precision of fixed-size splitting** on FCA regulatory text; this project puts that finding to work and tests whether it still holds when the task is *response drafting* rather than factual Q&A.
+The build is complete; the write-up is in progress. This repository clones the evaluation framework from `rag-eval-framework` and applies it to a working use case: an FCA complaints handling assistant. The eval framework quantified that **structure-aware chunking delivers ~3× the retrieval precision of fixed-size splitting** on FCA regulatory text; this project puts that finding to work and tests whether it still holds when the task is *response drafting* rather than factual Q&A.
 
 | Stage | State |
 |-------|-------|
 | Repo scaffold & tidy | Complete |
 | Corpus rebuild (add DISP + CONC) | Complete |
-| Bot build (retrieval + drafting + UI) | In progress |
-| Complaint ground-truth set | Pending |
-| Eval adaptation & run | Pending |
-| Write-up | Pending |
+| Bot build (retrieval + drafting + UI) | Complete |
+| Complaint ground-truth set | Complete |
+| Eval adaptation & run | Complete |
+| Compliance & security hardening | Planned |
+| Write-up | Not Started |
 
 ## What This Is
 
@@ -119,7 +122,7 @@ Each scenario records two ground truths: the provisions that *should* be retriev
 
 ## How to Run
 
-> Commands are placeholders during the build and will be confirmed as scripts are adapted.
+> Reproducible end to end — every stage (scrape, index, run, evaluate) is scripted. You'll need your own AWS account and Bedrock model access; the corpus and knowledge bases are built fresh into your own bucket.
 
 ### Prerequisites
 
