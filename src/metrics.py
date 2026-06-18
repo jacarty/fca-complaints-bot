@@ -265,7 +265,7 @@ def compute_cost(
     generation_usage: dict,
     judge_primary_usage: dict,
     judge_secondary_usage: dict,
-    generation_model: str = "global.anthropic.claude-sonnet-4-6",
+    generation_model: str = "eu.anthropic.claude-sonnet-4-6",
     judge_primary_model: str = "global.anthropic.claude-opus-4-6-v1",
     judge_secondary_model: str = "openai.gpt-oss-120b-1:0",
 ) -> CostMetrics:

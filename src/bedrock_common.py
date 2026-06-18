@@ -14,7 +14,7 @@ on the other for this infrastructure.
 JUDGE_PRESETS = {
     "opus": "global.anthropic.claude-opus-4-6-v1",
     "haiku": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
-    "sonnet": "global.anthropic.claude-sonnet-4-6",
+    "sonnet": "eu.anthropic.claude-sonnet-4-6",
     "gpt-oss": "openai.gpt-oss-120b-1:0",
 }
 
@@ -31,7 +31,7 @@ def resolve_judge_model(name_or_id: str) -> str:
 # Approximate Bedrock on-demand pricing as of June 2026
 TOKEN_PRICES = {
     # Generation model
-    "global.anthropic.claude-sonnet-4-6": {"input": 0.003, "output": 0.015},
+    "eu.anthropic.claude-sonnet-4-6": {"input": 0.003, "output": 0.015},
     # Judge models
     "global.anthropic.claude-opus-4-6-v1": {"input": 0.015, "output": 0.075},
     "eu.anthropic.claude-haiku-4-5-20251001-v1:0": {"input": 0.001, "output": 0.005},

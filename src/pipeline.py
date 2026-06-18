@@ -49,7 +49,7 @@ logger = logging.getLogger(__name__)
 KB_CONFIG_PATH = Path("config/knowledge_bases.json")
 PROMPT_PATH = Path("data/prompts/drafting_system_prompt.txt")
 
-GENERATION_MODEL = "global.anthropic.claude-sonnet-4-6"
+GENERATION_MODEL = "eu.anthropic.claude-sonnet-4-6"
 
 # Cap on how many provisions ride in the context block for a single turn, after
 # unioning the current turn's retrieval with those already in scope for the
@@ -133,10 +133,16 @@ class ComplaintResponse(BaseModel):
     customer_draft: str = Field(
         description="Text to send to the customer, in compliant language. Empty string if the handler's message is a question that does not call for new customer-facing text."
     )
-    cited_provisions: list[CitedProvision] = Field(description="The specific FCA provisions relied on")
+    cited_provisions: list[CitedProvision] = Field(
+        description="The specific FCA provisions relied on"
+    )
     human_review_required: bool = Field(description="True if a human must review before sending")
-    human_review_reason: str = Field(description="Why review is needed; empty string if not required")
-    insufficient_context: bool = Field(description="True if retrieved provisions do not adequately cover the complaint")
+    human_review_reason: str = Field(
+        description="Why review is needed; empty string if not required"
+    )
+    insufficient_context: bool = Field(
+        description="True if retrieved provisions do not adequately cover the complaint"
+    )
 
 
 class PipelineResult(BaseModel):

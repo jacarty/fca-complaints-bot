@@ -71,6 +71,7 @@ ignore = [
 "scripts/metrics.py" = ["E501"]
 "src/judge.py" = ["E501"]
 "src/metrics.py" = ["E501"]
+"src/pipeline.py" = ["E501"]
 
 
 [tool.ruff.format]
