@@ -16,7 +16,7 @@ The build is complete; the write-up is in progress. This repository clones the e
 | Complaint ground-truth set | Complete |
 | Eval adaptation & run | Complete |
 | Compliance & security hardening | Complete |
-| Write-up | Not Started |
+| Write-up | Complete |
 
 ## What This Is
 
@@ -119,6 +119,23 @@ A complaint response is not a factual answer: a good one is mostly *not* drawn f
 - **Hallucination rate** — claims with no support in any retrieved provision.
 
 Each scenario records two ground truths: the provisions that *should* be retrieved, and the response elements a compliant reply must contain. Scenarios span single-complaint, multi-provision, and escalation types.
+
+### Results
+
+Across 35 complaint scenarios, structure-aware chunking beat fixed-size on every dimension of the drafting task — not just retrieval precision, but citation correctness and grounding too:
+
+| Metric | fixed-titan | structure-titan |
+|--------|-------------|-----------------|
+| Rubric coverage | 52.8% | **55.2%** |
+| Section precision | 9.6% | **14.0%** |
+| Citation precision / recall | 21.4% / 23.7% | **30.7% / 33.1%** |
+| Retrieved-text recall | 11.4% | **32.6%** |
+| Retrieval–citation gap | −12.4% | **−0.5%** |
+| Grounded | 72.0% | **82.3%** |
+
+The headline: **on drafting, retrieval precision matters in a way it did not for factual Q&A.** The foundation's Q&A run found structure-aware chunking gave ~3× the retrieval precision but answer faithfulness barely moved — the generation model compensated for noisy retrieval. That compensation breaks down here. The retrieval–citation gap is the tell: fixed-size chunking cites provisions whose rule text it never retrieved (−12.4%, i.e. citing from memory rather than context), while structure-aware aligns the two (−0.5%). Citing the *correct* provision is a stricter, more precision-sensitive bar than stating a correct fact.
+
+Absolute scores are modest and judge-dependent by nature; the finding is in the delta between configurations and the gap diagnostic, not the leaderboard number.
 
 ## Security & Compliance
 
