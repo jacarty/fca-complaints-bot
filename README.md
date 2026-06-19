@@ -15,7 +15,7 @@ The build is complete; the write-up is in progress. This repository clones the e
 | Bot build (retrieval + drafting + UI) | Complete |
 | Complaint ground-truth set | Complete |
 | Eval adaptation & run | Complete |
-| Compliance & security hardening | Planned |
+| Compliance & security hardening | Complete |
 | Write-up | Not Started |
 
 ## What This Is
@@ -119,6 +119,37 @@ A complaint response is not a factual answer: a good one is mostly *not* drawn f
 - **Hallucination rate** — claims with no support in any retrieved provision.
 
 Each scenario records two ground truths: the provisions that *should* be retrieved, and the response elements a compliant reply must contain. Scenarios span single-complaint, multi-provision, and escalation types.
+
+## Security & Compliance
+
+Although the bot runs entirely on synthetic data, it carries a hardening layer built *as if* it handled real complainant PII — so the data-protection and regulatory story is demonstrated end to end. The emphasis is on controls that are **evidenced in the code**, paired with an honest account of what a production deployment would still need. Full detail lives in [`docs/gdpr_data_flow.md`](docs/gdpr_data_flow.md) and [`docs/compliance_mapping.md`](docs/compliance_mapping.md).
+
+**Data protection by design.** Personal data is pseudonymised *before* it leaves the controller's boundary:
+
+- **PII redaction** — reversible, session-scoped tokenisation at a redaction boundary; the model, the conversation history and the audit log only ever see tokens (`[NAME_1]`, `[ACCOUNT_2]`). Raw PII never reaches Bedrock.
+- **Re-identification** is confined to the boundary: real values are restored (`rehydrate()`) only for the authorised handler's rendered view.
+- **Defence in depth** — redaction runs on both the inbound question and the model's output, so an entity missed on the way in gets a second chance on the way out.
+- **Measured, not assumed** — a labelled eval set puts redaction at **96% recall / 64% precision**. The profile is deliberately *safe-but-imprecise*: it over-masks public and organisation names (a regex detector cannot always tell a person from a company) rather than risk leaking a real one. That precision ceiling is the documented reason a production build would move to entity-typed detection (Amazon Comprehend / Bedrock Guardrails).
+
+**PII-free audit trail.** Every `/ask` turn appends one record to a JSONL trail — but never any PII:
+
+- the input is stored only as a keyed **HMAC-SHA256 hash** (not the raw text), alongside the masked output, model ID, cited provisions, retrieval and review flags, latency and token usage;
+- it is append-only and queryable via `scripts/query_audit.py` (filter by session, date, review-only);
+- writes **fail open** — an audit failure is logged but never breaks the handler's response. That trade-off favours availability over guaranteed capture, and is flagged as a gap for regulated use.
+
+**EU data residency.** The whole path is EU-pinned, by two different mechanisms: **generation** is pinned by the `eu.anthropic.*` inference profile, and **retrieval** is pinned by resource location — the Knowledge Base, Titan embeddings and S3 Vectors index all live in `eu-west-1`.
+
+![GDPR data flow for one /ask turn](docs/assets/gdpr_data_flow.svg)
+
+**Known gaps (by design, for a demonstration build).** These are documented rather than hidden — closing them is the difference between a demo and a deployment:
+
+- the re-identification **Vault is in-memory and unencrypted**, with no TTL, persistence or access control — the highest-value asset and the first thing to harden;
+- **no authentication** — a single-user cookie session;
+- **fail-open audit** (above);
+- **redaction precision** (above) — regex NER, not entity-typed;
+- **TLS is assumed** for any non-local deployment (the dev server is plain HTTP on localhost).
+
+A full control-by-requirement mapping across **GDPR, FCA/PRA, DORA and the EU AI Act** — including the documented non-high-risk AI Act assessment — is in [`docs/compliance_mapping.md`](docs/compliance_mapping.md).
 
 ## How to Run
 

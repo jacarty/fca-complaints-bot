@@ -71,9 +71,23 @@ ignore = [
 "scripts/metrics.py" = ["E501"]
 "src/judge.py" = ["E501"]
 "src/metrics.py" = ["E501"]
+"src/pipeline.py" = ["E501"]
 
 
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
 line-ending = "lf"
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = [
+    "fastapi.Depends",
+    "fastapi.Query",
+    "fastapi.Path",
+    "fastapi.Body",
+    "fastapi.Header",
+    "fastapi.Cookie",
+    "fastapi.Security",
+    "fastapi.File",
+    "fastapi.Form",
+]

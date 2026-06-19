@@ -33,7 +33,7 @@ from pydantic import BaseModel, Field
 from src.bedrock_common import TOKEN_PRICES  # single source of truth for Bedrock pricing
 from src.provisions import normalise_provision, normalise_provisions
 
-GENERATION_MODEL = "global.anthropic.claude-sonnet-4-6"
+GENERATION_MODEL = "eu.anthropic.claude-sonnet-4-6"
 
 # A provision *definition* reads "MODULE NUMBER (TypeWord)" — e.g. "DISP 2.8.2A
 # (Rules)" or "DISP 2.8.3 (Guidance)". Structure chunks place these on their own
@@ -150,7 +150,9 @@ class RetrievalSectionMetrics(BaseModel):
     n_retrieved: int
     n_relevant: int = Field(description="Retrieved chunks whose section is expected")
     expected_sections: list[str] = Field(default_factory=list)
-    retrieved_sections: list[str] = Field(default_factory=list, description="Distinct, in rank order")
+    retrieved_sections: list[str] = Field(
+        default_factory=list, description="Distinct, in rank order"
+    )
     matched_sections: list[str] = Field(default_factory=list)
     missing_sections: list[str] = Field(default_factory=list)
 

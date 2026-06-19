@@ -1,0 +1,106 @@
+<svg class="blog-diagram" viewBox="0 0 720 620" xmlns="http://www.w3.org/2000/svg" font-family="'Source Sans Pro', -apple-system, sans-serif">
+  <defs>
+    <marker id="ar-gray" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9ca3af"/></marker>
+    <marker id="ar-mint" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#0F6E56"/></marker>
+    <marker id="ar-blue" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#185FA5"/></marker>
+  </defs>
+
+  <!-- container -->
+  <rect x="1.5" y="1.5" width="717" height="617" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+
+  <!-- title -->
+  <text x="28" y="36" font-family="'Raleway', sans-serif" font-size="18" font-weight="800" fill="#1a1a1a" letter-spacing="-0.02em">GDPR data flow — one /ask turn</text>
+  <text x="28" y="56" font-size="12.5" fill="#6b7280">Personal data is pseudonymised before it leaves the controller; re-identified only for the authorised handler.</text>
+
+  <!-- pseudonymisation boundary -->
+  <line x1="42" y1="266" x2="300" y2="266" stroke="#43d9b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="44" y="260" font-family="'Raleway', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.12em" fill="#0F6E56">PSEUDONYMISATION BOUNDARY</text>
+
+  <!-- ============ EDGES ============ -->
+  <!-- left vertical pipeline -->
+  <line x1="160" y1="124" x2="160" y2="172" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ar-gray)"/>
+  <text x="168" y="152" font-size="11" fill="#6b7280">raw PII</text>
+  <line x1="160" y1="228" x2="160" y2="296" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ar-gray)"/>
+  <text x="168" y="290" font-size="11" fill="#6b7280">pseudonymised</text>
+  <line x1="160" y1="352" x2="160" y2="404" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ar-gray)"/>
+  <text x="168" y="382" font-size="11" fill="#6b7280">tokenised output</text>
+  <line x1="160" y1="460" x2="160" y2="504" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ar-gray)"/>
+
+  <!-- right horizontals -->
+  <line x1="262" y1="202" x2="456" y2="202" stroke="#0F6E56" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ar-mint)"/>
+  <text x="300" y="196" font-size="11" fill="#0F6E56">token ↔ value</text>
+
+  <line x1="262" y1="326" x2="456" y2="326" stroke="#185FA5" stroke-width="1.5" marker-start="url(#ar-blue)" marker-end="url(#ar-blue)"/>
+  <text x="300" y="320" font-size="11" fill="#185FA5">retrieval · no PII</text>
+
+  <line x1="262" y1="420" x2="456" y2="410" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ar-gray)"/>
+  <text x="300" y="402" font-size="11" fill="#6b7280">masked output</text>
+  <line x1="262" y1="444" x2="456" y2="460" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ar-gray)"/>
+
+  <!-- vault -> rehydrate (key) -->
+  <path d="M478,228 C 362,320 362,470 268,528" fill="none" stroke="#0F6E56" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ar-mint)"/>
+  <text x="366" y="398" font-size="11" fill="#0F6E56">token ↔ value</text>
+
+  <!-- rehydrate -> render (re-identification, highlighted) -->
+  <polyline points="262,532 694,532 694,100 664,100" fill="none" stroke="#43d9b8" stroke-width="2.2" marker-end="url(#ar-mint)"/>
+  <text x="300" y="548" font-size="11" font-weight="600" fill="#0F6E56">real values · authorised</text>
+
+  <!-- ============ NODES ============ -->
+  <!-- handler (gray) -->
+  <rect class="n-gray" x="60" y="76" width="200" height="48" rx="7" fill="#f7f8fa" stroke="#e5e7eb"/>
+  <text class="d-title" x="74" y="98" font-size="13.5" font-weight="700" fill="#1a1a1a">Handler</text>
+  <text class="d-sub" x="74" y="114" font-size="11" fill="#6b7280">submits complaint · raw PII</text>
+
+  <!-- rendered draft (gray) -->
+  <rect class="n-gray" x="460" y="76" width="200" height="48" rx="7" fill="#f7f8fa" stroke="#e5e7eb"/>
+  <text class="d-title" x="474" y="98" font-size="13.5" font-weight="700" fill="#1a1a1a">Rendered draft</text>
+  <text class="d-sub" x="474" y="114" font-size="11" fill="#6b7280">real names · authorised</text>
+
+  <!-- redact boundary (teal) -->
+  <rect class="n-teal" x="60" y="176" width="200" height="52" rx="7" fill="#E1F5EE" stroke="#0F6E56"/>
+  <text class="d-title" x="74" y="200" font-size="13.5" font-weight="700" fill="#085041">redact()</text>
+  <text class="d-sub" x="74" y="217" font-size="11" fill="#0F6E56">pseudonymisation boundary</text>
+
+  <!-- vault (teal + mint key) -->
+  <rect class="n-teal" x="460" y="176" width="200" height="52" rx="7" fill="#f7f8fa" stroke="#43d9b8" stroke-width="2"/>
+  <text class="d-title" x="474" y="200" font-size="13.5" font-weight="700" fill="#085041">Vault · in-memory</text>
+  <text class="d-sub" x="474" y="217" font-size="11" fill="#0F6E56">re-identification key</text>
+
+  <!-- claude (blue) -->
+  <rect class="n-blue" x="60" y="300" width="200" height="52" rx="7" fill="#E6F1FB" stroke="#185FA5"/>
+  <text class="d-title" x="74" y="324" font-size="13.5" font-weight="700" fill="#0C447C">Claude Sonnet 4.6</text>
+  <text class="d-sub" x="74" y="341" font-size="11" fill="#185FA5">eu.anthropic · ZDR · Art 28</text>
+
+  <!-- knowledge base (blue) -->
+  <rect class="n-blue" x="460" y="300" width="200" height="52" rx="7" fill="#E6F1FB" stroke="#185FA5"/>
+  <text class="d-title" x="474" y="324" font-size="13.5" font-weight="700" fill="#0C447C">Knowledge Base</text>
+  <text class="d-sub" x="474" y="341" font-size="11" fill="#185FA5">FCA Handbook · S3 Vectors</text>
+
+  <!-- output redact (teal) -->
+  <rect class="n-teal" x="60" y="404" width="200" height="52" rx="7" fill="#E1F5EE" stroke="#0F6E56"/>
+  <text class="d-title" x="74" y="428" font-size="13.5" font-weight="700" fill="#085041">redact() — output</text>
+  <text class="d-sub" x="74" y="445" font-size="11" fill="#0F6E56">defence-in-depth</text>
+
+  <!-- audit (teal store) -->
+  <rect class="n-teal" x="460" y="388" width="200" height="44" rx="7" fill="#E1F5EE" stroke="#0F6E56"/>
+  <text class="d-title" x="474" y="408" font-size="13" font-weight="700" fill="#085041">Audit trail</text>
+  <text class="d-sub" x="474" y="423" font-size="11" fill="#0F6E56">JSONL · PII-free · HMAC</text>
+
+  <!-- history (teal store) -->
+  <rect class="n-teal" x="460" y="440" width="200" height="40" rx="7" fill="#E1F5EE" stroke="#0F6E56"/>
+  <text class="d-title" x="474" y="459" font-size="13" font-weight="700" fill="#085041">History</text>
+  <text class="d-sub" x="474" y="473" font-size="11" fill="#0F6E56">in-memory · masked</text>
+
+  <!-- rehydrate (teal) -->
+  <rect class="n-teal" x="60" y="508" width="200" height="48" rx="7" fill="#E1F5EE" stroke="#0F6E56"/>
+  <text class="d-title" x="74" y="530" font-size="13.5" font-weight="700" fill="#085041">rehydrate()</text>
+  <text class="d-sub" x="74" y="546" font-size="11" fill="#0F6E56">re-identification</text>
+
+  <!-- ============ LEGEND ============ -->
+  <rect x="60" y="582" width="13" height="13" rx="3" fill="#f7f8fa" stroke="#e5e7eb"/>
+  <text x="80" y="592" font-size="11" fill="#6b7280">Handler / browser</text>
+  <rect x="220" y="582" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56"/>
+  <text x="240" y="592" font-size="11" fill="#6b7280">Application — eu-west-1</text>
+  <rect x="430" y="582" width="13" height="13" rx="3" fill="#E6F1FB" stroke="#185FA5"/>
+  <text x="450" y="592" font-size="11" fill="#6b7280">Amazon Bedrock — processor · ZDR</text>
+</svg>

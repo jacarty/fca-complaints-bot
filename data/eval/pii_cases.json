@@ -1,0 +1,204 @@
+{
+  "_comment": "PII-redaction eval corpus (JAM-277). Each case carries `entities`: spans labelled is_pii=true (real personal data, drives recall) or is_pii=false (hard negatives — orgs/products/public reference data that must NOT be masked). Any mask that doesn't overlap a true-PII span is counted a false positive, so negatives need not be exhaustively labelled. `source`: 'seeded' = excerpt of a real drafting-eval scenario (data/qa/complaint_scenarios.json); 'synthetic' = purpose-built.",
+  "cases": [
+    {
+      "case_id": "syn_001",
+      "source": "synthetic",
+      "text": "I am writing to complain. My name is Mr John Smith and you can reach me at john.smith@example.com about the mishandling of my account.",
+      "entities": [
+        {"text": "Mr John Smith", "type": "NAME", "is_pii": true},
+        {"text": "john.smith@example.com", "type": "EMAIL", "is_pii": true}
+      ]
+    },
+    {
+      "case_id": "syn_002",
+      "source": "synthetic",
+      "text": "Thierry Henry here \u2014 I have been trying to resolve this for weeks. Please call me on 07911 123456 as the branch never responds.",
+      "entities": [
+        {"text": "Thierry Henry", "type": "NAME", "is_pii": true},
+        {"text": "07911 123456", "type": "PHONE", "is_pii": true}
+      ]
+    },
+    {
+      "case_id": "syn_003",
+      "source": "synthetic",
+      "text": "An unauthorised charge appeared on my card 4242 4242 4242 4242, and the refund was sent to the wrong sort code 12-34-56.",
+      "entities": [
+        {"text": "4242 4242 4242 4242", "type": "CARD", "is_pii": true},
+        {"text": "12-34-56", "type": "SORT_CODE", "is_pii": true}
+      ]
+    },
+    {
+      "case_id": "syn_004",
+      "source": "synthetic",
+      "text": "My account number 12345678 was debited in error. I live at 14 Mornington Crescent, London NW1 7RD and have had no reply.",
+      "entities": [
+        {"text": "12345678", "type": "ACCOUNT", "is_pii": true},
+        {"text": "14 Mornington Crescent", "type": "ADDRESS", "is_pii": true},
+        {"text": "NW1 7RD", "type": "POSTCODE", "is_pii": true}
+      ]
+    },
+    {
+      "case_id": "syn_005",
+      "source": "synthetic",
+      "text": "For reference my National Insurance number is AB123456C. I was told my complaint about the pension transfer would be escalated.",
+      "entities": [
+        {"text": "AB123456C", "type": "NINO", "is_pii": true}
+      ]
+    },
+    {
+      "case_id": "syn_006",
+      "source": "synthetic",
+      "text": "Your final response told me to contact the Financial Ombudsman Service at Exchange Tower, London E14 9SR, telephone 0800 023 4567, but you never enclosed the leaflet.",
+      "entities": [
+        {"text": "Financial Ombudsman Service", "type": "ORG", "is_pii": false},
+        {"text": "Exchange Tower", "type": "ORG", "is_pii": false},
+        {"text": "E14 9SR", "type": "POSTCODE", "is_pii": false},
+        {"text": "0800 023 4567", "type": "PHONE", "is_pii": false}
+      ]
+    },
+    {
+      "case_id": "syn_007",
+      "source": "synthetic",
+      "text": "I am disputing a fraudulent charge to my card for Tottenham Hotspur tickets that I never purchased.",
+      "entities": [
+        {"text": "Tottenham Hotspur", "type": "ORG", "is_pii": false}
+      ]
+    },
+    {
+      "case_id": "syn_008",
+      "source": "synthetic",
+      "text": "As Mrs Patel explained, your letter cited DISP 1.6.2R and DISP 2.8.2R but still failed to mention the eight-week deadline.",
+      "entities": [
+        {"text": "Mrs Patel", "type": "NAME", "is_pii": true},
+        {"text": "DISP 1.6.2R", "type": "REFERENCE", "is_pii": false},
+        {"text": "DISP 2.8.2R", "type": "REFERENCE", "is_pii": false}
+      ]
+    },
+    {
+      "case_id": "syn_009",
+      "source": "synthetic",
+      "text": "Both Mr David Jones and his wife Susan Jones were affected; please email confirmation to david.jones@mail.co.uk.",
+      "entities": [
+        {"text": "Mr David Jones", "type": "NAME", "is_pii": true},
+        {"text": "Susan Jones", "type": "NAME", "is_pii": true},
+        {"text": "david.jones@mail.co.uk", "type": "EMAIL", "is_pii": true}
+      ]
+    },
+    {
+      "case_id": "syn_010",
+      "source": "synthetic",
+      "text": "The agent read out a reference 1234 5678 9012 3456 which is not my card, yet still charged my real account number 87654321.",
+      "entities": [
+        {"text": "87654321", "type": "ACCOUNT", "is_pii": true},
+        {"text": "1234 5678 9012 3456", "type": "REFERENCE", "is_pii": false}
+      ]
+    },
+    {
+      "case_id": "syn_011",
+      "source": "synthetic",
+      "text": "They quoted DA123456C as my NI number which is wrong; please call me on 020 7946 0958 instead.",
+      "entities": [
+        {"text": "020 7946 0958", "type": "PHONE", "is_pii": true},
+        {"text": "DA123456C", "type": "REFERENCE", "is_pii": false}
+      ]
+    },
+    {
+      "case_id": "syn_012",
+      "source": "synthetic",
+      "text": "I switched to your Digital Flex Saver after the Universal Credit payment bounced, and then Card Protection Plan charges appeared.",
+      "entities": [
+        {"text": "Digital Flex Saver", "type": "PRODUCT", "is_pii": false},
+        {"text": "Universal Credit", "type": "ORG", "is_pii": false},
+        {"text": "Card Protection Plan", "type": "PRODUCT", "is_pii": false}
+      ]
+    },
+    {
+      "case_id": "syn_013",
+      "source": "synthetic",
+      "text": "Dr Aisha Khan of 22 Baker Street, London W1U 6RX reports the standing order to sort code 09-01-29 failed twice.",
+      "entities": [
+        {"text": "Dr Aisha Khan", "type": "NAME", "is_pii": true},
+        {"text": "22 Baker Street", "type": "ADDRESS", "is_pii": true},
+        {"text": "W1U 6RX", "type": "POSTCODE", "is_pii": true},
+        {"text": "09-01-29", "type": "SORT_CODE", "is_pii": true}
+      ]
+    },
+    {
+      "case_id": "syn_014",
+      "source": "synthetic",
+      "text": "Charge disputed on Mastercard 5555 5555 5555 4444; please send the outcome to a.patel@example.org.",
+      "entities": [
+        {"text": "5555 5555 5555 4444", "type": "CARD", "is_pii": true},
+        {"text": "a.patel@example.org", "type": "EMAIL", "is_pii": true}
+      ]
+    },
+    {
+      "case_id": "syn_015",
+      "source": "synthetic",
+      "text": "the customer thierry henry says we ignored him and never replied to his emails.",
+      "entities": [
+        {"text": "thierry henry", "type": "NAME", "is_pii": true}
+      ]
+    },
+    {
+      "case_id": "syn_016",
+      "source": "synthetic",
+      "text": "My complaint about Westfield Banking PLC was handled by Mr Tom Hardy in your Leeds office.",
+      "entities": [
+        {"text": "Mr Tom Hardy", "type": "NAME", "is_pii": true},
+        {"text": "Westfield Banking PLC", "type": "ORG", "is_pii": false},
+        {"text": "Leeds", "type": "LOCATION", "is_pii": false}
+      ]
+    },
+    {
+      "case_id": "seed_c006",
+      "source": "seeded",
+      "text": "I made a complaint to my bank, Westfield Banking PLC, six weeks ago about a payment protection insurance policy. Three weeks after I complained, the bank wrote to me saying they were forwarding my complaint to the insurer.",
+      "entities": [
+        {"text": "Westfield Banking PLC", "type": "ORG", "is_pii": false}
+      ]
+    },
+    {
+      "case_id": "seed_c008",
+      "source": "seeded",
+      "text": "During the application process, I noticed that a 'Card Protection Plan' at \u00a37.99/month was already pre-selected as part of the account setup. I only found out about the Ombudsman from a friend.",
+      "entities": [
+        {"text": "Card Protection Plan", "type": "PRODUCT", "is_pii": false}
+      ]
+    },
+    {
+      "case_id": "seed_c015",
+      "source": "seeded",
+      "text": "I took out a peer-to-peer loan of \u00a315,000 through LendConnect Platform in March this year. Within 10 days I sent an email to the address specified in the contract stating I wished to withdraw.",
+      "entities": [
+        {"text": "LendConnect Platform", "type": "ORG", "is_pii": false}
+      ]
+    },
+    {
+      "case_id": "seed_c017",
+      "source": "seeded",
+      "text": "On top of that, my payments are being applied to these charges first rather than reducing the shortfall. I am on Universal Credit and struggling to keep up as it is.",
+      "entities": [
+        {"text": "Universal Credit", "type": "ORG", "is_pii": false}
+      ]
+    },
+    {
+      "case_id": "seed_c022",
+      "source": "seeded",
+      "text": "I opened an execution-only share dealing account with your firm last year to buy and sell shares listed on the London Stock Exchange. When I signed up, I was never told anything about your complaints procedure.",
+      "entities": [
+        {"text": "London Stock Exchange", "type": "ORG", "is_pii": false}
+      ]
+    },
+    {
+      "case_id": "seed_c027",
+      "source": "seeded",
+      "text": "I used a price comparison website called QuickLoans Compare to find a short-term loan. A more expensive lender called FastCash was displayed at the top with a prominent 'Recommended' badge.",
+      "entities": [
+        {"text": "QuickLoans Compare", "type": "ORG", "is_pii": false},
+        {"text": "FastCash", "type": "ORG", "is_pii": false}
+      ]
+    }
+  ]
+}
